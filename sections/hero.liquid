@@ -1,0 +1,217 @@
+{% schema %}
+{
+  "name": "Hero Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hero_background",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Title",
+      "default": "Raw. Ancient. Powerful."
+    },
+    {
+      "type": "text",
+      "id": "hero_subtitle",
+      "label": "Subtitle",
+      "default": "Perform at your peak & feel like yourself again"
+    },
+    {
+      "type": "url",
+      "id": "cta_url",
+      "label": "CTA URL",
+      "default": "/collections/all"
+    },
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "CTA Text",
+      "default": "Shop now"
+    },
+    {
+      "type": "range",
+      "id": "star_rating",
+      "label": "Star rating",
+      "min": 0,
+      "max": 5,
+      "step": 0.1,
+      "default": 4.9
+    },
+    {
+      "type": "text",
+      "id": "review_count",
+      "label": "Number of reviews",
+      "default": "5,000+"
+    },
+    {
+      "type": "text",
+      "id": "guarantee_text",
+      "label": "Guarantee Text",
+      "default": "30-Day Money-Back Guarantee"
+    },
+    {
+      "type": "product",
+      "id": "product_one",
+      "label": "Product One"
+    },
+    {
+      "type": "product",
+      "id": "product_two",
+      "label": "Product Two"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Section"
+    }
+  ]
+}
+{% endschema %}
+
+{% stylesheet %}
+.hero-section {
+  position: relative;
+ max-width: 1300px;
+     margin: auto;
+  background-size: cover;
+  background-position: center;
+  color: #f5e3c0;
+  padding: 80px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero-content {
+  max-width: 500px;
+}
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+.hero-stars {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.hero-stars span {
+  margin-left: 0.5rem;
+  font-size: 0.9rem;
+  color: #fff;
+}
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.hero-buttons .btn {
+  background: transparent;
+  border: 2px solid #f5e3c0;
+  color: #f5e3c0;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.hero-buttons .btn:hover {
+  background: #f5e3c0;
+  color: #000;
+}
+.hero-cta {
+  display: inline-block;
+  background: #f5e3c0;
+  color: #000;
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.hero-products {
+  display: flex;
+  gap: 20px;
+}
+.hero-products img {
+  max-width: 150px;
+  border-radius: 8px;
+}
+.hero-guarantee {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+}
+.hero-guarantee::before {
+  content: '✔';
+  margin-right: 0.5rem;
+}
+{% endstylesheet %}
+
+<section style="background-image: url('{{ section.settings.hero_background | image_url: width: 2048 }}');">
+    <div class="hero-section" >
+  <div class="hero-content">
+    <div class="hero-title">{{ section.settings.hero_title }}</div>
+
+    <div class="hero-stars">
+      {% assign rounded_rating = section.settings.star_rating | round %}
+
+      {% for i in (1..5) %}
+        {% if i <= rounded_rating %}
+          <svg width="20" height="20" fill="#4CAF50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.917 1.432 8.271L12 18.897l-7.368 4.697 1.432-8.271-6.064-5.917 8.332-1.151z"/>
+          </svg>
+        {% else %}
+          <svg width="20" height="20" fill="#ccc" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.917 1.432 8.271L12 18.897l-7.368 4.697 1.432-8.271-6.064-5.917 8.332-1.151z"/>
+          </svg>
+        {% endif %}
+      {% endfor %}
+
+      <span>Rated {{ section.settings.star_rating }}/5 by {{ section.settings.review_count }} reviews</span>
+    </div>
+
+    <div class="hero-subtitle">{{ section.settings.hero_subtitle }}</div>
+
+    <div class="hero-buttons">
+      <a href="#" class="btn">Energy & Vitality</a>
+      <a href="#" class="btn">Ancient Mineral Power</a>
+      <a href="#" class="btn">Pure · Lab-Tested · Clean Formula</a>
+    </div>
+
+    <a href="{{ section.settings.cta_url }}" class="hero-cta">
+      {{ section.settings.cta_text }}
+    </a>
+
+    <div class="hero-guarantee">
+      {{ section.settings.guarantee_text }}
+    </div>
+  </div>
+
+  <div class="hero-products">
+    {% if section.settings.product_one %}
+      <a href="{{ section.settings.product_one.url }}">
+        <img 
+          src="{{ section.settings.product_one.featured_image | image_url: width: 300 }}" 
+          alt="{{ section.settings.product_one.title }}">
+      </a>
+    {% endif %}
+
+    {% if section.settings.product_two %}
+      <a href="{{ section.settings.product_two.url }}">
+        <img 
+          src="{{ section.settings.product_two.featured_image | image_url: width: 300 }}" 
+          alt="{{ section.settings.product_two.title }}">
+      </a>
+    {% endif %}
+  </div>
+</div>
+</section>
