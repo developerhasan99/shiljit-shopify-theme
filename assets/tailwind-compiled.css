@@ -94,6 +94,10 @@
     display: inline-block
 }
 
+.inline {
+    display: inline
+}
+
 .flex {
     display: flex
 }
@@ -175,6 +179,10 @@
 }
 
 .flex-shrink {
+    flex-shrink: 1
+}
+
+.shrink {
     flex-shrink: 1
 }
 
