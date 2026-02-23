@@ -1,7 +1,35 @@
 {% schema %}
 {
   "name": "Why Gold Shiljit",
-  "settings": [],
+  "settings": [
+    {
+      "type": "header",
+      "content": "Lab Report Banner"
+    },
+    {
+      "type": "text",
+      "id": "banner_heading",
+      "label": "Banner Heading",
+      "default": "Stop guessing what's in your supplement."
+    },
+    {
+      "type": "text",
+      "id": "banner_subheading",
+      "label": "Banner Subheading",
+      "default": "Choose the shilajit that proves potency and screens for cleanliness."
+    },
+    {
+      "type": "text",
+      "id": "banner_button_text",
+      "label": "Banner Button Text",
+      "default": "View Lab Report"
+    },
+    {
+      "type": "url",
+      "id": "banner_link",
+      "label": "Banner Link"
+    }
+  ],
   "blocks": [],
   "presets": [
     {
@@ -12,16 +40,16 @@
 {% endschema %}
 
 <section
-  class="py-24"
+  class="py-16 md:py-24"
   style="background: radial-gradient(900px 500px at 20% 10%, rgba(230, 198, 155, .14), transparent 60%), radial-gradient(700px 420px at 85% 30%, rgba(230, 198, 155, .10), transparent 55%), linear-gradient(180deg, #060607, #0a0a0b 55%, #070707)"
 >
-  <div class="max-w-[1300px] mx-auto text-center">
+  <div class="max-w-[1300px] mx-auto px-6 text-center">
     <span class="inline-block border border-[#2a2620] bg-[#121212]/50 rounded-full px-6 py-2 text-[10px] md:text-sm uppercase tracking-[0.2em] text-[#e5e5e5] font-medium">
       Third-party Verified &bull; Premium-Grade &bull; Transparent
     </span>
 
     <!-- Main Heading -->
-    <h2 class="text-5xl md:text-6xl font-black my-8 text-white tracking-tight leading-[0.9]">
+    <h2 class="text-4xl md:text-6xl font-black my-8 text-white tracking-tight leading-[0.9]">
       Why Gold Shiljit <br class="hidden md:block">
       Feels Different
     </h2>
@@ -39,10 +67,10 @@
       <!-- Left Card: Percentage -->
       <div
         style="background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));"
-        class="batch w-1/3 flex-grow flex flex-col justify-center p-8 md:p-12 rounded-[2rem] border border-[#2a2620] min-h-[300px] md:min-h-[380px] gap-2 md:gap-4"
+        class="batch w-full md:w-1/3 flex-grow flex flex-col justify-center p-8 md:p-12 rounded-[2rem] border border-[#2a2620] min-h-[260px] md:min-h-[380px] gap-2 md:gap-4"
       >
         <div>
-          <span class="text-[74px] font-bold text-[#E6C69B] leading-none tracking-tighter">82.8%</span>
+          <span class="text-[60px] md:text-[74px] font-bold text-[#E6C69B] leading-none tracking-tighter">82.8%</span>
         </div>
         <div>
           <p class="text-white text-sm">
@@ -53,7 +81,7 @@
       </div>
 
       <!-- Right Card: Details -->
-      <div class="batch w-2/3 flex-grow-[2] p-8 md:p-12 rounded-[2rem] bg-[#0c0c0d] border border-[#1a1a1b] flex flex-col justify-between min-h-[300px] md:min-h-[380px]">
+      <div class="batch w-full md:w-2/3 flex-grow-[2] p-8 md:p-12 rounded-[2rem] bg-[#0c0c0d] border border-[#1a1a1b] flex flex-col justify-between min-h-[300px] md:min-h-[380px]">
         <div>
           <h3 class="text-white text-2xl font-bold mb-6">Potency you can verify</h3>
           <p class="text-[#b1b1b1] text-base leading-relaxed font-medium max-w-2xl">
@@ -138,6 +166,31 @@
             High fulvic acid is a quality signal — we lead with it because premium should be measurable.
           </p>
         </div>
+      </div>
+    </div>
+
+    <div
+      style="background: radial-gradient(circle at 10% 50%, rgba(230, 198, 155, 0.08), transparent 40%), radial-gradient(circle at 90% 50%, rgba(230, 198, 155, 0.08), transparent 40%), #0c0c0d;"
+      class="batch mt-8 py-6 px-6 md:py-8 md:px-12 rounded-[2.5rem] border border-[#2a2620] flex flex-col md:flex-row items-center justify-between gap-8 text-center md:text-left"
+    >
+      <div>
+        <h3 class="text-white text-2xl md:text-3xl font-bold mb-3 tracking-tight">
+          {{ section.settings.banner_heading | default: "Stop guessing what's in your supplement." }}
+        </h3>
+        <p class="text-[#8e8e8e] text-sm md:text-base font-medium leading-relaxed">
+          {{
+            section.settings.banner_subheading
+            | default: 'Choose the shilajit that proves potency and screens for cleanliness.'
+          }}
+        </p>
+      </div>
+      <div>
+        <a
+          href="{{ section.settings.banner_link | default: '#' }}"
+          class="inline-block bg-[#E6C69B] text-black px-10 py-4 rounded-full font-bold text-sm md:text-base hover:opacity-90 transition-opacity whitespace-nowrap shadow-[0_0_20px_rgba(230,198,155,0.2)]"
+        >
+          {{ section.settings.banner_button_text | default: 'View Lab Report' }}
+        </a>
       </div>
     </div>
   </div>
