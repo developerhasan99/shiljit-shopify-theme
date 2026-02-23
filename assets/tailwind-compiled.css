@@ -539,6 +539,11 @@
     color: rgb(230 210 163 / var(--tw-text-opacity, 1))
 }
 
+.text-\[\#a2840c\] {
+    --tw-text-opacity: 1;
+    color: rgb(162 132 12 / var(--tw-text-opacity, 1))
+}
+
 .antialiased {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale

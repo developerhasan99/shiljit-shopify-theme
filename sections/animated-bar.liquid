@@ -153,7 +153,7 @@
 
   .feature-bar__list {
     display: flex;
-    gap: 2rem;
+    gap: 4rem;
     animation: feature-scroll 20s linear infinite;
   }
 
@@ -166,7 +166,7 @@
 
   .feature-bar__text {
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     margin: 0;
   }
   .feature-bar__icon {
@@ -181,10 +181,10 @@
 
   @keyframes feature-scroll {
     0% {
-      transform: translateX(0);
+      transform: translateX(-100%);
     }
     100% {
-      transform: translateX(-50%);
+      transform: translateX(0);
     }
   }
 {% endstylesheet %}
