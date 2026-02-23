@@ -3,7 +3,10 @@
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
 
-<div class="review-items-container" style="--star-color:{{ block.settings.star_color }};--margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;--margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;">
+<div
+  class="review-items-container"
+  style="--star-color:{{ block.settings.star_color }};--margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;--margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;"
+>
   {%- assign items_count = 0 -%}
   {%- if block.settings.text_1 != blank -%}
     {%- assign items_count = items_count | plus: 1 -%}
@@ -22,7 +25,7 @@
     aria-label="Customer reviews"
   >
     <div
-      class="slideshow banner grid grid--1-col slider slider--everywhere"
+      class="slideshow banner theme-grid grid--1-col slider slider--everywhere"
       id="Slider-{{ section.id }}"
       aria-live="polite"
       aria-atomic="true"

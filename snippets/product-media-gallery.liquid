@@ -56,7 +56,12 @@
   data-disable-prepend="{{ disable_prepend }}"
 >
   <div id="GalleryStatus-{{ section.id }}" class="visually-hidden" role="status"></div>
-  <slider-component id="GalleryViewer-{{ section.id }}{{ id_append }}" class="slider-mobile-gutter" data-pause-videos='true' data-update-active="true">
+  <slider-component
+    id="GalleryViewer-{{ section.id }}{{ id_append }}"
+    class="slider-mobile-gutter"
+    data-pause-videos="true"
+    data-update-active="true"
+  >
     {%- unless is_duplicate -%}
       <a class="skip-to-content-link button visually-hidden quick-add-hidden" href="#ProductInfo-{{ section.id }}">
         {{ 'accessibility.skip_to_product_info' | t }}
@@ -64,10 +69,12 @@
     {%- endunless -%}
     <ul
       id="Slider-Gallery-{{ section.id }}{{ id_append }}"
-      class="product__media-list contains-media grid grid--peek list-unstyled slider slider--mobile{% if section.settings.gallery_layout == 'thumbnail' or section.settings.gallery_layout == 'thumbnail_slider'%} gallery-slider--desktop{% endif %}{% if section.settings.mobile_spacing == false %} slider--mobile-no-spacing{% endif %}{% if section.settings.mobile_preview_media == false %} slider--mobile-no-preview{% endif %}"
+      class="product__media-list contains-media theme-grid grid--peek list-unstyled slider slider--mobile{% if section.settings.gallery_layout == 'thumbnail' or section.settings.gallery_layout == 'thumbnail_slider'%} gallery-slider--desktop{% endif %}{% if section.settings.mobile_spacing == false %} slider--mobile-no-spacing{% endif %}{% if section.settings.mobile_preview_media == false %} slider--mobile-no-preview{% endif %}"
       role="list"
     >
-      {%- if product.selected_or_first_available_variant.featured_media != null and section.settings.display_variant_image_first -%}
+      {%- if product.selected_or_first_available_variant.featured_media != null
+        and section.settings.display_variant_image_first
+      -%}
         {%- assign featured_media = product.selected_or_first_available_variant.featured_media -%}
         <li
           id="Slide-{{ section.id }}-{{ featured_media.id }}{{ id_append }}"
@@ -94,7 +101,9 @@
         </li>
       {%- endif -%}
       {%- for media in product.media -%}
-        {%- if media.id != product.selected_or_first_available_variant.featured_media.id or section.settings.display_variant_image_first == false -%}
+        {%- if media.id != product.selected_or_first_available_variant.featured_media.id
+          or section.settings.display_variant_image_first == false
+        -%}
           <li
             id="Slide-{{ section.id }}-{{ media.id }}{{ id_append }}"
             class="product__media-item grid__item slider__slide{% if single_media_visible %} product__media-item--single{% endif %}{% if product.selected_or_first_available_variant.featured_media == null and forloop.index == 1 %} is-active{% endif %}{% if media.media_type != 'image' %} product__media-item--full{% endif %}{% if section.settings.hide_variants and variant_images contains media.src %} product__media-item--variant{% endif %}"
@@ -253,7 +262,9 @@
           </li>
         {%- endif -%}
         {%- for media in product.media -%}
-          {%- if media.id != product.selected_or_first_available_variant.featured_media.id or section.settings.display_variant_image_first == false -%}
+          {%- if media.id != product.selected_or_first_available_variant.featured_media.id
+            or section.settings.display_variant_image_first == false
+          -%}
             {%- liquid
               capture media_index
                 if media.media_type == 'model'

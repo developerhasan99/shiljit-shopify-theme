@@ -50,7 +50,7 @@
     {%- endunless -%}
     <slider-component class="slider-mobile-gutter">
       <ul
-        class="multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--mobile grid--peek{% endif %}{% unless section.settings.slider_preview %} slider--no-preview{% endunless %}"
+        class="multicolumn-list contains-content-container theme-grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--mobile grid--peek{% endif %}{% unless section.settings.slider_preview %} slider--no-preview{% endunless %}"
         id="Slider-{{ section.id }}"
         role="list"
       >
@@ -184,7 +184,7 @@
     "groups": ["header", "footer"]
   },
   "settings": [
-        {
+    {
       "type": "select",
       "id": "visibility",
       "options": [
@@ -503,4 +503,3 @@
   ]
 }
 {% endschema %}
-

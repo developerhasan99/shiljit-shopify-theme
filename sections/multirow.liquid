@@ -70,7 +70,7 @@
         class="image-with-text image-with-text--mobile-{{ section.settings.mobile_direction }} isolate{{ borders_class }}{{ corners_class }}{{ padding_class }}{% if same_bgs %} same-colors{% else %} different-colors{% endif %}"
         {{ block.shopify_attributes }}
       >
-        <div class="image-with-text__grid grid  color-scheme-{{ section.id }}-row grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.image_layout contains 'alternate' %}{% cycle odd_class, even_class %}{% else %}{{ odd_class }}{% endif %}">
+        <div class="image-with-text__grid theme-grid  color-scheme-{{ section.id }}-row grid--gapless grid--1-col grid--{% if section.settings.desktop_image_width == 'medium' %}2-col-tablet{% else %}3-col-tablet{% endif %}{% if section.settings.image_layout contains 'alternate' %}{% cycle odd_class, even_class %}{% else %}{{ odd_class }}{% endif %}">
           <div class="image-with-text__media-item  image-with-text__media-item--{{ section.settings.desktop_image_width }} image-with-text__media-item--{{ section.settings.desktop_content_position }} grid__item">
             <div
               class="image-with-text__media  image-with-text__media--{{ section.settings.image_height }} gradient color-{{ section.settings.row_color_scheme }} global-media-settings{% if block.settings.image != blank or block.settings.video != blank %} media{% else %} image-with-text__media--placeholder placeholder{% endif %}"
@@ -178,7 +178,7 @@
     "groups": ["header", "footer"]
   },
   "settings": [
-        {
+    {
       "type": "select",
       "id": "visibility",
       "options": [
@@ -587,7 +587,7 @@
           "label": "Video",
           "info": "Use autoplay mp4 instead of GIFs & animated WEBPs."
         },
-       {
+        {
           "type": "checkbox",
           "id": "video_muted_autoplay",
           "label": "Muted autoplay",
