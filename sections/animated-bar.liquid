@@ -1,0 +1,90 @@
+{% schema %}
+{
+  "name": "Animated Bar",
+  "settings": [],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Animated Bar"
+    }
+  ]
+}
+{% endschema %}
+<div class="feature-bar-container">
+  <div class="feature-bar-liquid"></div>
+  <div class="feature-bar-content">
+    <div class="feature-item">
+      <span class="feature-icon">★</span>
+      <span class="feature-text">CLINICALLY BACKED FORMULAS</span>
+    </div>
+    <div class="feature-item">
+      <span class="feature-icon">🛡️</span>
+      <span class="feature-text">THIRD PARTY TESTED</span>
+    </div>
+    <div class="feature-item">
+      <span class="feature-icon">🌿</span>
+      <span class="feature-text">CLEAN INGREDIENT</span>
+    </div>
+    <div class="feature-item">
+      <span class="feature-icon">★</span>
+      <span class="feature-text">CLINICALLY BACKED FORMULAS</span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .feature-bar-container {
+    position: relative;
+    background: #111;
+    color: white;
+    overflow: hidden;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+  }
+
+  .feature-bar-liquid {
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(90deg, #1e90ff, #00bfff, #1e90ff);
+    transform: skewX(-20deg);
+    animation: liquidMove 3s infinite linear;
+    z-index: 0;
+    opacity: 0.2;
+  }
+
+  @keyframes liquidMove {
+    0% {
+      transform: translateX(-50%) skewX(-20deg);
+    }
+    100% {
+      transform: translateX(0%) skewX(-20deg);
+    }
+  }
+
+  .feature-bar-content {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 1200px;
+    z-index: 1;
+  }
+
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  .feature-icon {
+    font-size: 18px;
+  }
+</style>

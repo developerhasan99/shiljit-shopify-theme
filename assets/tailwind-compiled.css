@@ -37,6 +37,14 @@
     isolation: isolate
 }
 
+.-z-10 {
+    z-index: -10
+}
+
+.z-10 {
+    z-index: 10
+}
+
 .mx-auto {
     margin-left: auto;
     margin-right: auto
@@ -302,6 +310,10 @@
     background-color: rgb(255 255 255 / 0.4)
 }
 
+.bg-black\/70 {
+    background-color: rgb(0 0 0 / 0.7)
+}
+
 .bg-gradient-to-r {
     background-image: linear-gradient(to right, var(--tw-gradient-stops))
 }
@@ -312,9 +324,20 @@
     --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
 }
 
+.from-black\/80 {
+    --tw-gradient-from: rgb(0 0 0 / 0.8) var(--tw-gradient-from-position);
+    --tw-gradient-to: rgb(0 0 0 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+
 .via-black\/50 {
     --tw-gradient-to: rgb(0 0 0 / 0)  var(--tw-gradient-to-position);
     --tw-gradient-stops: var(--tw-gradient-from), rgb(0 0 0 / 0.5) var(--tw-gradient-via-position), var(--tw-gradient-to)
+}
+
+.via-black\/60 {
+    --tw-gradient-to: rgb(0 0 0 / 0)  var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), rgb(0 0 0 / 0.6) var(--tw-gradient-via-position), var(--tw-gradient-to)
 }
 
 .to-transparent {
@@ -503,6 +526,11 @@
     color: rgb(74 222 128 / var(--tw-text-opacity, 1))
 }
 
+.text-\[\#e6d2a3\] {
+    --tw-text-opacity: 1;
+    color: rgb(230 210 163 / var(--tw-text-opacity, 1))
+}
+
 .antialiased {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale
@@ -511,6 +539,12 @@
 .shadow-lg {
     --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
     --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.shadow-xl {
+    --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
 }
 
@@ -536,6 +570,10 @@
     transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 150ms
+}
+
+.duration-300 {
+    transition-duration: 300ms
 }
 
 .animate-move-left {

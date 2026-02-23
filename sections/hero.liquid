@@ -71,33 +71,25 @@
 }
 {% endschema %}
 
-<section class="relative overflow-hidden">
-  <!-- Background Image -->
-  <div class="absolute inset-0">
-    <img
-      src="{{ section.settings.hero_background | image_url: width: 2048 }}"
-      class="w-full h-full object-cover"
-      alt="Hero Background"
-    >
-    <!-- Dark Gradient Overlay -->
-    <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent"></div>
-  </div>
+<section
+  class="relative overflow-hidden bg-cover bg-center"
+  style="background-image: url('{{ section.settings.hero_background | image_url: width: 2048 }}');"
+>
+  <!-- Gradient Overlay -->
+  <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-transparent"></div>
 
-  <!-- Content Container -->
-  <div class="relative max-w-[1300px] mx-auto px-6 py-24 flex flex-wrap items-center justify-between text-[#f3e2c2]">
+  <!-- Content -->
+  <div class="relative max-w-[1300px] mx-auto px-6 py-24 flex flex-wrap items-center justify-between text-[#f3e2c2] z-10">
     <!-- LEFT CONTENT -->
     <div class="max-w-[600px]">
-      <!-- Small Label -->
       <p class="uppercase tracking-widest text-sm text-[#e8d6a8] mb-4">
         {{ section.settings.small_label }}
       </p>
 
-      <!-- Main Heading -->
-      <h1 class="text-5xl lg:text-6xl text-[#e9e2d3] font-extrabold leading-tight mb-6">
+      <h1 class="text-5xl lg:text-6xl text-[#e6d2a3] font-extrabold leading-tight mb-6">
         {{ section.settings.hero_title }}
       </h1>
 
-      <!-- Rating Badge -->
       <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-4 py-2 mb-6">
         {% assign rounded_rating = section.settings.star_rating | round %}
         <div class="flex">
@@ -119,12 +111,10 @@
         </span>
       </div>
 
-      <!-- Subtitle -->
       <p class="text-lg text-[#e9e2d3] mb-8 max-w-[500px]">
         {{ section.settings.hero_subtitle }}
       </p>
 
-      <!-- Feature Pills -->
       <div class="flex flex-wrap gap-3 mb-8">
         <span class="bg-white/10 backdrop-blur-md border border-white/20 px-5 py-2 rounded-full text-sm font-semibold">
           ⚡ Energy & Vitality
@@ -139,15 +129,13 @@
         </span>
       </div>
 
-      <!-- CTA Button -->
       <a
         href="{{ section.settings.cta_url }}"
-        class="inline-block bg-[#e7d2a5] text-black font-bold px-10 py-4 rounded-full text-lg transition hover:scale-105 hover:bg-[#f3e2c2] shadow-lg"
+        class="inline-block bg-[#e7d2a5] text-black font-bold px-10 py-4 rounded-full text-lg transition duration-300 hover:scale-105 hover:bg-[#f3e2c2] shadow-xl"
       >
         {{ section.settings.cta_text }}
       </a>
 
-      <!-- Guarantee -->
       <div class="mt-5 text-sm text-white flex items-center gap-2">
         <span class="text-green-400">✔</span>
         {{ section.settings.guarantee_text }}
