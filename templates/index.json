@@ -39,6 +39,11 @@
         "product_two": ""
       }
     },
+    "animated_bar_rtYPbt": {
+      "type": "animated-bar",
+      "name": "Animated Bar",
+      "settings": {}
+    },
     "featured_product_bKjGVU": {
       "type": "featured-product",
       "blocks": {
@@ -650,6 +655,7 @@
   "order": [
     "e6750b05-7703-4f69-ab7c-9ffb0acf18fb",
     "hero_6UJqC4",
+    "animated_bar_rtYPbt",
     "featured_product_bKjGVU",
     "d8b7c7f2-8a7b-486d-b2c1-184eea98110d",
     "comparison_table_QMtry4",
