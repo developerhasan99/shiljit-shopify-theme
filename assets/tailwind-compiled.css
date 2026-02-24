@@ -171,6 +171,14 @@
     height: 100%
 }
 
+.h-auto {
+    height: auto
+}
+
+.max-h-\[800px\] {
+    max-height: 800px
+}
+
 .min-h-\[260px\] {
     min-height: 260px
 }
@@ -271,6 +279,10 @@
 
 .flex-col {
     flex-direction: column
+}
+
+.flex-col-reverse {
+    flex-direction: column-reverse
 }
 
 .flex-wrap {
@@ -527,6 +539,11 @@
     fill: #4ade80
 }
 
+.object-contain {
+    -o-object-fit: contain;
+       object-fit: contain
+}
+
 .object-cover {
     -o-object-fit: cover;
        object-fit: cover
@@ -535,6 +552,11 @@
 .object-center {
     -o-object-position: center;
        object-position: center
+}
+
+.object-bottom {
+    -o-object-position: bottom;
+       object-position: bottom
 }
 
 .p-5 {
@@ -625,6 +647,26 @@
 
 .pl-5 {
     padding-left: 20px
+}
+
+.pb-12 {
+    padding-bottom: 48px
+}
+
+.pt-12 {
+    padding-top: 48px
+}
+
+.pt-8 {
+    padding-top: 32px
+}
+
+.pt-4 {
+    padding-top: 16px
+}
+
+.pb-2 {
+    padding-bottom: 8px
 }
 
 .text-left {
@@ -1040,6 +1082,18 @@
     .md\:py-20 {
         padding-top: 80px;
         padding-bottom: 80px
+    }
+
+    .md\:pb-20 {
+        padding-bottom: 80px
+    }
+
+    .md\:pt-20 {
+        padding-top: 80px
+    }
+
+    .md\:pt-12 {
+        padding-top: 48px
     }
 
     .md\:text-left {
