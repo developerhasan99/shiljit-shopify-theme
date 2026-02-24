@@ -57,6 +57,26 @@
     },
     "performance_support_n79ggF": {
       "type": "performance-support",
+      "blocks": {
+        "highlight_9kVDQA": {
+          "type": "highlight",
+          "settings": {
+            "title": "",
+            "description": ""
+          }
+        },
+        "feature_nbrVUP": {
+          "type": "feature",
+          "settings": {
+            "title": "",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "highlight_9kVDQA",
+        "feature_nbrVUP"
+      ],
       "name": "Performance Support Section",
       "settings": {
         "badge_text": "PERFORMANCE SUPPORT",
