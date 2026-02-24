@@ -184,6 +184,20 @@
         "description": "Xara is the only brad where we confidentaly showcase our 3rd Party lab test showing over 82% fulvic acid, most fake shilajit has less than 20%"
       }
     },
+    "homepage_product_WpkqV6": {
+      "type": "homepage-product",
+      "name": "Homepage Product",
+      "settings": {
+        "tab_1_label": "Best Sellers",
+        "tab_1_collection": "",
+        "tab_2_label": "New Arrivals",
+        "tab_2_collection": "",
+        "tab_3_label": "Bundles",
+        "tab_3_collection": "",
+        "button_text": "Shop Now",
+        "button_link": "shopify://products/buy-10g-shilajit-in-pakistan-pure-himalayan-resin-for-energy-wellness"
+      }
+    },
     "featured_product_bKjGVU": {
       "type": "featured-product",
       "blocks": {
@@ -800,6 +814,7 @@
     "performance_support_n79ggF",
     "why_benifit_G3XxR4",
     "certificate_VKqyBC",
+    "homepage_product_WpkqV6",
     "featured_product_bKjGVU",
     "d8b7c7f2-8a7b-486d-b2c1-184eea98110d",
     "comparison_table_QMtry4",
