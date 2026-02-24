@@ -1,511 +1,104 @@
-{{ 'section-multicolumn.css' | asset_url | stylesheet_tag }}
-{{ 'section-testimonials.css' | asset_url | stylesheet_tag }}
-{{ 'component-rte.css' | asset_url | stylesheet_tag }}
-
-<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
-<noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
-
-{%- style -%}
-  .section-{{ section.id }}-padding {
-    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
-    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
-  }
-
-  @media screen and (min-width: 750px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-
-  .color-scheme-{{ section.id }}.color-custom {
-    --color-background: {{ section.settings.custom_colors_background.red }}, {{ section.settings.custom_colors_background.green }}, {{ section.settings.custom_colors_background.blue }};
-    --gradient-background: {% if section.settings.custom_gradient_background != blank %}{{ section.settings.custom_gradient_background }}{% else %}{{ section.settings.custom_colors_background }}{% endif %};
-    {% if section.settings.custom_image_background != blank %}
-      {% # theme-check-disable %}
-      --gradient-background: url('{{ section.settings.custom_image_background | img_url: 'master' }}') center center / cover no-repeat;
-      {% # theme-check-enable %}
-    {% endif %}
-    --color-foreground: {{ section.settings.custom_colors_text.red }}, {{ section.settings.custom_colors_text.green }}, {{ section.settings.custom_colors_text.blue }};
-  }
-  {% if section.settings.custom_mobile_image_background != blank %}
-    @media screen and (max-width: 740px) {
-      .color-scheme-{{ section.id }}.color-custom {
-        {% # theme-check-disable %}
-        --gradient-background: url('{{ section.settings.custom_mobile_image_background | img_url: 'master' }}') center center / cover no-repeat;
-        {% # theme-check-enable %}
-      }
-    }
-  {% endif %}
-{%- endstyle -%}
-
-{%- liquid
-  assign columns_mobile_int = 1
-  assign show_mobile_slider = false
-  if section.blocks.size > columns_mobile_int
-    assign show_mobile_slider = true
-  endif
--%}
-
-<div class="{{ section.settings.visibility }} multicolumn color-{{ section.settings.color_scheme }} color-scheme-{{ section.id }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}">
-  <div class="page-width section-{{ section.id }}-padding isolate">
-    {%- unless section.settings.title == blank -%}
-      <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin{% if section.settings.text != blank %} multicolumn-title-with-text{% endif %}">
-        <h2 class="title {{ section.settings.heading_size }}">
-          {{ section.settings.title | escape }}
-        </h2>
-        {%- if section.settings.button_label != blank and show_mobile_slider -%}
-          <a href="{{ section.settings.button_link }}" class="link underlined-link large-up-hide">
-            {{- section.settings.button_label | escape -}}
-          </a>
-        {%- endif -%}
-      </div>
-    {%- endunless -%}
-    {% if section.settings.text != blank %}
-      <div class="multicolumn-text">
-        {{ section.settings.text }}
-      </div>
-    {% endif %}
-    <slider-component
-      class="slider-mobile-gutter"
-      role="region"
-      aria-roledescription="{{ 'sections.slideshow.carousel' | t }}"
-    >
-      <ul
-        class="multicolumn-list contains-content-container theme-grid grid--1-col grid--1-col-tablet slider slider--everywhere{% unless section.settings.slider_preview %} slider--no-preview{% endunless %}"
-        id="Slider-{{ section.id }}"
-        role="list"
-      >
-        {%- liquid
-          assign highest_ratio = 0
-          for block in section.blocks
-            if block.settings.image.aspect_ratio > highest_ratio
-              assign highest_ratio = block.settings.image.aspect_ratio
-            endif
-          endfor
-        -%}
-        {%- for block in section.blocks -%}
-          {%- assign empty_column = '' -%}
-          {%- if block.settings.image == blank and block.settings.title == blank and block.settings.text == blank -%}
-            {%- assign empty_column = ' multicolumn-list__item--empty' -%}
-          {%- endif -%}
-          {% assign image_blank_class = '' %}
-          {% if block.settings.image == blank %}
-            {% assign image_blank_class = 'testimonial-card__info--image-blank' %}
-          {% endif %}
-
-          <li
-            id="Slide-{{ section.id }}-{{ forloop.index }}"
-            class="multicolumn-list__item grid__item slider__slide{% if section.settings.column_alignment == 'center' %} center{% endif %}{{ empty_column }}"
-            {{ block.shopify_attributes }}
-          >
-            <div class="testimonial-card center">
-              {%- if section.settings.show_quotes -%}
-                <div class="testimonial-card__quotes">
-                  <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 123 85">
-                    <path d="M53.704 32.96c0 9.02-1.386 16.768-4.157 23.244-2.772 6.708-6.353 12.143-10.741 16.306-4.39 4.395-9.355 7.517-14.899 9.367C18.132 83.96 12.473 85 6.93 85V72.857c6.005 0 11.664-2.082 16.977-6.245 5.082-3.932 8.084-9.367 9.009-16.306-.694.231-1.502.463-2.426.694a33.25 33.25 0 0 1-2.425.694c-1.155.231-2.426.347-3.812.347-6.93 0-12.704-2.66-17.323-7.98C2.31 38.973 0 32.96 0 26.021c0-6.94 2.425-13.069 7.276-18.388C11.896 2.544 18.132 0 25.986 0c8.777 0 15.591 3.238 20.442 9.714 4.85 6.708 7.276 14.456 7.276 23.245Zm69.296 0c0 9.02-1.386 16.768-4.158 23.244-2.772 6.708-6.352 12.143-10.741 16.306-4.388 4.395-9.355 7.517-14.898 9.367C87.428 83.96 81.769 85 76.225 85V72.857c6.006 0 11.665-2.082 16.978-6.245 5.081-3.932 8.084-9.367 9.008-16.306-.693.231-1.501.463-2.425.694a33.25 33.25 0 0 1-2.425.694c-1.155.231-2.426.347-3.812.347-6.93 0-12.704-2.66-17.324-7.98-4.62-5.088-6.93-11.102-6.93-18.04 0-6.94 2.426-13.069 7.277-18.388C81.192 2.544 87.428 0 95.282 0c8.777 0 15.591 3.238 20.442 9.714C120.575 16.422 123 24.17 123 32.96Z" fill="currentColor"></path>
-                  </svg>
-                </div>
-              {%- endif -%}
-              <div class="testimonial-card__info">
-                {%- if block.settings.text != blank -%}
-                  <div class="rte testimonial-card__text">{{ block.settings.text }}</div>
-                {%- endif -%}
-                {%- if section.settings.show_stars -%}
-                  <p class="testimonial-card__stars">★★★★★</p>
-                {%- endif -%}
-                {%- unless block.settings.author == blank -%}
-                  <div class="testimonial-card__author-container">
-                    <p class="testimonial-card__author">
-                      {{ block.settings.author }}
-                      <span class="testimonial-card__verified">
-                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000">
-                          <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                      </span>
-                    </p>
-                  </div>
-                {%- endunless -%}
-              </div>
-            </div>
-          </li>
-        {%- endfor -%}
-      </ul>
-
-      <div class="slider-buttons no-js-hidden">
-        <button
-          type="button"
-          class="slider-button slider-button--prev"
-          name="previous"
-          aria-label="{{ 'general.slider.previous_slide' | t }}"
-          aria-controls="Slider-{{ section.id }}"
-        >
-          {% render 'icon-caret' %}
-        </button>
-        <button
-          type="button"
-          class="slider-button slider-button--next"
-          name="next"
-          aria-label="{{ 'general.slider.next_slide' | t }}"
-          aria-controls="Slider-{{ section.id }}"
-        >
-          {% render 'icon-caret' %}
-        </button>
-      </div>
-      <div class="slider-counter slider-counter--dots center">
-        {%- for block in section.blocks -%}
-          <button
-            class="slider-counter__link slider-counter__link--dots link"
-            aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
-            aria-controls="Slider-{{ section.id }}"
-          >
-            <span class="dot"></span>
-          </button>
-        {%- endfor -%}
-      </div>
-    </slider-component>
-  </div>
-</div>
-
 {% schema %}
 {
   "name": "Testimonials",
-  "class": "section",
-  "tag": "section",
-  "disabled_on": {
-    "groups": ["header", "footer"]
-  },
-  "settings": [
-    {
-      "type": "select",
-      "id": "visibility",
-      "options": [
-        {
-          "value": "desktop-hidden",
-          "label": "Mobile only"
-        },
-        {
-          "value": "mobile-hidden",
-          "label": "Desktop only"
-        },
-        {
-          "value": "always-display",
-          "label": "All devices"
-        }
-      ],
-      "label": "Display on",
-      "default": "always-display"
-    },
-    {
-      "type": "text",
-      "id": "title",
-      "default": "Testimonials",
-      "label": "Heading"
-    },
-    {
-      "type": "select",
-      "id": "heading_size",
-      "options": [
-        {
-          "value": "h2",
-          "label": "t:sections.all.heading_size.options__1.label"
-        },
-        {
-          "value": "h1",
-          "label": "t:sections.all.heading_size.options__2.label"
-        },
-        {
-          "value": "h0",
-          "label": "t:sections.all.heading_size.options__3.label"
-        }
-      ],
-      "default": "h1",
-      "label": "t:sections.all.heading_size.label"
-    },
-    {
-      "type": "richtext",
-      "id": "text",
-      "label": "Text"
-    },
-    {
-      "type": "select",
-      "id": "image_width",
-      "options": [
-        {
-          "value": "third",
-          "label": "t:sections.multicolumn.settings.image_width.options__1.label"
-        },
-        {
-          "value": "half",
-          "label": "t:sections.multicolumn.settings.image_width.options__2.label"
-        },
-        {
-          "value": "full",
-          "label": "t:sections.multicolumn.settings.image_width.options__3.label"
-        }
-      ],
-      "default": "full",
-      "label": "t:sections.multicolumn.settings.image_width.label"
-    },
-    {
-      "type": "select",
-      "id": "image_ratio",
-      "options": [
-        {
-          "value": "adapt",
-          "label": "t:sections.multicolumn.settings.image_ratio.options__1.label"
-        },
-        {
-          "value": "portrait",
-          "label": "t:sections.multicolumn.settings.image_ratio.options__2.label"
-        },
-        {
-          "value": "square",
-          "label": "t:sections.multicolumn.settings.image_ratio.options__3.label"
-        },
-        {
-          "value": "circle",
-          "label": "t:sections.multicolumn.settings.image_ratio.options__4.label"
-        }
-      ],
-      "default": "square",
-      "label": "t:sections.multicolumn.settings.image_ratio.label"
-    },
-    {
-      "type": "range",
-      "id": "columns_desktop",
-      "min": 1,
-      "max": 6,
-      "step": 1,
-      "default": 1,
-      "label": "Number of testimonials on desktop"
-    },
-    {
-      "type": "checkbox",
-      "id": "slider_preview",
-      "label": "Enable mobile preview of the next slide",
-      "default": true
-    },
-    {
-      "type": "select",
-      "id": "column_alignment",
-      "options": [
-        {
-          "value": "left",
-          "label": "t:sections.multicolumn.settings.column_alignment.options__1.label"
-        },
-        {
-          "value": "center",
-          "label": "t:sections.multicolumn.settings.column_alignment.options__2.label"
-        }
-      ],
-      "default": "center",
-      "label": "Text alignment"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_stars",
-      "default": true,
-      "label": "Show stars"
-    },
-    {
-      "type": "color",
-      "id": "stars_color",
-      "label": "Stars color",
-      "default": "#000000"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_quotes",
-      "default": true,
-      "label": "Show quote marks"
-    },
-    {
-      "type": "select",
-      "id": "quotes_color_scheme",
-      "options": [
-        {
-          "value": "accent-1",
-          "label": "t:sections.all.colors.accent_1.label"
-        },
-        {
-          "value": "accent-2",
-          "label": "t:sections.all.colors.accent_2.label"
-        },
-        {
-          "value": "background-1",
-          "label": "t:sections.all.colors.background_1.label"
-        },
-        {
-          "value": "background-2",
-          "label": "t:sections.all.colors.background_2.label"
-        },
-        {
-          "value": "inverse",
-          "label": "t:sections.all.colors.inverse.label"
-        }
-      ],
-      "default": "accent-2",
-      "label": "Quotes color scheme"
-    },
-    {
-      "type": "select",
-      "id": "background_style",
-      "options": [
-        {
-          "value": "none",
-          "label": "t:sections.multicolumn.settings.background_style.options__1.label"
-        },
-        {
-          "value": "primary",
-          "label": "t:sections.multicolumn.settings.background_style.options__2.label"
-        }
-      ],
-      "default": "primary",
-      "label": "t:sections.multicolumn.settings.background_style.label"
-    },
-    {
-      "type": "select",
-      "id": "color_scheme",
-      "options": [
-        {
-          "value": "accent-1",
-          "label": "t:sections.all.colors.accent_1.label"
-        },
-        {
-          "value": "accent-2",
-          "label": "t:sections.all.colors.accent_2.label"
-        },
-        {
-          "value": "background-1",
-          "label": "t:sections.all.colors.background_1.label"
-        },
-        {
-          "value": "background-2",
-          "label": "t:sections.all.colors.background_2.label"
-        },
-        {
-          "value": "inverse",
-          "label": "t:sections.all.colors.inverse.label"
-        },
-        {
-          "value": "custom",
-          "label": "Custom"
-        }
-      ],
-      "default": "background-1",
-      "label": "t:sections.all.colors.label"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.all.padding.section_padding_heading"
-    },
-    {
-      "type": "range",
-      "id": "padding_top",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_top",
-      "default": 36
-    },
-    {
-      "type": "range",
-      "id": "padding_bottom",
-      "min": 0,
-      "max": 100,
-      "step": 4,
-      "unit": "px",
-      "label": "t:sections.all.padding.padding_bottom",
-      "default": 36
-    },
-    {
-      "type": "header",
-      "content": "Custom color scheme",
-      "info": "Applied if Color scheme setting is set to Custom."
-    },
-    {
-      "type": "color",
-      "id": "custom_colors_background",
-      "default": "#FFFFFF",
-      "label": "Background color"
-    },
-    {
-      "type": "color_background",
-      "id": "custom_gradient_background",
-      "label": "Gradient background",
-      "info": "If added, replaces Background color when applicable."
-    },
-    {
-      "type": "image_picker",
-      "id": "custom_image_background",
-      "label": "Image background"
-    },
-    {
-      "type": "image_picker",
-      "id": "custom_mobile_image_background",
-      "label": "Mobile image background",
-      "info": "If empty, the Image background will also be applied to mobile devices"
-    },
-    {
-      "type": "color",
-      "id": "custom_colors_text",
-      "default": "#2E2A39",
-      "label": "Text"
-    }
-  ],
-  "blocks": [
-    {
-      "type": "column",
-      "name": "Testimonial",
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "t:sections.multicolumn.blocks.column.settings.image.label"
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "default": "Heading",
-          "label": "t:sections.multicolumn.blocks.column.settings.title.label"
-        },
-        {
-          "type": "richtext",
-          "id": "text",
-          "default": "<p>Share positive thoughts and feedback from your customer..</p>",
-          "label": "t:sections.multicolumn.blocks.column.settings.text.label"
-        },
-        {
-          "type": "image_picker",
-          "id": "author_avatar",
-          "label": "Author avatar"
-        },
-        {
-          "type": "text",
-          "id": "author",
-          "default": "Author",
-          "label": "Author"
-        }
-      ]
-    }
-  ],
+  "settings": [],
+  "blocks": [],
   "presets": [
     {
-      "name": "Testimonials",
-      "blocks": [
-        {
-          "type": "column"
-        },
-        {
-          "type": "column"
-        },
-        {
-          "type": "column"
-        }
-      ]
+      "name": "Testimonials"
     }
   ]
 }
 {% endschema %}
+
+<section class="relative bg-[#f3f3f3] pb-24 pt-40 overflow-hidden">
+  <!-- Large Quote Icon (Background) -->
+
+  <div class="absolute  inset-[40px] flex justify-center items-start pointer-events-none">
+    <div class="mt-6 opacity-10 w-28">
+      <svg viewBox="0 0 123 85" fill="black">
+        <path d="M53.704 32.96c0 9.02-1.386 16.768-4.157 23.244-2.772 6.708-6.353 12.143-10.741 16.306-4.39 4.395-9.355 7.517-14.899 9.367C18.132 83.96 12.473 85 6.93 85V72.857c6.005 0 11.664-2.082 16.977-6.245 5.082-3.932 8.084-9.367 9.009-16.306-.694.231-1.502.463-2.426.694a33.25 33.25 0 0 1-2.425.694c-1.155.231-2.426.347-3.812.347-6.93 0-12.704-2.66-17.323-7.98C2.31 38.973 0 32.96 0 26.021c0-6.94 2.425-13.069 7.276-18.388C11.896 2.544 18.132 0 25.986 0c8.777 0 15.591 3.238 20.442 9.714 4.85 6.708 7.276 14.456 7.276 23.245Zm69.296 0c0 9.02-1.386 16.768-4.158 23.244-2.772 6.708-6.352 12.143-10.741 16.306-4.388 4.395-9.355 7.517-14.898 9.367C87.428 83.96 81.769 85 76.225 85V72.857c6.006 0 11.665-2.082 16.978-6.245 5.081-3.932 8.084-9.367 9.008-16.306-.693.231-1.501.463-2.425.694a33.25 33.25 0 0 1-2.425.694c-1.155.231-2.426.347-3.812.347-6.93 0-12.704-2.66-17.324-7.98-4.62-5.088-6.93-11.102-6.93-18.04 0-6.94 2.426-13.069 7.277-18.388C81.192 2.544 87.428 0 95.282 0c8.777 0 15.591 3.238 20.442 9.714C120.575 16.422 123 24.17 123 32.96Z"/>
+      </svg>
+    </div>
+  </div>
+
+  <div class="relative max-w-4xl mx-auto overflow-hidden">
+    <div id="carousel" class="flex transition-transform duration-500 ease-in-out">
+      <!-- Slide 1 -->
+      <div class="min-w-full text-center px-6">
+        <p class="text-3xl font-medium leading-snug mb-10">
+          Love the product energizes me feel good after the exercise. Delivery time has been excellent.
+        </p>
+
+        <div class="flex justify-center mb-4 text-black text-2xl">★★★★★</div>
+
+        <div class="flex justify-center items-center gap-2 font-medium">
+          David L.
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2">
+            <path d="M9 12L11 14L15 10"/>
+            <circle cx="12" cy="12" r="9"/>
+          </svg>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="min-w-full text-center px-6">
+        <p class="text-3xl font-medium leading-snug mb-10">Absolutely amazing quality and super fast shipping.</p>
+        <div class="flex justify-center mb-4 text-black text-2xl">★★★★★</div>
+        <div class="flex justify-center items-center gap-2 font-medium">Sarah M.</div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="min-w-full text-center px-6">
+        <p class="text-3xl font-medium leading-snug mb-10">Best purchase this year. Highly recommended.</p>
+        <div class="flex justify-center mb-4 text-black text-2xl">★★★★★</div>
+        <div class="flex justify-center items-center gap-2 font-medium">John D.</div>
+      </div>
+    </div>
+
+    <!-- Dots -->
+    <div class="flex justify-center gap-3 mt-10">
+      <button class="dot w-3 h-3 bg-black rounded-full"></button>
+      <button class="dot w-3 h-3 bg-black/30 rounded-full"></button>
+      <button class="dot w-3 h-3 bg-black/30 rounded-full"></button>
+    </div>
+  </div>
+</section>
+
+<script>
+  const carousel = document.getElementById('carousel');
+  const slides = document.querySelectorAll('#carousel > div');
+  const dots = document.querySelectorAll('.dot');
+
+  let index = 0;
+  const total = slides.length;
+
+  function updateCarousel() {
+    carousel.style.transition = 'transform 0.5s ease-in-out';
+    carousel.style.transform = `translateX(-${index * 100}%)`;
+
+    // Update dots
+    dots.forEach((dot) => {
+      dot.classList.remove('bg-black');
+      dot.classList.add('bg-black/30');
+    });
+    dots[index % dots.length].classList.remove('bg-black/30');
+    dots[index % dots.length].classList.add('bg-black');
+  }
+
+  // Dot click handler
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      index = i;
+      updateCarousel();
+    });
+  });
+
+  // Automatic looping
+  setInterval(() => {
+    index = (index + 1) % total;
+    updateCarousel();
+  }, 5000);
+
+  updateCarousel();
+</script>
