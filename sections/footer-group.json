@@ -11,11 +11,6 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
-    "testimonials_FWYFga": {
-      "type": "testimonials",
-      "name": "Testimonials section",
-      "settings": {}
-    },
     "footer": {
       "type": "footer",
       "blocks": {
@@ -52,7 +47,6 @@
     }
   },
   "order": [
-    "testimonials_FWYFga",
     "footer"
   ]
 }
