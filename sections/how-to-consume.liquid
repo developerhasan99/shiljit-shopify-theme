@@ -1,0 +1,145 @@
+{% schema %}
+{
+  "name": "How to Consume",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#e2d5ae"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "HOW TO CONSUME OUR GUMMIES"
+    },
+    {
+      "type": "header",
+      "content": "Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Top",
+      "default": 80
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Padding Bottom",
+      "default": 80
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Step Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Step Title",
+          "default": "1. TAKE 1-2 GUMMIES DAILY"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "Morning or night whatever fits your routine."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "How to Consume",
+      "blocks": [
+        {
+          "type": "step",
+          "settings": {
+            "title": "1. TAKE 1-2 GUMMIES DAILY",
+            "description": "Morning or night whatever fits your routine."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "2. CHEW THOROUGHLY",
+            "description": "Let your body absorb all the active ingredients."
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "3. STAY CONSISTENT",
+            "description": "Daily use helps unlock full, lasting benefits."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<section
+  class="relative z-[1]"
+  style="background-color: {{ section.settings.background_color }}; padding-top: {{ section.settings.padding_top }}px; padding-bottom: {{ section.settings.padding_bottom }}px;"
+>
+  <div class="max-w-[1300px] mx-auto px-6">
+    <!-- Main Heading -->
+    {% if section.settings.heading != blank %}
+      <h2 class="text-2xl md:text-[32px] font-black text-[#111] text-center mb-12 md:mb-20 tracking-tight uppercase">
+        {{ section.settings.heading }}
+      </h2>
+    {% endif %}
+
+    <!-- Steps Grid -->
+    <div class="flex flex-col md:flex-row gap-8 md:gap-12 lg:gap-16">
+      {% for block in section.blocks %}
+        <div class="flex-1 flex flex-col items-center text-center" {{ block.shopify_attributes }}>
+          <!-- Image Container -->
+          <div class="w-full aspect-square relative overflow-hidden rounded-[16px] md:rounded-[20px] mb-8 md:mb-10 shadow-sm">
+            {% if block.settings.image != blank %}
+              {{
+                block.settings.image
+                | image_url: width: 800
+                | image_tag: loading: 'lazy', class: 'w-full h-full object-cover', widths: '400, 600, 800'
+              }}
+            {% else %}
+              <div class="w-full h-full bg-[#dcd0a5] flex items-center justify-center">
+                {{ 'image' | placeholder_svg_tag: 'w-1/2 h-1/2 opacity-20' }}
+              </div>
+            {% endif %}
+          </div>
+
+          <!-- Title Box -->
+          <div class="bg-white px-6 py-3 rounded-[8px] md:rounded-[10px] shadow-sm mb-4 md:mb-6">
+            <h3 class="text-[14px] md:text-[16px] font-black text-[#111] uppercase tracking-wide whitespace-nowrap">
+              {{ block.settings.title }}
+            </h3>
+          </div>
+
+          <!-- Description -->
+          <p class="text-[14px] md:text-[16px] text-black/80 font-medium leading-[1.4] max-w-[280px]">
+            {{ block.settings.description }}
+          </p>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
