@@ -325,26 +325,19 @@
         "text_wzMcGG": {
           "type": "text",
           "settings": {
-            "title": "Shrine Theme"
+            "title": "Supports energy, focus, vitality"
           }
         },
         "text_RGGF9w": {
           "type": "text",
           "settings": {
-            "title": "Shrine Theme"
-          }
-        },
-        "text_xbA4hD": {
-          "type": "text",
-          "settings": {
-            "title": "Shrine Theme"
+            "title": "One gummie a day"
           }
         }
       },
       "block_order": [
         "text_wzMcGG",
-        "text_RGGF9w",
-        "text_xbA4hD"
+        "text_RGGF9w"
       ],
       "name": "Horizontal Ticker",
       "settings": {
