@@ -189,7 +189,7 @@
       "name": "Homepage Product",
       "settings": {
         "tab_1_label": "Best Sellers",
-        "tab_1_collection": "",
+        "tab_1_collection": "frontpage",
         "tab_2_label": "New Arrivals",
         "tab_2_collection": "",
         "tab_3_label": "Bundles",
