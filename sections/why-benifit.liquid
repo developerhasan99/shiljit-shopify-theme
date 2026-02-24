@@ -1,0 +1,192 @@
+{% schema %}
+{
+  "name": "Why Benefit",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#dec9a7"
+    },
+    {
+      "type": "image_picker",
+      "id": "main_image",
+      "label": "Main Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Why xara shilajit?"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "We are dedicated to providing exceptional quality and a seamless shopping experience. Discover what makes our brand the preferred choice for customers worldwide."
+    },
+    {
+      "type": "color",
+      "id": "card_background",
+      "label": "Card Background",
+      "default": "#f5f1ea"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefit",
+      "name": "Benefit",
+      "settings": [
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            { "value": "energy", "label": "Energy" },
+            { "value": "strength", "label": "Strength" },
+            { "value": "focus", "label": "Focus" },
+            { "value": "wellness", "label": "Wellness" }
+          ],
+          "default": "energy"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Clean Daily Energy"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "May help improve energy without crashes or jitters"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Why Benefit",
+      "blocks": [
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "energy",
+            "title": "Clean Daily Energy",
+            "description": "May help improve energy without crashes or jitters"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "strength",
+            "title": "Strength & Stamina",
+            "description": "May support endurance, strength, and physical performance"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "focus",
+            "title": "Focus & Mental Clarity",
+            "description": "May help support focus, motivation, and mental sharpness"
+          }
+        },
+        {
+          "type": "benefit",
+          "settings": {
+            "icon": "wellness",
+            "title": "Libido & Sexual Wellness",
+            "description": "May help support libido and sexual performance"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<section class="py-12 md:py-20 overflow-hidden" style="background-color: {{ section.settings.background_color }};">
+  <div class="max-w-[1400px] mx-auto px-6">
+    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+      <!-- Image Column -->
+      <div class="w-full lg:w-1/2 relative">
+        <div class="relative w-full aspect-square lg:aspect-[4/5] rounded-[2rem] overflow-hidden">
+          {% if section.settings.main_image %}
+            {{
+              section.settings.main_image
+              | image_url: width: 1000
+              | image_tag:
+                loading: 'lazy',
+                class: 'w-full h-full object-cover object-center',
+                widths: '375, 550, 750, 1000'
+            }}
+          {% else %}
+            {{ 'lifestyle-1' | placeholder_svg_tag: 'w-full h-full object-cover bg-gray-200' }}
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- Content Column -->
+      <div class="w-full lg:w-1/2 flex flex-col justify-center">
+        <div class="max-w-2xl">
+          <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-6 tracking-tight leading-tight">
+            {{ section.settings.heading }}
+          </h2>
+          <p class="text-black/60 text-base md:text-lg mb-10 leading-relaxed font-medium">
+            {{ section.settings.subheading }}
+          </p>
+
+          <!-- Benefits Card -->
+          <div
+            class="p-8 md:p-12 rounded-[2.5rem] space-y-10"
+            style="background-color: {{ section.settings.card_background }};"
+          >
+            {% for block in section.blocks %}
+              <div class="flex items-start gap-5">
+                <!-- Icon Placeholder / SVG mapping -->
+                <div class="flex-shrink-0 mt-1">
+                  {% case block.settings.icon %}
+                    {% when 'energy' %}
+                      <div class="w-10 h-10 flex items-center justify-center">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <circle cx="12" cy="12" r="10" stroke="black" stroke-width="2"/>
+                          <path d="M12 7L11 13H14L12 17" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </div>
+                    {% when 'strength' %}
+                      <div class="w-10 h-10 flex items-center justify-center">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M12 2L13.5 6M12 2L10.5 6M5 7L7 8" stroke="black" stroke-width="1"/>
+                        </svg>
+                      </div>
+                    {% when 'focus' %}
+                      <div class="w-10 h-10 flex items-center justify-center">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12 22C12 22 19 18 19 12C19 6 12 2 12 2C12 2 5 6 5 12C5 18 12 22 12 22Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <path d="M12 2V22" stroke="black" stroke-width="1.5"/>
+                        </svg>
+                      </div>
+                    {% when 'wellness' %}
+                      <div class="w-10 h-10 flex items-center justify-center">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12 12C12 12 15 9 18 9C21 9 22 11 22 13C22 17 16 21 12 21C8 21 2 17 2 13C2 11 3 9 6 9C9 9 12 12 12 12Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          <circle cx="12" cy="12" r="3" stroke="black" stroke-width="1.5"/>
+                        </svg>
+                      </div>
+                  {% endcase %}
+                </div>
+
+                <div class="flex flex-col gap-1">
+                  <h3 class="text-xl md:text-2xl font-bold text-black">{{ block.settings.title }}</h3>
+                  <p class="text-black/50 text-sm md:text-base font-medium">{{ block.settings.description }}</p>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

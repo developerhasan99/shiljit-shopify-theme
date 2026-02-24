@@ -147,6 +147,10 @@
     display: none
 }
 
+.aspect-square {
+    aspect-ratio: 1 / 1
+}
+
 .h-10 {
     height: 40px
 }
@@ -224,8 +228,16 @@
     max-width: 576px
 }
 
+.max-w-\[1400px\] {
+    max-width: 1400px
+}
+
 .flex-shrink {
     flex-shrink: 1
+}
+
+.flex-shrink-0 {
+    flex-shrink: 0
 }
 
 .flex-grow {
@@ -259,6 +271,10 @@
 
 .flex-wrap {
     flex-wrap: wrap
+}
+
+.items-start {
+    align-items: flex-start
 }
 
 .items-end {
@@ -305,6 +321,10 @@
     gap: 32px
 }
 
+.gap-5 {
+    gap: 20px
+}
+
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(16px * calc(1 - var(--tw-space-y-reverse)));
@@ -321,6 +341,12 @@
     --tw-space-y-reverse: 0;
     margin-top: calc(12px * calc(1 - var(--tw-space-y-reverse)));
     margin-bottom: calc(12px * var(--tw-space-y-reverse))
+}
+
+.space-y-10 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(40px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(40px * var(--tw-space-y-reverse))
 }
 
 .self-start {
@@ -472,6 +498,11 @@
     background-color: #ffffff0a
 }
 
+.bg-gray-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(229 231 235 / var(--tw-bg-opacity, 1))
+}
+
 .bg-cover {
     background-size: cover
 }
@@ -486,6 +517,16 @@
 
 .fill-green-400 {
     fill: #4ade80
+}
+
+.object-cover {
+    -o-object-fit: cover;
+       object-fit: cover
+}
+
+.object-center {
+    -o-object-position: center;
+       object-position: center
 }
 
 .p-5 {
@@ -567,6 +608,11 @@
 .py-8 {
     padding-top: 32px;
     padding-bottom: 32px
+}
+
+.py-12 {
+    padding-top: 48px;
+    padding-bottom: 48px
 }
 
 .pl-5 {
@@ -792,6 +838,14 @@
     color: rgb(144 144 144 / var(--tw-text-opacity, 1))
 }
 
+.text-black\/50 {
+    color: rgb(0 0 0 / 0.5)
+}
+
+.text-black\/60 {
+    color: rgb(0 0 0 / 0.6)
+}
+
 .antialiased {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale
@@ -975,6 +1029,11 @@
         padding-bottom: 64px
     }
 
+    .md\:py-20 {
+        padding-top: 80px;
+        padding-bottom: 80px
+    }
+
     .md\:text-left {
         text-align: left
     }
@@ -1034,6 +1093,10 @@
         margin-top: 0px
     }
 
+    .lg\:aspect-\[4\/5\] {
+        aspect-ratio: 4/5
+    }
+
     .lg\:w-5\/12 {
         width: 41.666667%
     }
@@ -1048,6 +1111,10 @@
 
     .lg\:w-\[220px\] {
         width: 220px
+    }
+
+    .lg\:w-1\/2 {
+        width: 50%
     }
 
     .lg\:grid-cols-4 {
