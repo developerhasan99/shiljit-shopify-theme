@@ -290,6 +290,13 @@
             "bundle_3_label": "BUY 2 GET 1 FREE (90 DAY SUPPLY)"
           }
         },
+        "purchase_options_6qHRXP": {
+          "type": "purchase_options",
+          "settings": {
+            "subscribe_label": "Subscribe & Save",
+            "subscribe_benefits": "<ul><li>1-month supply delivered every 1 month</li><li>Free 3-5 day shipping</li><li>Pause or cancel anytime</li><li>30 days risk-free</li></ul>"
+          }
+        },
         "price_bYLqFz": {
           "type": "price",
           "settings": {
@@ -398,6 +405,7 @@
         "rating_stars_Y8UYBg",
         "title_dfrrrA",
         "bundle_selector_kACDWp",
+        "purchase_options_6qHRXP",
         "price_bYLqFz",
         "variant_picker_hG7qyA",
         "quantity_selector_rf6JVc",
