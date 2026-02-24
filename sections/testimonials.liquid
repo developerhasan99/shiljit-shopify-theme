@@ -66,9 +66,13 @@
         {{ section.settings.text }}
       </div>
     {% endif %}
-    <slider-component class="slider-mobile-gutter">
+    <slider-component
+      class="slider-mobile-gutter"
+      role="region"
+      aria-roledescription="{{ 'sections.slideshow.carousel' | t }}"
+    >
       <ul
-        class="multicolumn-list contains-content-container theme-grid grid--{{ columns_mobile_int }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--mobile grid--peek{% endif %}{% unless section.settings.slider_preview %} slider--no-preview{% endunless %}"
+        class="multicolumn-list contains-content-container theme-grid grid--1-col grid--1-col-tablet slider slider--everywhere{% unless section.settings.slider_preview %} slider--no-preview{% endunless %}"
         id="Slider-{{ section.id }}"
         role="list"
       >
@@ -92,76 +96,34 @@
 
           <li
             id="Slide-{{ section.id }}-{{ forloop.index }}"
-            class="multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}{{ empty_column }}"
+            class="multicolumn-list__item grid__item slider__slide{% if section.settings.column_alignment == 'center' %} center{% endif %}{{ empty_column }}"
             {{ block.shopify_attributes }}
           >
-            <div class="multicolumn-card content-container testimonial-card">
-              {%- if block.settings.image != blank -%}
-                {% if section.settings.image_ratio == 'adapt' or section.settings.image_ratio == 'circle' %}
-                  {% assign spaced_image = true %}
-                {% endif %}
-                <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
-                  <div
-                    class="media media--transparent media--{{ section.settings.image_ratio }}"
-                    {% if section.settings.image_ratio == 'adapt' %}
-                      style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
-                    {% endif %}
-                  >
-                    {%- capture sizes -%}
-                      (min-width: 990px) {% if section.blocks.size <= 2 %}710px{% else %}550px{% endif %}, (min-width:
-                      750px) {% if section.blocks.size == 1 %}710px{% else %}550px{% endif %}, calc(100vw - 30px)
-                    {%- endcapture -%}
-                    {{
-                      block.settings.image
-                      | image_url: width: 1420
-                      | image_tag:
-                        loading: 'lazy',
-                        sizes: sizes,
-                        widths: '275, 550, 710, 1420',
-                        class: 'multicolumn-card__image'
-                    }}
-                  </div>
-                </div>
-              {%- endif -%}
+            <div class="testimonial-card center">
               {%- if section.settings.show_quotes -%}
-                <div class="testimonial-card__quotes color-{{ section.settings.quotes_color_scheme }}">
-                  <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                    <path fill="currentColor" d="M119.472 66.59C53.489 66.59 0 120.094 0 186.1c0 65.983 53.489 119.487 119.472 119.487c0 0-0.578 44.392-36.642 108.284c-4.006 12.802 3.135 26.435 15.945 30.418c9.089 2.859 18.653 0.08 24.829-6.389c82.925-90.7 115.385-197.448 115.385-251.8C238.989 120.094 185.501 66.59 119.472 66.59z"/>
-                    <path fill="currentColor" d="M392.482 66.59c-65.983 0-119.472 53.505-119.472 119.51c0 65.983 53.489 119.487 119.472 119.487c0 0-0.578 44.392-36.642 108.284c-4.006 12.802 3.136 26.435 15.945 30.418c9.089 2.859 18.653 0.08 24.828-6.389C479.539 347.2 512 240.452 512 186.1C512 120.094 458.511 66.59 392.482 66.59z"/>
+                <div class="testimonial-card__quotes">
+                  <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 123 85">
+                    <path d="M53.704 32.96c0 9.02-1.386 16.768-4.157 23.244-2.772 6.708-6.353 12.143-10.741 16.306-4.39 4.395-9.355 7.517-14.899 9.367C18.132 83.96 12.473 85 6.93 85V72.857c6.005 0 11.664-2.082 16.977-6.245 5.082-3.932 8.084-9.367 9.009-16.306-.694.231-1.502.463-2.426.694a33.25 33.25 0 0 1-2.425.694c-1.155.231-2.426.347-3.812.347-6.93 0-12.704-2.66-17.323-7.98C2.31 38.973 0 32.96 0 26.021c0-6.94 2.425-13.069 7.276-18.388C11.896 2.544 18.132 0 25.986 0c8.777 0 15.591 3.238 20.442 9.714 4.85 6.708 7.276 14.456 7.276 23.245Zm69.296 0c0 9.02-1.386 16.768-4.158 23.244-2.772 6.708-6.352 12.143-10.741 16.306-4.388 4.395-9.355 7.517-14.898 9.367C87.428 83.96 81.769 85 76.225 85V72.857c6.006 0 11.665-2.082 16.978-6.245 5.081-3.932 8.084-9.367 9.008-16.306-.693.231-1.501.463-2.425.694a33.25 33.25 0 0 1-2.425.694c-1.155.231-2.426.347-3.812.347-6.93 0-12.704-2.66-17.324-7.98-4.62-5.088-6.93-11.102-6.93-18.04 0-6.94 2.426-13.069 7.277-18.388C81.192 2.544 87.428 0 95.282 0c8.777 0 15.591 3.238 20.442 9.714C120.575 16.422 123 24.17 123 32.96Z" fill="currentColor"></path>
                   </svg>
                 </div>
               {%- endif -%}
-              <div class="multicolumn-card__info">
-                {%- if block.settings.title != blank -%}
-                  <h3 class="testimonial-card__title">{{ block.settings.title | escape }}</h3>
-                {%- endif -%}
+              <div class="testimonial-card__info">
                 {%- if block.settings.text != blank -%}
                   <div class="rte testimonial-card__text">{{ block.settings.text }}</div>
                 {%- endif -%}
                 {%- if section.settings.show_stars -%}
-                  <p class="testimonial-card__stars" style="--stars-color:{{ section.settings.stars_color }}">★★★★★</p>
+                  <p class="testimonial-card__stars">★★★★★</p>
                 {%- endif -%}
-                {%- unless block.settings.author_avatar == blank and block.settings.author == blank -%}
+                {%- unless block.settings.author == blank -%}
                   <div class="testimonial-card__author-container">
-                    {%- if block.settings.author_avatar != blank -%}
-                      <div class="testimonial-card__avatar">
-                        {{
-                          block.settings.author_avatar
-                          | image_url: width: 1420
-                          | image_tag: loading: 'lazy', width: 100
-                        }}
-                      </div>
-                    {%- endif -%}
-                    {%- if block.settings.author != blank -%}
-                      <p class="testimonial-card__author">
-                        {{ block.settings.author }}
-                        <span class="testimonial-card__verified">
-                          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                          </svg>
-                        </span>
-                      </p>
-                    {%- endif -%}
+                    <p class="testimonial-card__author">
+                      {{ block.settings.author }}
+                      <span class="testimonial-card__verified">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#000">
+                          <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </span>
+                    </p>
                   </div>
                 {%- endunless -%}
               </div>
@@ -176,6 +138,7 @@
           class="slider-button slider-button--prev"
           name="previous"
           aria-label="{{ 'general.slider.previous_slide' | t }}"
+          aria-controls="Slider-{{ section.id }}"
         >
           {% render 'icon-caret' %}
         </button>
@@ -184,17 +147,20 @@
           class="slider-button slider-button--next"
           name="next"
           aria-label="{{ 'general.slider.next_slide' | t }}"
+          aria-controls="Slider-{{ section.id }}"
         >
           {% render 'icon-caret' %}
         </button>
       </div>
-
-      <div class="slider-pagination center">
+      <div class="slider-counter slider-counter--dots center">
         {%- for block in section.blocks -%}
           <button
-            class="slider-pagination__dot {% if forloop.first %} active{% endif %}"
-            data-index="{{ forloop.index0 }}"
-          ></button>
+            class="slider-counter__link slider-counter__link--dots link"
+            aria-label="{{ 'sections.slideshow.load_slide' | t }} {{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+            aria-controls="Slider-{{ section.id }}"
+          >
+            <span class="dot"></span>
+          </button>
         {%- endfor -%}
       </div>
     </slider-component>
@@ -311,7 +277,7 @@
       "min": 1,
       "max": 6,
       "step": 1,
-      "default": 3,
+      "default": 1,
       "label": "Number of testimonials on desktop"
     },
     {

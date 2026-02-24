@@ -1,18 +1,18 @@
 .testimonial-card__stars {
-  --stars-color: #ffd700;
-  font-size: 2.2rem;
-  color: var(--stars-color);
+  font-size: 1.8rem;
+  color: #000;
+  margin: 1.5rem 0 0.5rem;
+  text-align: center;
+  letter-spacing: 0.2rem;
 }
+
 .testimonial-card__author-container {
   display: flex;
   align-items: center;
-  padding-top: 1rem;
-  margin-top: 0.5rem;
-  border-top: solid 1px rgba(var(--color-foreground), 0.06);
-}
-.multicolumn-list__item.center .testimonial-card__author-container {
   justify-content: center;
+  margin-top: 0.5rem;
 }
+
 .testimonial-card__avatar {
   width: 3rem;
   height: 3rem;
@@ -21,6 +21,7 @@
   overflow: hidden;
   position: relative;
 }
+
 .testimonial-card__avatar img {
   position: absolute;
   width: 100%;
@@ -30,58 +31,146 @@
   object-fit: cover;
   object-position: center center;
 }
+
 .testimonial-card .multicolumn-card-spacing {
   padding: 0;
   margin: 0;
 }
+
 .testimonial-card__author {
-  font-style: italic;
-  font-weight: 600;
-  font-size: 1.4rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #000;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: none;
+  font-style: normal;
 }
+
+.testimonial-card__verified {
+  display: inline-flex;
+  width: 1.4rem;
+  height: 1.4rem;
+  color: #000;
+}
+
+.testimonial-card__verified svg {
+  width: 100%;
+  height: 100%;
+}
+
 .testimonial-card .multicolumn-card__info {
   padding: 2rem;
   position: relative;
   padding-top: 1rem;
 }
+
 .testimonial-card__quotes {
-  position: absolute;
-  top: 0;
-  right: 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 5rem;
-  height: 5rem;
-  border-radius: 50%;
-  transform: translateY(-50%);
-  margin: 0 !important;
+  margin-bottom: 2rem !important;
+  color: #f0f0f0;
+  background: transparent !important;
 }
+
 .testimonial-card__quotes svg {
-  width: 55%;
+  width: 10rem;
+  height: 6rem;
 }
 
-.testimonial-card__quotes--image-blank {
-  width: 3.5rem;
-  height: 3.5rem;
-  right: 5px;
-  top: 5px;
-  transform: none;
-}
-.testimonial-card__info--no-image-no-stars h3 {
-  padding: 0 3rem;
+.testimonial-card__text {
+  font-size: 2.2rem;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #000;
+  max-width: 80rem;
+  margin: 0 auto;
 }
 
-.testimonial-card .testimonial-card__info--image-no-stars {
-  padding-top: 1.25rem;
-}
-.testimonial-card__info--image-no-stars .testimonial-card__quotes {
-  width: 4rem;
-  height: 4rem;
+.slider-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 2;
 }
 
-.multicolumn .testimonial-card .multicolumn-card__info h3 {
-  margin-top: 0.5rem;
-  font-size: calc(var(--font-heading-scale) * 1.45rem);
-  margin-bottom: 1rem;
+.slider-button {
+  background: transparent;
+  border: none;
+  pointer-events: auto;
+  cursor: pointer;
+  padding: 2rem;
+}
+
+.slider-button svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #000;
+}
+
+.slider-counter--dots {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.slider-counter__link--dots {
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider-counter__link--dots .dot {
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  display: block;
+  transition: all 0.2s ease;
+}
+
+.slider-counter__link--active.slider-counter__link--dots .dot {
+  background-color: #000;
+  border-color: #000;
+  transform: scale(1.2);
+}
+
+.slider-counter__link--dots:hover .dot {
+  border-color: #000;
+}
+
+.multicolumn-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.multicolumn-list__item {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.testimonial-card {
+  width: 100%;
+  padding: 0 4rem;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 749px) {
+  .testimonial-card {
+    padding: 0 2rem;
+  }
 }
