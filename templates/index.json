@@ -28,6 +28,7 @@
       "name": "Hero Section",
       "settings": {
         "hero_background": "shopify://shop_images/Screenshot_2026-01-27_at_7.15.54_PM.webp",
+        "small_label": "NATURE'S MOST POTENT SUPERFOOD",
         "hero_title": "Raw. Ancient. Powerful.",
         "hero_subtitle": "Perform at your peak & feel like yourself again",
         "cta_url": "shopify://collections/all",
@@ -47,6 +48,16 @@
     "why_gold_shiljit_TTCJWn": {
       "type": "why-gold-shiljit",
       "name": "Why Gold Shiljit",
+      "settings": {
+        "banner_heading": "Stop guessing what's in your supplement.",
+        "banner_subheading": "Choose the shilajit that proves potency and screens for cleanliness.",
+        "banner_button_text": "View Lab Report",
+        "banner_link": ""
+      }
+    },
+    "performance_support_n79ggF": {
+      "type": "performance-support",
+      "name": "Performance Support Section",
       "settings": {}
     },
     "featured_product_bKjGVU": {
@@ -662,6 +673,7 @@
     "hero_6UJqC4",
     "animated_bar_rtYPbt",
     "why_gold_shiljit_TTCJWn",
+    "performance_support_n79ggF",
     "featured_product_bKjGVU",
     "d8b7c7f2-8a7b-486d-b2c1-184eea98110d",
     "comparison_table_QMtry4",
