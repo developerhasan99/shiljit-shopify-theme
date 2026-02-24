@@ -258,6 +258,22 @@
     "featured_product_bKjGVU": {
       "type": "featured-product",
       "blocks": {
+        "reviews_7HY7fe": {
+          "type": "reviews",
+          "settings": {
+            "display_stars": true,
+            "star_color": "#ffcc00",
+            "avatar_alignment": "top",
+            "author_1": "Author",
+            "text_1": "<p>Share positive thoughts and feedback from your customer.</p>",
+            "author_2": "Author",
+            "text_2": "<p>Share positive thoughts and feedback from your customer.</p>",
+            "author_3": "Author",
+            "text_3": "<p>Share positive thoughts and feedback from your customer.</p>",
+            "margin_top": 18,
+            "margin_bottom": 18
+          }
+        },
         "title_dfrrrA": {
           "type": "title",
           "settings": {
@@ -373,6 +389,7 @@
         }
       },
       "block_order": [
+        "reviews_7HY7fe",
         "title_dfrrrA",
         "price_bYLqFz",
         "variant_picker_hG7qyA",
@@ -410,6 +427,7 @@
         "mobile_pagination": "dots_overlay",
         "hide_arrows": true,
         "dots_color_scheme": "inverse",
+        "trust_badge": "shopify://shop_images/6cca4e1d-4d0d-4197-b457-8ff4d73c331e.avif",
         "trust_badge_position": "top-right",
         "trust_badge_size": "medium",
         "mobile_padding_top": 20,
@@ -845,6 +863,63 @@
         "custom_colors_text": "#2e2a39"
       }
     },
+    "testimonials_9GqxCK": {
+      "type": "testimonials",
+      "blocks": {
+        "column_AhqrBf": {
+          "type": "column",
+          "settings": {
+            "title": "Heading",
+            "text": "<p>Share positive thoughts and feedback from your customer..</p>",
+            "author": "Author"
+          }
+        },
+        "column_QpkHw6": {
+          "type": "column",
+          "settings": {
+            "title": "Heading",
+            "text": "<p>Share positive thoughts and feedback from your customer..</p>",
+            "author": "Author"
+          }
+        },
+        "column_DeECQQ": {
+          "type": "column",
+          "settings": {
+            "title": "Heading",
+            "text": "<p>Share positive thoughts and feedback from your customer..</p>",
+            "author": "Author"
+          }
+        }
+      },
+      "block_order": [
+        "column_AhqrBf",
+        "column_QpkHw6",
+        "column_DeECQQ"
+      ],
+      "name": "Testimonials",
+      "settings": {
+        "visibility": "always-display",
+        "title": "Testimonials",
+        "heading_size": "h1",
+        "text": "",
+        "image_width": "full",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "slider_preview": true,
+        "column_alignment": "center",
+        "show_stars": true,
+        "stars_color": "#ffd700",
+        "show_quotes": true,
+        "quotes_color_scheme": "accent-2",
+        "background_style": "primary",
+        "color_scheme": "background-1",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_colors_background": "#FFFFFF",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#2E2A39"
+      }
+    },
     "0cf14636-438d-4227-b017-3b91b9f6dd17": {
       "type": "contact-form",
       "settings": {
@@ -882,6 +957,7 @@
     "05db8b15-3aa7-4652-a96c-89ad2a167474",
     "33217d57-e749-436e-bb7a-44a340facaa4",
     "c65117da-b894-43a0-8d4d-7bd214ab10a9",
+    "testimonials_9GqxCK",
     "0cf14636-438d-4227-b017-3b91b9f6dd17"
   ]
 }
