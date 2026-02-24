@@ -258,20 +258,18 @@
     "featured_product_bKjGVU": {
       "type": "featured-product",
       "blocks": {
-        "reviews_7HY7fe": {
-          "type": "reviews",
+        "rating_stars_Y8UYBg": {
+          "type": "rating_stars",
           "settings": {
-            "display_stars": true,
-            "star_color": "#ffcc00",
-            "avatar_alignment": "top",
-            "author_1": "Author",
-            "text_1": "<p>Share positive thoughts and feedback from your customer.</p>",
-            "author_2": "Author",
-            "text_2": "<p>Share positive thoughts and feedback from your customer.</p>",
-            "author_3": "Author",
-            "text_3": "<p>Share positive thoughts and feedback from your customer.</p>",
-            "margin_top": 18,
-            "margin_bottom": 18
+            "rating": 4.8,
+            "star_color": "#ff5a00",
+            "bg_stars_style": "full",
+            "bg_star_color": "#ececec",
+            "label": "Rated 4.9/5 by 15,400+",
+            "size": 16,
+            "alignment": "flex-start",
+            "margin_top": 15,
+            "margin_bottom": 15
           }
         },
         "title_dfrrrA": {
@@ -389,7 +387,7 @@
         }
       },
       "block_order": [
-        "reviews_7HY7fe",
+        "rating_stars_Y8UYBg",
         "title_dfrrrA",
         "price_bYLqFz",
         "variant_picker_hG7qyA",
