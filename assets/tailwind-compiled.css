@@ -115,6 +115,10 @@
     margin-bottom: 4px
 }
 
+.mb-0 {
+    margin-bottom: 0px
+}
+
 .block {
     display: block
 }
@@ -404,6 +408,10 @@
     border-color: rgb(42 42 43 / var(--tw-border-opacity, 1))
 }
 
+.border-\[\#ffffff0a\] {
+    border-color: #ffffff0a
+}
+
 .bg-\[\#0c0c0d\] {
     --tw-bg-opacity: 1;
     background-color: rgb(12 12 13 / var(--tw-bg-opacity, 1))
@@ -458,6 +466,10 @@
 .bg-\[\#111112\] {
     --tw-bg-opacity: 1;
     background-color: rgb(17 17 18 / var(--tw-bg-opacity, 1))
+}
+
+.bg-\[\#ffffff0a\] {
+    background-color: #ffffff0a
 }
 
 .bg-cover {
@@ -552,6 +564,11 @@
     padding-bottom: 40px
 }
 
+.py-8 {
+    padding-top: 32px;
+    padding-bottom: 32px
+}
+
 .pl-5 {
     padding-left: 20px
 }
@@ -616,6 +633,11 @@
     line-height: 16px
 }
 
+.text-3xl {
+    font-size: 30px;
+    line-height: 36px
+}
+
 .font-black {
     font-weight: 900
 }
@@ -634,6 +656,10 @@
 
 .font-semibold {
     font-weight: 600
+}
+
+.font-thin {
+    font-weight: 100
 }
 
 .uppercase {
@@ -759,6 +785,11 @@
 .text-white {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity, 1))
+}
+
+.text-\[\#909090\] {
+    --tw-text-opacity: 1;
+    color: rgb(144 144 144 / var(--tw-text-opacity, 1))
 }
 
 .antialiased {
