@@ -58,15 +58,29 @@
     "performance_support_n79ggF": {
       "type": "performance-support",
       "blocks": {
-        "highlight_9kVDQA": {
-          "type": "highlight",
-          "settings": {
-            "title": "",
-            "description": ""
-          }
-        },
         "feature_nbrVUP": {
           "type": "feature",
+          "settings": {
+            "title": "Circulation Support",
+            "description": "May help support blood flow and performance when it matters."
+          }
+        },
+        "feature_exC9fz": {
+          "type": "feature",
+          "settings": {
+            "title": "Drive & Sexual Wellness",
+            "description": "May help support libido, confidence, and intimacy."
+          }
+        },
+        "feature_4pirDx": {
+          "type": "feature",
+          "settings": {
+            "title": "Stamina & Recovery",
+            "description": "May help support endurance and healthy energy metabolism."
+          }
+        },
+        "highlight_9kVDQA": {
+          "type": "highlight",
           "settings": {
             "title": "",
             "description": ""
@@ -74,8 +88,10 @@
         }
       },
       "block_order": [
-        "highlight_9kVDQA",
-        "feature_nbrVUP"
+        "feature_nbrVUP",
+        "feature_exC9fz",
+        "feature_4pirDx",
+        "highlight_9kVDQA"
       ],
       "name": "Performance Support Section",
       "settings": {
