@@ -174,6 +174,15 @@
         "card_background": "#f5f1ea"
       }
     },
+    "certificate_VKqyBC": {
+      "type": "certificate",
+      "name": "Certificate",
+      "settings": {
+        "background_color": "#ffffff",
+        "heading": "82% Fulvic Acid. No heavy Metals. Pure Shilajit.",
+        "description": "Xara is the only brad where we confidentaly showcase our 3rd Party lab test showing over 82% fulvic acid, most fake shilajit has less than 20%"
+      }
+    },
     "featured_product_bKjGVU": {
       "type": "featured-product",
       "blocks": {
@@ -789,6 +798,7 @@
     "why_gold_shiljit_TTCJWn",
     "performance_support_n79ggF",
     "why_benifit_G3XxR4",
+    "certificate_VKqyBC",
     "featured_product_bKjGVU",
     "d8b7c7f2-8a7b-486d-b2c1-184eea98110d",
     "comparison_table_QMtry4",
