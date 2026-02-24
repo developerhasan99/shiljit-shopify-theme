@@ -12,23 +12,69 @@
       padding-bottom: {{ section.settings.desktop_padding_bottom }}px;
     }
   }
-  #MediaGallery-{{ section.id }},
-  #MediaGallery-{{ section.id }}-duplicate {
-    --desktop-thumbnails: {{ section.settings.desktop_thumbnails_count }};
-    --mobile-thumbnails: {{ section.settings.mobile_thumbnails_count }};
-    --mobile-vertical-thumbnails-width: {{ section.settings.mobile_vertical_thumbnails_width }}%;
+
+  /* Redesign Refinements */
+  .featured-product .product__title h1 {
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 0.5rem 0;
   }
-  @media screen and (max-width: 749px) {
-    #MediaGallery-{{ section.id }},
-    #MediaGallery-{{ section.id }}-duplicate {
-      --media-radius: {{ section.settings.mobile_media_corner_radius }}px;
-    }
-    {% if section.settings.product_images == 'one' %}
-      #MediaGallery-{{ section.id }} .grid__item {
-        margin: 0;
-        width: 100%;
-      }
-    {% endif %}
+  
+  .featured-product .rating-stars {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .featured-product .atc-button {
+    border-radius: 6px !important;
+    padding: 18px !important;
+    background: #000 !important;
+    color: #fff !important;
+    font-weight: 700 !important;
+    position: relative;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .featured-product .atc-button::after {
+    content: '→';
+    position: absolute;
+    right: 20px;
+    font-size: 18px;
+    transition: transform 0.2s ease;
+  }
+  
+  .featured-product .atc-button:hover::after {
+    transform: translateX(5px);
+  }
+
+  .featured-product .inventory-status {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: #348a58;
+    margin-top: 12px;
+  }
+  
+  .featured-product .inventory-dot {
+    width: 10px;
+    height: 10px;
+    background: #348a58;
+    border-radius: 50%;
+  }
+
+  .featured-product .guarantee-text {
+    font-size: 12px;
+    font-weight: 700;
+    color: #111;
+    margin-top: 4px;
   }
 {%- endstyle -%}
 
@@ -174,51 +220,19 @@
                   {{- product.selected_or_first_available_variant.sku -}}
                 </p>
               {%- when 'inventory' -%}
-                <p
-                  class="product__inventory no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}"
+                <div
                   {{ block.shopify_attributes }}
                   id="Inventory-{{ section.id }}"
-                  role="status"
                   style="--margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;--margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;"
                 >
-                  {%- if product.selected_or_first_available_variant.inventory_quantity > 0 -%}
-                    {%- if product.selected_or_first_available_variant.inventory_quantity <= block.settings.inventory_threshold -%}
-                      <svg width="15" height="15" aria-hidden="true">
-                        <circle cx="7.5" cy="7.5" r="7.5" fill="rgb(238,148,65, 0.3)"/>
-                        <circle cx="7.5" cy="7.5" r="5" stroke="rgb(255, 255, 255)" stroke-width="1" fill="rgb(238,148,65)"/>
-                      </svg>
-                      {%- if block.settings.show_inventory_quantity -%}
-                        {{- 'products.product.inventory_low_stock_show_count' | t: quantity: product.selected_or_first_available_variant.inventory_quantity -}}
-                      {%- else -%}
-                        {{- 'products.product.inventory_low_stock' | t -}}
-                      {%- endif -%}
-                    {%- else -%}
-                      <svg width="15" height="15" aria-hidden="true">
-                        <circle cx="7.5" cy="7.5" r="7.5" fill="rgb(62,214,96, 0.3)"/>
-                        <circle cx="7.5" cy="7.5" r="5" stroke="rgb(255, 255, 255)" stroke-width="1" fill="rgb(62,214,96)"/>
-                      </svg>
-                      {%- if block.settings.show_inventory_quantity -%}
-                        {{- 'products.product.inventory_in_stock_show_count' | t: quantity: product.selected_or_first_available_variant.inventory_quantity -}}
-                      {%- else -%}
-                          {{- 'products.product.inventory_in_stock' | t -}}
-                      {%- endif -%}
-                    {%- endif -%}
-                  {%- else -%}
-                    {%- if product.selected_or_first_available_variant.inventory_policy == 'continue' -%}
-                      <svg width="15" height="15" aria-hidden="true">
-                        <circle cx="7.5" cy="7.5" r="7.5" fill="rgb(62,214,96, 0.3)"/>
-                        <circle cx="7.5" cy="7.5" r="5" stroke="rgb(255, 255, 255)" stroke-width="1" fill="rgb(62,214,96)"/>
-                      </svg>
-                      {{- 'products.product.inventory_out_of_stock_continue_selling' | t -}}
-                    {%- else -%}
-                      <svg width="15" height="15" aria-hidden="true">
-                        <circle cx="7.5" cy="7.5" r="7.5" fill="rgb(200,200,200, 0.3)"/>
-                        <circle cx="7.5" cy="7.5" r="5" stroke="rgb(255, 255, 255)" stroke-width="1" fill="rgb(200,200,200)"/>
-                      </svg>
-                      {{- 'products.product.inventory_out_of_stock' | t -}}
-                    {%- endif -%}
+                  {%- if product.selected_or_first_available_variant.inventory_quantity > 0 or product.selected_or_first_available_variant.inventory_policy == 'continue' -%}
+                    <div class="inventory-status">
+                      <div class="inventory-dot"></div>
+                      <span>In stock, ready to ship</span>
+                    </div>
+                    <div class="guarantee-text">30 day money back guarantee</div>
                   {%- endif -%}
-                </p>
+                </div>
               {% when 'emoji_benefits' %}
                 <div class='emoji-benefits-container' {{ block.shopify_attributes }} style="margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;">
                   {{ block.settings.benefits }}
@@ -416,6 +430,14 @@
                   sizing_chart_html: sizing_chart_html,
                   has_filtering: has_filtering
                 %}
+              {%- when 'purchase_options' -%}
+                <div class="purchase-options" {{ block.shopify_attributes }}>
+                  {%- render 'purchase-options', product: product, block: block -%}
+                </div>
+              {%- when 'bundle_selector' -%}
+                <div class="bundle-selector" {{ block.shopify_attributes }}>
+                  {%- render 'bundle-selector', product: product, block: block -%}
+                </div>
               {%- when 'buy_buttons' -%}
                 {%- render 'buy-buttons',
                   block: block,
@@ -1442,6 +1464,62 @@
       ]
     },
     {
+      "type": "bundle_selector",
+      "name": "Bundle Selector",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Bundle 1"
+        },
+        {
+          "type": "text",
+          "id": "bundle_1_label",
+          "label": "Label",
+          "default": "BUY 1 (30 DAY SUPPLY)"
+        },
+        {
+          "type": "header",
+          "content": "Bundle 2"
+        },
+        {
+          "type": "text",
+          "id": "bundle_2_label",
+          "label": "Label",
+          "default": "BUY 2 (60 DAY SUPPLY)"
+        },
+        {
+          "type": "header",
+          "content": "Bundle 3"
+        },
+        {
+          "type": "text",
+          "id": "bundle_3_label",
+          "label": "Label",
+          "default": "BUY 2 GET 1 FREE (90 DAY SUPPLY)"
+        }
+      ]
+    },
+    {
+      "type": "purchase_options",
+      "name": "Purchase Options",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "subscribe_label",
+          "label": "Subscribe Label",
+          "default": "Subscribe & Save"
+        },
+        {
+          "type": "richtext",
+          "id": "subscribe_benefits",
+          "label": "Subscribe Benefits",
+          "default": "<ul><li>1-month supply delivered every 1 month</li><li>Free 3-5 day shipping</li><li>Pause or cancel anytime</li><li>30 days risk-free</li></ul>"
+        }
+      ]
+    },
+    {
       "type": "rating_stars",
       "name": "Rating stars",
       "limit": 1,
@@ -1458,7 +1536,7 @@
         {
           "type": "color",
           "id": "star_color",
-          "default": "#ffcc00",
+          "default": "#ff5a00",
           "label": "Stars color"
         },
         {
@@ -1487,7 +1565,7 @@
           "type": "inline_richtext",
           "id": "label",
           "label": "Text",
-          "default": "(xxxx Reviews)"
+          "default": "Rated 4.9/5 by 15,400+"
         },
         {
           "type": "range",

@@ -37,7 +37,10 @@
   {% endif %}
 </style>
 
-<div style="--margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;--margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;" {{ block.shopify_attributes }}>
+<div
+  style="--margin-top: {{ block.settings.margin_top | divided_by: 10.0 }}rem;--margin-bottom: {{ block.settings.margin_bottom | divided_by: 10.0 }}rem;"
+  {{ block.shopify_attributes }}
+>
   {%- if product != blank -%}
     <product-form
       id="ProductForm-{{ section.id }}"
@@ -88,7 +91,7 @@
               assign quantity_rule_soldout = true
             endif
           -%}
-          <div class='product-form__quantity-and-btn product-form__quantity-and-btn--{{ quantity_atc_append }} product-form__quantity-and-btn--{{ quantity_atc_append_heights }}'>
+          <div class="product-form__quantity-and-btn product-form__quantity-and-btn--{{ quantity_atc_append }} product-form__quantity-and-btn--{{ quantity_atc_append_heights }}">
             {% if quantity_selector_html != blank and quantity_atc_append != 'none' %}
               {{ quantity_selector_html }}
             {% endif %}
@@ -109,20 +112,14 @@
             >
               <span class="main-atc__error" style="display:none;"></span>
               <span class="main-atc__label button__label">
-                {% if block.settings.display_price %}
-                  <span id="main-atc-price-{{ section.id }}" class='main-atc-price{%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%} hidden{% endif %}'>
-                    {{ product.selected_or_first_available_variant.price | money }} •
-                  </span>
-                {% endif %}
                 <span class="main-atc__label__text">
                   {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                     {{ 'products.product.sold_out' | t }}
                   {%- else -%}
-                    {% if block.settings.atc_custom_label != blank %}
-                      {{ block.settings.atc_custom_label }}
-                    {% else %}
-                      {{ 'products.product.add_to_cart' | t }}
-                    {%- endif -%}
+                    Add To Cart -
+                    <span id="main-atc-price-{{ section.id }}" class="main-atc-price">
+                      {{ product.selected_or_first_available_variant.price | money }} USD
+                    </span>
                   {%- endif -%}
                 </span>
               </span>

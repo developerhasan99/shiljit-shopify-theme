@@ -1,0 +1,184 @@
+<div class="purchase-options-container">
+  <!-- Subscribe Box -->
+  <div class="purchase-box subscribe-box" data-type="subscribe">
+    <label class="purchase-label">
+      <input type="radio" name="purchase_type" value="subscribe" class="purchase-radio">
+      <span class="custom-radio"></span>
+      <span class="option-title">{{ block.settings.subscribe_label }}</span>
+    </label>
+    <div class="option-benefits">
+      {{ block.settings.subscribe_benefits }}
+
+      {%- if product.selected_or_first_available_variant.selling_plan_allocations.size > 0 -%}
+        <div class="selling-plan-selector">
+          <select name="selling_plan" class="selling-plan-dropdown">
+            {%- for allocation in product.selected_or_first_available_variant.selling_plan_allocations -%}
+              <option value="{{ allocation.selling_plan.id }}">{{ allocation.selling_plan.name }}</option>
+            {%- endfor -%}
+          </select>
+          <span class="dropdown-icon">{% render 'icon-caret' %}</span>
+        </div>
+      {%- else -%}
+        <div class="selling-plan-selector">
+          <select class="selling-plan-dropdown">
+            <option>Every Month</option>
+          </select>
+          <span class="dropdown-icon">{% render 'icon-caret' %}</span>
+        </div>
+      {%- endif -%}
+    </div>
+  </div>
+
+  <!-- One-time Box -->
+  <div class="purchase-box onetime-box active" data-type="onetime">
+    <label class="purchase-label">
+      <input type="radio" name="purchase_type" value="onetime" class="purchase-radio" checked>
+      <span class="custom-radio"></span>
+      <span class="option-title">One-time purchase</span>
+    </label>
+  </div>
+</div>
+
+<style>
+  .purchase-options-container {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-col;
+    gap: 12px;
+  }
+  .purchase-box {
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #fff;
+  }
+  .purchase-box.active {
+    border-color: #348a58; /* Green border from screenshot */
+    background: #f4faf6;
+  }
+  .onetime-box.active {
+    border-color: #111;
+    background: #f9f9f9;
+  }
+
+  .purchase-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-weight: 700;
+    color: #123456; /* Dark blue-ish text */
+    font-size: 14px;
+  }
+
+  .purchase-radio {
+    display: none;
+  }
+
+  .custom-radio {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+  }
+
+  .purchase-box.active .custom-radio {
+    border-color: #348a58;
+    background: #348a58;
+  }
+
+  .purchase-box.active .custom-radio::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .option-benefits {
+    margin-top: 10px;
+    margin-left: 32px;
+    font-size: 13px;
+    color: #333;
+    display: none;
+  }
+
+  .subscribe-box.active .option-benefits {
+    display: block;
+  }
+
+  .option-benefits ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 0 15px 0;
+  }
+
+  .option-benefits li {
+    position: relative;
+    padding-left: 18px;
+    margin-bottom: 4px;
+    color: #555;
+    font-size: 12px;
+  }
+
+  .option-benefits li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #CCC;
+  }
+
+  .selling-plan-selector {
+    position: relative;
+    width: 100%;
+    margin-top: 5px;
+  }
+
+  .selling-plan-dropdown {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #111;
+    border-radius: 8px;
+    appearance: none;
+    background: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .dropdown-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    width: 12px;
+    height: 12px;
+  }
+  .dropdown-icon svg {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const purchaseBoxes = document.querySelectorAll('.purchase-box');
+
+    purchaseBoxes.forEach((box) => {
+      box.addEventListener('click', function () {
+        purchaseBoxes.forEach((b) => b.classList.remove('active'));
+        this.classList.add('active');
+        this.querySelector('.purchase-radio').checked = true;
+      });
+    });
+  });
+</script>

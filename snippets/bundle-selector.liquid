@@ -1,0 +1,84 @@
+<div class="bundle-selector-container">
+  <div class="bundle-grid">
+    {%- for variant in product.variants limit: 3 -%}
+      {%- capture label_id -%}bundle_{{ forloop.index }}_label{%- endcapture -%}
+      <div
+        class="bundle-option {% if forloop.first %}active{% endif %}"
+        data-variant-id="{{ variant.id }}"
+        data-price="{{ variant.price | money }}"
+      >
+        <div class="bundle-option-content">
+          <span class="bundle-label">{{ block.settings[label_id] | default: variant.title }}</span>
+        </div>
+      </div>
+    {%- endfor -%}
+  </div>
+</div>
+
+<style>
+  .bundle-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 1.5rem;
+  }
+  .bundle-option {
+    border: 1px solid #111;
+    border-radius: 4px;
+    padding: 12px 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60px;
+  }
+  .bundle-option.active {
+    background-color: #111;
+    color: #fff;
+  }
+  .bundle-label {
+    font-size: 11px;
+    font-weight: 800;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+  @media screen and (max-width: 749px) {
+    .bundle-grid {
+      grid-template-columns: 1fr;
+    }
+    .bundle-option {
+      min-height: 50px;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const bundleOptions = document.querySelectorAll('.bundle-option');
+    const variantInput = document.querySelector('.product-variant-id');
+    const atcPrice = document.querySelector('.main-atc-price');
+
+    bundleOptions.forEach((option) => {
+      option.addEventListener('click', function () {
+        bundleOptions.forEach((opt) => opt.classList.remove('active'));
+        this.classList.add('active');
+
+        const variantId = this.getAttribute('data-variant-id');
+        const price = this.getAttribute('data-price');
+
+        if (variantInput) variantInput.value = variantId;
+        if (atcPrice) atcPrice.textContent = price + ' • ';
+
+        // Trigger variant change event for other components
+        document.dispatchEvent(
+          new CustomEvent('variant:change', {
+            detail: { variantId: variantId },
+          })
+        );
+      });
+    });
+  });
+</script>
