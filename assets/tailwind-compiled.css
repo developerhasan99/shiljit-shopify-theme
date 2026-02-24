@@ -57,6 +57,14 @@
     z-index: 2
 }
 
+.order-1 {
+    order: 1
+}
+
+.order-2 {
+    order: 2
+}
+
 .m-0 {
     margin: 0px
 }
@@ -183,6 +191,10 @@
     aspect-ratio: 1 / 1
 }
 
+.aspect-\[4\/5\] {
+    aspect-ratio: 4/5
+}
+
 .h-10 {
     height: 40px
 }
@@ -205,6 +217,10 @@
 
 .h-\[2px\] {
     height: 2px
+}
+
+.h-3\.5 {
+    height: 14px
 }
 
 .max-h-\[800px\] {
@@ -260,6 +276,10 @@
     width: 32px
 }
 
+.w-3\.5 {
+    width: 14px
+}
+
 .max-w-2xl {
     max-width: 672px
 }
@@ -286,6 +306,10 @@
 
 .max-w-\[1400px\] {
     max-width: 1400px
+}
+
+.max-w-lg {
+    max-width: 512px
 }
 
 .flex-shrink {
@@ -399,6 +423,10 @@
     gap: 20px
 }
 
+.gap-0\.5 {
+    gap: 2px
+}
+
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
     margin-top: calc(16px * calc(1 - var(--tw-space-y-reverse)));
@@ -479,6 +507,10 @@
 
 .rounded-sm {
     border-radius: 2px
+}
+
+.rounded-\[24px\] {
+    border-radius: 24px
 }
 
 .border {
@@ -619,6 +651,11 @@
     background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1))
 }
 
+.bg-\[\#111\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(17 17 17 / var(--tw-bg-opacity, 1))
+}
+
 .bg-cover {
     background-size: cover
 }
@@ -633,6 +670,10 @@
 
 .fill-green-400 {
     fill: #4ade80
+}
+
+.fill-current {
+    fill: currentColor
 }
 
 .object-contain {
@@ -853,6 +894,14 @@
     line-height: 36px
 }
 
+.text-\[13px\] {
+    font-size: 13px
+}
+
+.text-\[14px\] {
+    font-size: 14px
+}
+
 .font-black {
     font-weight: 900
 }
@@ -957,6 +1006,10 @@
     letter-spacing: 0.025em
 }
 
+.tracking-\[0\.05em\] {
+    letter-spacing: 0.05em
+}
+
 .text-\[\#4a4a4a\] {
     --tw-text-opacity: 1;
     color: rgb(74 74 74 / var(--tw-text-opacity, 1))
@@ -1058,6 +1111,20 @@
 .text-\[\#d3bc8d\] {
     --tw-text-opacity: 1;
     color: rgb(211 188 141 / var(--tw-text-opacity, 1))
+}
+
+.text-\[\#ffcc00\] {
+    --tw-text-opacity: 1;
+    color: rgb(255 204 0 / var(--tw-text-opacity, 1))
+}
+
+.text-black\/80 {
+    color: rgb(0 0 0 / 0.8)
+}
+
+.text-gray-700 {
+    --tw-text-opacity: 1;
+    color: rgb(55 65 81 / var(--tw-text-opacity, 1))
 }
 
 .antialiased {
@@ -1206,6 +1273,11 @@
     background-color: rgb(0 0 0 / 0.9)
 }
 
+.hover\:bg-black:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1))
+}
+
 .hover\:opacity-90:hover {
     opacity: 0.9
 }
@@ -1239,6 +1311,14 @@
 
 @media (min-width: 768px) {
 
+    .md\:order-1 {
+        order: 1
+    }
+
+    .md\:order-2 {
+        order: 2
+    }
+
     .md\:mb-16 {
         margin-bottom: 64px
     }
@@ -1247,8 +1327,24 @@
         margin-top: 64px
     }
 
+    .md\:mb-10 {
+        margin-bottom: 40px
+    }
+
+    .md\:mb-6 {
+        margin-bottom: 24px
+    }
+
+    .md\:mb-8 {
+        margin-bottom: 32px
+    }
+
     .md\:block {
         display: block
+    }
+
+    .md\:aspect-\[3\/4\] {
+        aspect-ratio: 3/4
     }
 
     .md\:min-h-\[380px\] {
@@ -1263,6 +1359,14 @@
         width: 66.666667%
     }
 
+    .md\:w-2\/5 {
+        width: 40%
+    }
+
+    .md\:w-3\/5 {
+        width: 60%
+    }
+
     .md\:flex-row {
         flex-direction: row
     }
@@ -1273,6 +1377,14 @@
 
     .md\:gap-12 {
         gap: 48px
+    }
+
+    .md\:gap-20 {
+        gap: 80px
+    }
+
+    .md\:rounded-\[32px\] {
+        border-radius: 32px
     }
 
     .md\:p-12 {
@@ -1310,6 +1422,11 @@
     .md\:py-20 {
         padding-top: 80px;
         padding-bottom: 80px
+    }
+
+    .md\:py-5 {
+        padding-top: 20px;
+        padding-bottom: 20px
     }
 
     .md\:pb-20 {
@@ -1384,6 +1501,18 @@
     .md\:text-4xl {
         font-size: 36px;
         line-height: 40px
+    }
+
+    .md\:text-\[14px\] {
+        font-size: 14px
+    }
+
+    .md\:text-\[16px\] {
+        font-size: 16px
+    }
+
+    .md\:text-\[44px\] {
+        font-size: 44px
     }
 }
 
