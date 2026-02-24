@@ -275,11 +275,19 @@
         "title_dfrrrA": {
           "type": "title",
           "settings": {
-            "text_size": "h1",
+            "text_size": "h0",
             "title_alignment": "left",
             "uppercase_title": false,
             "margin_top": 0,
             "margin_bottom": 15
+          }
+        },
+        "bundle_selector_kACDWp": {
+          "type": "bundle_selector",
+          "settings": {
+            "bundle_1_label": "BUY 1 (30 DAY SUPPLY)",
+            "bundle_2_label": "BUY 2 (60 DAY SUPPLY)",
+            "bundle_3_label": "BUY 2 GET 1 FREE (90 DAY SUPPLY)"
           }
         },
         "price_bYLqFz": {
@@ -389,6 +397,7 @@
       "block_order": [
         "rating_stars_Y8UYBg",
         "title_dfrrrA",
+        "bundle_selector_kACDWp",
         "price_bYLqFz",
         "variant_picker_hG7qyA",
         "quantity_selector_rf6JVc",
