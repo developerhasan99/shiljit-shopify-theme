@@ -214,47 +214,6 @@
         "padding_bottom": 80
       }
     },
-    "how_to_consume_f6rcey": {
-      "type": "how-to-consume",
-      "blocks": {
-        "step_jeXFGC": {
-          "type": "step",
-          "settings": {
-            "image": "shopify://shop_images/29b50c0a-6ef1-4e81-bf10-13a4aed84d56.avif",
-            "title": "1. TAKE 1-2 GUMMIES DAILY",
-            "description": "Morning or night whatever fits your routine."
-          }
-        },
-        "step_PHwwtJ": {
-          "type": "step",
-          "settings": {
-            "image": "shopify://shop_images/69acebc1-0612-456a-a30a-17398f28ff35.avif",
-            "title": "2. CHEW THOROUGHLY",
-            "description": "Let your body absorb all the active ingredients."
-          }
-        },
-        "step_khPEUy": {
-          "type": "step",
-          "settings": {
-            "image": "shopify://shop_images/6cca4e1d-4d0d-4197-b457-8ff4d73c331e.avif",
-            "title": "3. STAY CONSISTENT",
-            "description": "Daily use helps unlock full, lasting benefits."
-          }
-        }
-      },
-      "block_order": [
-        "step_jeXFGC",
-        "step_PHwwtJ",
-        "step_khPEUy"
-      ],
-      "name": "How to Consume",
-      "settings": {
-        "background_color": "#e2d5ae",
-        "heading": "HOW TO CONSUME OUR GUMMIES",
-        "padding_top": 80,
-        "padding_bottom": 80
-      }
-    },
     "featured_product_bKjGVU": {
       "type": "featured-product",
       "blocks": {
@@ -397,6 +356,47 @@
         "mobile_padding_bottom": 20,
         "desktop_padding_top": 36,
         "desktop_padding_bottom": 36
+      }
+    },
+    "how_to_consume_f6rcey": {
+      "type": "how-to-consume",
+      "blocks": {
+        "step_jeXFGC": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/29b50c0a-6ef1-4e81-bf10-13a4aed84d56.avif",
+            "title": "1. TAKE 1-2 GUMMIES DAILY",
+            "description": "Morning or night whatever fits your routine."
+          }
+        },
+        "step_PHwwtJ": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/69acebc1-0612-456a-a30a-17398f28ff35.avif",
+            "title": "2. CHEW THOROUGHLY",
+            "description": "Let your body absorb all the active ingredients."
+          }
+        },
+        "step_khPEUy": {
+          "type": "step",
+          "settings": {
+            "image": "shopify://shop_images/6cca4e1d-4d0d-4197-b457-8ff4d73c331e.avif",
+            "title": "3. STAY CONSISTENT",
+            "description": "Daily use helps unlock full, lasting benefits."
+          }
+        }
+      },
+      "block_order": [
+        "step_jeXFGC",
+        "step_PHwwtJ",
+        "step_khPEUy"
+      ],
+      "name": "How to Consume",
+      "settings": {
+        "background_color": "#e2d5ae",
+        "heading": "HOW TO CONSUME OUR GUMMIES",
+        "padding_top": 80,
+        "padding_bottom": 80
       }
     },
     "d8b7c7f2-8a7b-486d-b2c1-184eea98110d": {
@@ -911,8 +911,8 @@
     "certificate_VKqyBC",
     "homepage_product_WpkqV6",
     "free_travel_tin_k8hm9D",
-    "how_to_consume_f6rcey",
     "featured_product_bKjGVU",
+    "how_to_consume_f6rcey",
     "d8b7c7f2-8a7b-486d-b2c1-184eea98110d",
     "comparison_table_QMtry4",
     "bb0df407-4b1e-45f0-a6fa-a64b51c078eb",
