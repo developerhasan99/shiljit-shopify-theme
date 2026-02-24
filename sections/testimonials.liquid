@@ -123,23 +123,23 @@
                   </div>
                 </div>
               {%- endif -%}
-              <div class="multicolumn-card__info{% if block.settings.image == blank and section.settings.show_stars == false %} testimonial-card__info--no-image-no-stars{% endif %}{% if block.settings.image != blank and section.settings.show_stars == false %} testimonial-card__info--image-no-stars{% endif %}">
-                {%- if section.settings.show_stars -%}
-                  <p class="testimonial-card__stars" style="--stars-color:{{ section.settings.stars_color }}">★★★★★</p>
-                {%- endif -%}
-                {%- if section.settings.show_quotes -%}
-                  <div class="testimonial-card__quotes{% if block.settings.image == blank %} testimonial-card__quotes--image-blank{% endif %} color-{{ section.settings.quotes_color_scheme }}">
-                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                      <path fill="currentColor" d="M119.472 66.59C53.489 66.59 0 120.094 0 186.1c0 65.983 53.489 119.487 119.472 119.487c0 0-0.578 44.392-36.642 108.284c-4.006 12.802 3.135 26.435 15.945 30.418c9.089 2.859 18.653 0.08 24.829-6.389c82.925-90.7 115.385-197.448 115.385-251.8C238.989 120.094 185.501 66.59 119.472 66.59z"/>
-                      <path fill="currentColor" d="M392.482 66.59c-65.983 0-119.472 53.505-119.472 119.51c0 65.983 53.489 119.487 119.472 119.487c0 0-0.578 44.392-36.642 108.284c-4.006 12.802 3.136 26.435 15.945 30.418c9.089 2.859 18.653 0.08 24.828-6.389C479.539 347.2 512 240.452 512 186.1C512 120.094 458.511 66.59 392.482 66.59z"/>
-                    </svg>
-                  </div>
-                {%- endif -%}
+              {%- if section.settings.show_quotes -%}
+                <div class="testimonial-card__quotes color-{{ section.settings.quotes_color_scheme }}">
+                  <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                    <path fill="currentColor" d="M119.472 66.59C53.489 66.59 0 120.094 0 186.1c0 65.983 53.489 119.487 119.472 119.487c0 0-0.578 44.392-36.642 108.284c-4.006 12.802 3.135 26.435 15.945 30.418c9.089 2.859 18.653 0.08 24.829-6.389c82.925-90.7 115.385-197.448 115.385-251.8C238.989 120.094 185.501 66.59 119.472 66.59z"/>
+                    <path fill="currentColor" d="M392.482 66.59c-65.983 0-119.472 53.505-119.472 119.51c0 65.983 53.489 119.487 119.472 119.487c0 0-0.578 44.392-36.642 108.284c-4.006 12.802 3.136 26.435 15.945 30.418c9.089 2.859 18.653 0.08 24.828-6.389C479.539 347.2 512 240.452 512 186.1C512 120.094 458.511 66.59 392.482 66.59z"/>
+                  </svg>
+                </div>
+              {%- endif -%}
+              <div class="multicolumn-card__info">
                 {%- if block.settings.title != blank -%}
-                  <h3>{{ block.settings.title | escape }}</h3>
+                  <h3 class="testimonial-card__title">{{ block.settings.title | escape }}</h3>
                 {%- endif -%}
                 {%- if block.settings.text != blank -%}
-                  <div class="rte">{{ block.settings.text }}</div>
+                  <div class="rte testimonial-card__text">{{ block.settings.text }}</div>
+                {%- endif -%}
+                {%- if section.settings.show_stars -%}
+                  <p class="testimonial-card__stars" style="--stars-color:{{ section.settings.stars_color }}">★★★★★</p>
                 {%- endif -%}
                 {%- unless block.settings.author_avatar == blank and block.settings.author == blank -%}
                   <div class="testimonial-card__author-container">
@@ -155,6 +155,11 @@
                     {%- if block.settings.author != blank -%}
                       <p class="testimonial-card__author">
                         {{ block.settings.author }}
+                        <span class="testimonial-card__verified">
+                          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </span>
                       </p>
                     {%- endif -%}
                   </div>
@@ -165,32 +170,33 @@
         {%- endfor -%}
       </ul>
 
-      {%- if show_mobile_slider -%}
-        <div class="slider-buttons no-js-hidden medium-hide">
+      <div class="slider-buttons no-js-hidden">
+        <button
+          type="button"
+          class="slider-button slider-button--prev"
+          name="previous"
+          aria-label="{{ 'general.slider.previous_slide' | t }}"
+        >
+          {% render 'icon-caret' %}
+        </button>
+        <button
+          type="button"
+          class="slider-button slider-button--next"
+          name="next"
+          aria-label="{{ 'general.slider.next_slide' | t }}"
+        >
+          {% render 'icon-caret' %}
+        </button>
+      </div>
+
+      <div class="slider-pagination center">
+        {%- for block in section.blocks -%}
           <button
-            type="button"
-            class="slider-button slider-button--prev"
-            name="previous"
-            aria-label="{{ 'general.slider.previous_slide' | t }}"
-          >
-            {% render 'icon-caret' %}
-          </button>
-          <div class="slider-counter caption">
-            <span class="slider-counter--current">1</span>
-            <span aria-hidden="true"> / </span>
-            <span class="visually-hidden">{{ 'general.slider.of' | t }}</span>
-            <span class="slider-counter--total">{{ section.blocks.size }}</span>
-          </div>
-          <button
-            type="button"
-            class="slider-button slider-button--next"
-            name="next"
-            aria-label="{{ 'general.slider.next_slide' | t }}"
-          >
-            {% render 'icon-caret' %}
-          </button>
-        </div>
-      {%- endif -%}
+            class="slider-pagination__dot {% if forloop.first %} active{% endif %}"
+            data-index="{{ forloop.index0 }}"
+          ></button>
+        {%- endfor -%}
+      </div>
     </slider-component>
   </div>
 </div>
@@ -340,7 +346,7 @@
       "type": "color",
       "id": "stars_color",
       "label": "Stars color",
-      "default": "#ffd700"
+      "default": "#000000"
     },
     {
       "type": "checkbox",
