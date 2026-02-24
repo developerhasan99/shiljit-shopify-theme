@@ -139,7 +139,7 @@
 
           <!-- Benefits Card -->
           <div
-            class="p-8 md:p-12 rounded-[2.5rem] space-y-10"
+            class="p-8 md:p-12 rounded-[16px] space-y-10"
             style="background-color: {{ section.settings.card_background }};"
           >
             {% for block in section.blocks %}
@@ -149,38 +149,34 @@
                   {% case block.settings.icon %}
                     {% when 'energy' %}
                       <div class="w-10 h-10 flex items-center justify-center">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <circle cx="12" cy="12" r="10" stroke="black" stroke-width="2"/>
-                          <path d="M12 7L11 13H14L12 17" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+                          <title>18 shield check</title><g fill="currentColor" class="nc-icon-wrapper"><path d="M14.783,2.813l-5.25-1.68c-.349-.112-.718-.111-1.066,0L3.216,2.813c-.728,.233-1.216,.903-1.216,1.667v6.52c0,3.508,4.946,5.379,6.46,5.869,.177,.057,.358,.086,.54,.086s.362-.028,.538-.085c1.516-.49,6.462-2.361,6.462-5.869V4.48c0-.764-.489-1.434-1.217-1.667Zm-2.681,4.389l-3.397,4.5c-.128,.169-.322,.276-.534,.295-.021,.002-.043,.003-.065,.003-.189,0-.372-.071-.511-.201l-1.609-1.5c-.303-.283-.32-.757-.038-1.06,.284-.303,.758-.319,1.06-.038l1.001,.933,2.896-3.836c.25-.33,.72-.396,1.051-.146,.331,.25,.396,.72,.146,1.051Z" fill="currentColor"></path></g>
                         </svg>
                       </div>
                     {% when 'strength' %}
                       <div class="w-10 h-10 flex items-center justify-center">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M12 2L13.5 6M12 2L10.5 6M5 7L7 8" stroke="black" stroke-width="1"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+                          <title>18 star sparkle</title><g fill="currentColor" class="nc-icon-wrapper"><path d="M4.743,2.492l-.946-.315-.316-.947c-.102-.306-.609-.306-.711,0l-.316,.947-.946,.315c-.153,.051-.257,.194-.257,.356s.104,.305,.257,.356l.946,.315,.316,.947c.051,.153,.194,.256,.355,.256s.305-.104,.355-.256l.316-.947,.946-.315c.153-.051,.257-.194,.257-.356s-.104-.305-.257-.356Z" fill="currentColor" data-color="color-2"></path><path d="M9,13.964c0-.863,.55-1.625,1.369-1.897l.55-.184,.184-.551c.267-.798,1.029-1.332,1.897-1.332,.359,0,.689,.11,.984,.273l2.789-2.718c.205-.199,.278-.498,.19-.769-.088-.271-.323-.469-.605-.51l-4.62-.671L9.672,1.418c-.252-.512-1.093-.512-1.345,0l-2.066,4.186-4.62,.671c-.282,.041-.517,.239-.605,.51-.088,.271-.015,.57,.19,.769l3.343,3.258-.79,4.601c-.048,.282,.067,.566,.298,.734,.232,.167,.537,.19,.79,.057l4.132-2.173,.012,.006c0-.025-.012-.048-.012-.073Z" fill="currentColor"></path><path d="M15.158,13.49l-1.263-.421-.421-1.263c-.137-.408-.812-.408-.949,0l-.421,1.263-1.263,.421c-.204,.068-.342,.259-.342,.474s.138,.406,.342,.474l1.263,.421,.421,1.263c.068,.204,.26,.342,.475,.342s.406-.138,.475-.342l.421-1.263,1.263-.421c.204-.068,.342-.259,.342-.474s-.138-.406-.342-.474Z" fill="currentColor" data-color="color-2"></path><circle cx="14.25" cy="3.25" r=".75" fill="currentColor" data-color="color-2"></circle></g>
                         </svg>
                       </div>
                     {% when 'focus' %}
                       <div class="w-10 h-10 flex items-center justify-center">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M12 22C12 22 19 18 19 12C19 6 12 2 12 2C12 2 5 6 5 12C5 18 12 22 12 22Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                          <path d="M12 2V22" stroke="black" stroke-width="1.5"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+                          <title>18 leaf</title><g fill="currentColor" class="nc-icon-wrapper"><path d="M13.923,1.389c-.135-.247-.369-.409-.679-.389-.28,.008-.534,.172-.655,.426-.833,1.741-2.247,2.352-3.884,3.058-1.372,.592-2.79,1.204-3.879,2.547-.855,1.053-1.326,2.316-1.326,3.555,0,1.45,.574,2.766,1.502,3.739,1.431-.919,3.217-2.458,4.592-4.938,.202-.362,.657-.493,1.02-.292s.493,.657,.293,1.02c-1.391,2.509-3.143,4.143-4.651,5.189,.781,.442,1.681,.698,2.64,.698,2.238,0,4.121-1.099,5.302-3.095,1.848-3.123,1.735-7.858-.273-11.516Z" fill="currentColor"></path><path d="M5.002,14.324c-1.374,.883-2.42,1.194-2.452,1.203-.398,.11-.633,.522-.522,.921,.091,.333,.393,.551,.723,.551,.065,0,.133-.009,.199-.027,.108-.03,1.539-.446,3.306-1.671-.465-.263-.886-.594-1.253-.978Z" fill="currentColor" data-color="color-2"></path></g>
                         </svg>
                       </div>
                     {% when 'wellness' %}
                       <div class="w-10 h-10 flex items-center justify-center">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M12 12C12 12 15 9 18 9C21 9 22 11 22 13C22 17 16 21 12 21C8 21 2 17 2 13C2 11 3 9 6 9C9 9 12 12 12 12Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                          <circle cx="12" cy="12" r="3" stroke="black" stroke-width="1.5"/>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18">
+                          <title>18 target</title><g fill="currentColor" class="nc-icon-wrapper"><path d="M17.693,2.963c-.116-.28-.39-.463-.693-.463h-1.5V1c0-.303-.183-.577-.463-.693-.28-.117-.603-.052-.817,.163l-2.5,2.5c-.141,.141-.22,.332-.22,.53v1.939l-3.03,3.03c-.293,.293-.293,.768,0,1.061,.146,.146,.338,.22,.53,.22s.384-.073,.53-.22l3.03-3.03h1.939c.199,0,.39-.079,.53-.22l2.5-2.5c.215-.214,.278-.537,.163-.817Z" fill="currentColor" data-color="color-2"></path><path d="M9,17c-4.411,0-8-3.589-8-8C1,4.102,5.397,.177,10.499,1.145c.407,.077,.675,.47,.598,.876-.077,.408-.477,.674-.877,.597-.416-.079-.826-.119-1.22-.119-3.584,0-6.5,2.916-6.5,6.5s2.916,6.5,6.5,6.5,6.5-2.916,6.5-6.5c0-.396-.04-.807-.118-1.22-.078-.407,.189-.799,.596-.877,.408-.078,.799,.189,.877,.597,.097,.505,.146,1.01,.146,1.5,0,4.411-3.589,8-8,8Z" fill="currentColor"></path><path d="M9,14c-2.757,0-5-2.243-5-5s2.243-5,5-5c.262,0,.513,.036,.764,.074,.409,.063,.69,.446,.627,.855-.062,.41-.438,.693-.855,.627-.176-.027-.352-.057-.535-.057-1.93,0-3.5,1.57-3.5,3.5s1.57,3.5,3.5,3.5,3.5-1.57,3.5-3.5c0-.183-.029-.358-.057-.534-.063-.409,.217-.792,.626-.856,.416-.058,.793,.217,.856,.626,.039,.251,.074,.503,.074,.765,0,2.757-2.243,5-5,5Z" fill="currentColor"></path></g>
                         </svg>
                       </div>
                   {% endcase %}
                 </div>
 
                 <div class="flex flex-col gap-1">
-                  <h3 class="text-xl md:text-2xl font-bold text-black">{{ block.settings.title }}</h3>
-                  <p class="text-black/50 text-sm md:text-base font-medium">{{ block.settings.description }}</p>
+                  <h3 class="m-0 text-xl font-bold text-black">{{ block.settings.title }}</h3>
+                  <p class="m-0 text-black/50 text-sm font-medium">{{ block.settings.description }}</p>
                 </div>
               </div>
             {% endfor %}
