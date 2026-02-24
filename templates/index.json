@@ -123,6 +123,56 @@
         "fda_disclaimer": "*These statements have not been evaluated by the FDA. This product is not intended to diagnose, treat, cure, or prevent any disease."
       }
     },
+    "why_benifit_G3XxR4": {
+      "type": "why-benifit",
+      "blocks": {
+        "benefit_P3bkAU": {
+          "type": "benefit",
+          "settings": {
+            "icon": "energy",
+            "title": "Clean Daily Energy",
+            "description": "May help improve energy without crashes or jitters"
+          }
+        },
+        "benefit_x6xmj8": {
+          "type": "benefit",
+          "settings": {
+            "icon": "strength",
+            "title": "Strength & Stamina",
+            "description": "May support endurance, strength, and physical performance"
+          }
+        },
+        "benefit_hFUThT": {
+          "type": "benefit",
+          "settings": {
+            "icon": "focus",
+            "title": "Focus & Mental Clarity",
+            "description": "May help support focus, motivation, and mental sharpness"
+          }
+        },
+        "benefit_YFtVPz": {
+          "type": "benefit",
+          "settings": {
+            "icon": "wellness",
+            "title": "Libido & Sexual Wellness",
+            "description": "May help support libido and sexual performance"
+          }
+        }
+      },
+      "block_order": [
+        "benefit_P3bkAU",
+        "benefit_x6xmj8",
+        "benefit_hFUThT",
+        "benefit_YFtVPz"
+      ],
+      "name": "Why Benefit",
+      "settings": {
+        "background_color": "#dec9a7",
+        "heading": "Why xara shilajit?",
+        "subheading": "We are dedicated to providing exceptional quality and a seamless shopping experience. Discover what makes our brand the preferred choice for customers worldwide.",
+        "card_background": "#f5f1ea"
+      }
+    },
     "featured_product_bKjGVU": {
       "type": "featured-product",
       "blocks": {
@@ -737,6 +787,7 @@
     "animated_bar_rtYPbt",
     "why_gold_shiljit_TTCJWn",
     "performance_support_n79ggF",
+    "why_benifit_G3XxR4",
     "featured_product_bKjGVU",
     "d8b7c7f2-8a7b-486d-b2c1-184eea98110d",
     "comparison_table_QMtry4",
