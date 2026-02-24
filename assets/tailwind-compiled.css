@@ -791,6 +791,25 @@
     background-color: rgb(0 0 0 / 0.3)
 }
 
+.bg-gradient-to-b {
+    background-image: linear-gradient(to bottom, var(--tw-gradient-stops))
+}
+
+.from-\[\#060607\] {
+    --tw-gradient-from: #060607 var(--tw-gradient-from-position);
+    --tw-gradient-to: rgb(6 6 7 / 0) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to)
+}
+
+.via-\[\#0a0a0b\] {
+    --tw-gradient-to: rgb(10 10 11 / 0)  var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-from), #0a0a0b var(--tw-gradient-via-position), var(--tw-gradient-to)
+}
+
+.to-\[\#070707\] {
+    --tw-gradient-to: #070707 var(--tw-gradient-to-position)
+}
+
 .bg-cover {
     background-size: cover
 }
