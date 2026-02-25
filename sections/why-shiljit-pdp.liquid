@@ -1,0 +1,257 @@
+{% schema %}
+{
+  "name": "Why Gold Shiljit PDP",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#f9f6f1"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge Text",
+      "default": "MEN'S PERFORMANCE FOUNDATIONS"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Most male performance supplements stimulate your body. Very few rebuild it."
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>If erections feel weaker and fatigue is creeping in, it's often the same root issue: your body isn't recovering the way it used to. Gold Shiljit supports the daily foundations that power performance — in and out of the bedroom.*</p>"
+    },
+    {
+      "type": "header",
+      "content": "Potency Card (Right Column)"
+    },
+    {
+      "type": "text",
+      "id": "potency_badge",
+      "label": "Potency Badge",
+      "default": "THIRD-PARTY VERIFIED"
+    },
+    {
+      "type": "text",
+      "id": "potency_percentage",
+      "label": "Potency Percentage",
+      "default": "82.8%"
+    },
+    {
+      "type": "text",
+      "id": "potency_label",
+      "label": "Potency Label",
+      "default": "Fulvic Acid"
+    },
+    {
+      "type": "text",
+      "id": "potency_sublabel",
+      "label": "Potency Sublabel",
+      "default": "Potency verified on your lab report"
+    },
+    {
+      "type": "text",
+      "id": "potency_why_title",
+      "label": "Why This Matters Title",
+      "default": "WHY THIS MATTERS"
+    },
+    {
+      "type": "textarea",
+      "id": "potency_description",
+      "label": "Potency Description",
+      "default": "Fulvic acid is a key marker of shilajit quality. It supports mineral transport and absorption — which is why premium-grade shilajit is measured, not guessed."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "performance_card",
+      "name": "Performance Card",
+      "settings": [
+        {
+          "type": "html",
+          "id": "icon_svg",
+          "label": "Icon SVG",
+          "info": "Leave blank for default sparkle icon."
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Circulation & Sexual Performance"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Description",
+          "default": "helps support healthy blood flow, firmness, and performance when it matters.*"
+        }
+      ]
+    },
+    {
+      "type": "potency_tag",
+      "name": "Potency Tag",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Tag Text",
+          "default": "Potency Tested"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Why Gold Shiljit PDP",
+      "blocks": [
+        {
+          "type": "performance_card",
+          "settings": {
+            "title": "Circulation & Sexual Performance",
+            "text": "helps support healthy blood flow, firmness, and performance when it matters.*"
+          }
+        },
+        {
+          "type": "performance_card",
+          "settings": {
+            "title": "Energy & Fatigue Support",
+            "text": "helps support steady energy and stamina — without feeling \"wired.\""
+          }
+        },
+        {
+          "type": "performance_card",
+          "settings": {
+            "title": "Stress Response & Recovery",
+            "text": "helps support resilience, recovery, and overall vitality — so you feel like yourself again."
+          }
+        },
+        {
+          "type": "potency_tag",
+          "settings": { "text": "Potency Tested" }
+        },
+        {
+          "type": "potency_tag",
+          "settings": { "text": "Heavy Metals Screened" }
+        },
+        {
+          "type": "potency_tag",
+          "settings": { "text": "Microbial Screened" }
+        },
+        {
+          "type": "potency_tag",
+          "settings": { "text": "Transparent Results" }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<section class="py-16 md:py-24" style="background-color: {{ section.settings.background_color }};">
+  <div class="max-w-[1200px] mx-auto px-6">
+    <!-- Header -->
+    <div class="text-center max-w-4xl mx-auto mb-16">
+      {% if section.settings.badge_text != blank %}
+        <span class="inline-block bg-[#efe6d9] rounded-full px-5 py-2 text-[10px] md:text-xs font-bold tracking-[0.15em] text-[#1a1a1b] mb-6 uppercase">
+          {{ section.settings.badge_text }}
+        </span>
+      {% endif %}
+
+      {% if section.settings.heading != blank %}
+        <h2 class="text-3xl md:text-5xl font-bold text-[#1a1a1b] mb-6 tracking-tight leading-[1.1]">
+          {{ section.settings.heading }}
+        </h2>
+      {% endif %}
+
+      {% if section.settings.description != blank %}
+        <div class="text-[#666666] text-base md:text-lg leading-relaxed font-medium rte">
+          {{ section.settings.description }}
+        </div>
+      {% endif %}
+    </div>
+
+    <!-- Main Content Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+      <!-- Left Column: Performance Cards -->
+      <div class="flex flex-col gap-4">
+        {% for block in section.blocks %}
+          {% if block.type == 'performance_card' %}
+            <div
+              class="bg-white rounded-[1.5rem] p-8 flex gap-6 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-white/50"
+              {{ block.shopify_attributes }}
+            >
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 rounded-full bg-[#f9f6f1] flex items-center justify-center text-[#d4af37]">
+                  {% if block.settings.icon_svg != blank %}
+                    {{ block.settings.icon_svg }}
+                  {% else %}
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M12 2L14.5 9.5L22 12L14.5 14.5L12 22L9.5 14.5L2 12L9.5 9.5L12 2Z"/>
+                    </svg>
+                  {% endif %}
+                </div>
+              </div>
+              <div>
+                <h3 class="text-xl font-bold text-[#1a1a1b] mb-3 leading-tight">{{ block.settings.title }}</h3>
+                <p class="text-[#666666] text-md leading-relaxed font-medium">{{ block.settings.text }}</p>
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <!-- Right Column: Potency Card -->
+      <div class="bg-[#1a1a1b] rounded-[2.5rem] p-10 md:p-14 text-white relative overflow-hidden h-full flex flex-col justify-between">
+        <div>
+          <span class="text-[10px] md:text-xs font-bold tracking-[0.1em] text-[#8e8e8e] uppercase mb-8 block">
+            {{ section.settings.potency_badge }}
+          </span>
+
+          <div class="mb-8">
+            <span class="text-[70px] md:text-[86px] font-bold text-[#e6c69b] leading-none tracking-tighter block mb-2">
+              {{ section.settings.potency_percentage }}
+            </span>
+            <span class="text-2xl font-bold block mb-2">{{ section.settings.potency_label }}</span>
+            <span class="text-[#8e8e8e] text-sm font-medium block">{{ section.settings.potency_sublabel }}</span>
+          </div>
+
+          <div class="pt-8 border-t border-white/10 mb-8">
+            <span class="text-[10px] md:text-xs font-bold tracking-[0.1em] text-[#8e8e8e] uppercase mb-4 block">
+              {{ section.settings.potency_why_title }}
+            </span>
+            <p class="text-[#b1b1b1] text-base leading-relaxed font-medium">
+              {{ section.settings.potency_description }}
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-3 mt-auto">
+          {% for block in section.blocks %}
+            {% if block.type == 'potency_tag' %}
+              <span
+                class="px-5 py-2.5 rounded-full border border-white/10 text-white text-xs md:text-sm font-bold bg-white/5"
+                {{ block.shopify_attributes }}
+              >
+                {{ block.settings.text }}
+              </span>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .rte p {
+    margin-bottom: 0;
+  }
+  .rte p:not(:last-child) {
+    margin-bottom: 0.5rem;
+  }
+{% endstylesheet %}
