@@ -1,0 +1,163 @@
+{% schema %}
+{
+  "name": "How Shiljit Works PDP",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge Text",
+      "default": "THE SCIENCE"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "How Xara Works"
+    },
+    {
+      "type": "text",
+      "id": "heading_highlight",
+      "label": "Heading Highlight",
+      "default": "(3-Phase System)"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Side Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "phase",
+      "name": "Phase",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Phase Number",
+          "default": "01"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Phase Title"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Content",
+          "default": "<p>Phase description goes here.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "How Shiljit Works PDP",
+      "blocks": [
+        {
+          "type": "phase",
+          "settings": {
+            "number": "01",
+            "title": "Testosterone Reboot",
+            "content": "<p>Shilajit supports ATP production, hormone balance, and natural male energy.</p><p>Many men report increased stamina, confidence, and drive within the first 24–48 hours.*</p>"
+          }
+        },
+        {
+          "type": "phase",
+          "settings": {
+            "number": "02",
+            "title": "Stress & Cortisol Control",
+            "content": "<p>Manuka honey helps regulate stress pathways that interfere with performance.</p><p>Lower stress is strongly linked to higher libido, improved arousal, and better mood.*</p>"
+          }
+        },
+        {
+          "type": "phase",
+          "settings": {
+            "number": "03",
+            "title": "Nitric Oxide + Blood Flow",
+            "content": "<p>Pomegranate and shilajit promote stronger circulation.</p><ul><li>Firmer erections</li><li>Greater fullness</li><li>Improved sensitivity</li><li>Stronger endurance</li></ul>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<section class="py-16 md:py-24 bg-black text-white">
+  <div class="max-w-[1300px] mx-auto px-6">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      {% if section.settings.badge_text != blank %}
+        <span class="inline-block border border-[#2a2620] bg-[#121212] rounded-full px-6 py-2 text-[10px] md:text-xs font-bold tracking-[0.2em] text-[#e5e5e5] mb-6 uppercase">
+          {{ section.settings.badge_text }}
+        </span>
+      {% endif %}
+
+      <h2 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight">
+        {{ section.settings.heading }}
+        <span class="text-[#e6c69b]">{{ section.settings.heading_highlight }}</span>
+      </h2>
+    </div>
+
+    <!-- Content Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <!-- Left: Image -->
+      <div class="relative">
+        <div class="rounded-[2.5rem] overflow-hidden border border-[#1a1a1b]">
+          {% if section.settings.image != blank %}
+            {{
+              section.settings.image
+              | image_url: width: 1200
+              | image_tag: loading: 'lazy', class: 'w-full h-auto block'
+            }}
+          {% else %}
+            {{ 'image' | placeholder_svg_tag: 'w-full h-full bg-[#1a1a1b] opacity-50' }}
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- Right: Phases -->
+      <div class="flex flex-col gap-6">
+        {% for block in section.blocks %}
+          <div class="relative pl-10 md:pl-12" {{ block.shopify_attributes }}>
+            <!-- Number Badge with Glow -->
+            <div class="absolute left-0 top-0 -translate-x-1/2 md:translate-x-0 w-12 h-10 md:w-14 md:h-12 bg-[#e6c69b] text-black rounded-lg flex items-center justify-center font-bold text-lg md:text-xl shadow-[0_0_20px_rgba(230,198,155,0.4)] z-10">
+              {{ block.settings.number }}
+            </div>
+
+            <!-- Card -->
+            <div class="bg-[#0c0c0d] border border-[#1a1a1b] rounded-[1.5rem] p-8 md:p-10 pt-12 md:pt-10">
+              <h3 class="text-xl md:text-2xl font-bold mb-4 text-white">
+                {{ block.settings.title }}
+              </h3>
+              <div class="text-[#b1b1b1] text-base leading-relaxed font-medium rte-simple">
+                {{ block.settings.content }}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .rte-simple p {
+    margin-bottom: 1rem;
+  }
+  .rte-simple p:last-child {
+    margin-bottom: 0;
+  }
+  .rte-simple ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    color: #b1b1b1;
+  }
+  .rte-simple li {
+    margin-bottom: 0.5rem;
+  }
+</style>
