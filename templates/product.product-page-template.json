@@ -564,6 +564,65 @@
         "image": "shopify://shop_images/Screenshot_2026-02-05_at_7.42.43_PM.webp"
       }
     },
+    "review_pdp_ke46Dp": {
+      "type": "review-pdp",
+      "blocks": {
+        "review_kjxaAQ": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-11-20_at_5.54.03_PM.webp",
+            "quote": "I bought it for the size claims, but the energy and stamina were what took me by surprise.",
+            "star_rating": 5,
+            "author_name": "Jimmy L.",
+            "is_verified": true
+          }
+        },
+        "review_JUc636": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-11-20_at_5.56.34_PM.webp",
+            "quote": "I bought it for the size claims, but the energy and stamina were what took me by surprise.",
+            "star_rating": 5,
+            "author_name": "Jimmy L.",
+            "is_verified": true
+          }
+        },
+        "review_BaDHrK": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-11-20_at_5.55.50_PM.webp",
+            "quote": "I bought it for the size claims, but the energy and stamina were what took me by surprise.",
+            "star_rating": 5,
+            "author_name": "Jimmy L.",
+            "is_verified": true
+          }
+        },
+        "review_9f8UrX": {
+          "type": "review",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2025-12-09_at_7.44.34_PM.webp",
+            "quote": "I bought it for the size claims, but the energy and stamina were what took me by surprise.",
+            "star_rating": 5,
+            "author_name": "Jimmy L.",
+            "is_verified": true
+          }
+        }
+      },
+      "block_order": [
+        "review_kjxaAQ",
+        "review_JUc636",
+        "review_BaDHrK",
+        "review_9f8UrX"
+      ],
+      "name": "Review PDP",
+      "settings": {
+        "background_color": "#f9f6f1",
+        "top_label": "50K+ Happy Customers",
+        "rating_text": "Excellent 4.9",
+        "heading": "<em>40,000+ Men</em> Transformed Their <em>Energy & Performance</em>",
+        "footer_badge_text": "Real customers. Real results. No filters."
+      }
+    },
     "854b8c46-40a3-4c74-9b36-360886558b1f": {
       "type": "testimonials",
       "settings": {}
@@ -1314,6 +1373,7 @@
     "certificate_PHaiYk",
     "collapsible_content_igJqFK",
     "how_shiljit_works_pdp_Mxmyfd",
+    "review_pdp_ke46Dp",
     "854b8c46-40a3-4c74-9b36-360886558b1f",
     "related-products",
     "rich_text_JKTUfe",
