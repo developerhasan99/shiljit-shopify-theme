@@ -473,7 +473,6 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Testosterone Support",
-            "icon": "check_mark",
             "row_content": "<p>Shilajit’s minerals and fulvic acids help support healthy testosterone levels, which improves strength, motivation, mood, and overall male vitality. It’s a natural boost that builds over time.</p>",
             "page": ""
           }
@@ -482,7 +481,6 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Collapsible row",
-            "icon": "check_mark",
             "row_content": "",
             "page": ""
           }
@@ -491,7 +489,6 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Collapsible row",
-            "icon": "check_mark",
             "row_content": "",
             "page": ""
           }
@@ -500,7 +497,6 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Collapsible row",
-            "icon": "check_mark",
             "row_content": "",
             "page": ""
           }
@@ -517,26 +513,12 @@
         "visibility": "always-display",
         "caption": "",
         "title": "Collapsible content",
-        "title_highlight_color": "#DD1D1D",
         "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "none",
         "color_scheme": "background-1",
-        "container_color_scheme": "background-2",
         "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "row_heading_size": "medium",
-        "collapse_icon": "carret",
-        "display_top_border": true,
+        "image": "shopify://shop_images/j6.webp",
         "padding_top": 36,
-        "padding_bottom": 36,
-        "custom_colors_background": "#FFFFFF",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#2E2A39",
-        "custom_contaner_colors_background": "#FFFFFF",
-        "custom_container_gradient_background": "",
-        "custom_contaner_colors_text": "#2E2A39"
+        "padding_bottom": 36
       }
     },
     "854b8c46-40a3-4c74-9b36-360886558b1f": {
@@ -1231,7 +1213,6 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "When will I feel the difference?",
-            "icon": "check_mark",
             "row_content": "<p>It varies person to person. Many people start seeing results in as little as two weeks and have reported seeing overall improvement in health and energy in as little as 2 weeks. Most people feel a difference in 4 weeks. </p>",
             "page": ""
           }
@@ -1240,7 +1221,6 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Is it Safe?",
-            "icon": "check_mark",
             "row_content": "<p>100%. It is all natural and free from metals or any other harmful ingredients. It is GMP certified, third party lab tested for purity and potency. No artificial fillers, no sugars or stimulants. </p>",
             "page": ""
           }
@@ -1249,7 +1229,6 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Can I take this with other supplements & medications?",
-            "icon": "check_mark",
             "row_content": "<p>Yes, they can be combined with other supplements and medicines. However if you have health conditions, best to consult a doctor before combining with other products. </p>",
             "page": ""
           }
@@ -1258,7 +1237,6 @@
           "type": "collapsible_row",
           "settings": {
             "heading": "Viagra didn't work, will this work?",
-            "icon": "check_mark",
             "row_content": "<p>Yes. The blue pill forces blood flow temporarily. Our Shilajit restores your body's natural testosterone, fixing the root cause. </p>",
             "page": ""
           }
@@ -1274,26 +1252,11 @@
         "visibility": "always-display",
         "caption": "",
         "title": "Frequently Asked Questions",
-        "title_highlight_color": "#dd1d1d",
         "heading_size": "h1",
-        "heading_alignment": "center",
-        "layout": "none",
         "color_scheme": "background-1",
-        "container_color_scheme": "background-2",
         "open_first_collapsible_row": false,
-        "image_ratio": "adapt",
-        "desktop_layout": "image_second",
-        "row_heading_size": "medium",
-        "collapse_icon": "carret",
-        "display_top_border": true,
         "padding_top": 36,
-        "padding_bottom": 36,
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#2e2a39",
-        "custom_contaner_colors_background": "#ffffff",
-        "custom_container_gradient_background": "",
-        "custom_contaner_colors_text": "#2e2a39"
+        "padding_bottom": 36
       }
     }
   },
