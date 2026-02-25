@@ -50,10 +50,10 @@
 }
 {% endschema %}
 
-<section class="py-16 md:py-24" style="background-color: {{ section.settings.background_color }};">
+<section class="py-16" style="background-color: {{ section.settings.background_color }};">
   <div class="max-w-[1300px] mx-auto px-6">
     <!-- Header -->
-    <div class="text-center max-w-4xl mx-auto mb-16 md:mb-20">
+    <div class="text-center max-w-4xl mx-auto mb-16">
       {% if section.settings.badge_text != blank %}
         <span class="inline-block bg-[#efe6d9] rounded-full px-5 py-2 text-[10px] md:text-xs font-bold tracking-[0.15em] text-[#1a1a1b] mb-6 uppercase">
           {{ section.settings.badge_text }}
@@ -61,7 +61,7 @@
       {% endif %}
 
       {% if section.settings.heading != blank %}
-        <h2 class="text-3xl md:text-5xl font-bold text-[#1a1a1b] tracking-tight leading-[1.1]">
+        <h2 class="m-0 text-3xl md:text-5xl font-bold text-[#1a1a1b] tracking-tight leading-[1.1]">
           {{ section.settings.heading }}
         </h2>
       {% endif %}
