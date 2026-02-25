@@ -152,10 +152,10 @@
 }
 {% endschema %}
 
-<section class="py-16 md:py-24" style="background-color: {{ section.settings.background_color }};">
-  <div class="max-w-[1200px] mx-auto px-6">
+<section class="py-16" style="background-color: {{ section.settings.background_color }};">
+  <div class="max-w-[1300px] mx-auto px-6">
     <!-- Header -->
-    <div class="text-center max-w-4xl mx-auto mb-16">
+    <div class="text-center max-w-4xl mx-auto mb-6">
       {% if section.settings.badge_text != blank %}
         <span class="inline-block bg-[#efe6d9] rounded-full px-5 py-2 text-[10px] md:text-xs font-bold tracking-[0.15em] text-[#1a1a1b] mb-6 uppercase">
           {{ section.settings.badge_text }}
@@ -163,7 +163,7 @@
       {% endif %}
 
       {% if section.settings.heading != blank %}
-        <h2 class="text-3xl md:text-5xl font-bold text-[#1a1a1b] mb-6 tracking-tight leading-[1.1]">
+        <h2 class="text-3xl font-bold text-[#1a1a1b] mt-0 mb-6 tracking-tight leading-[1.1]">
           {{ section.settings.heading }}
         </h2>
       {% endif %}
@@ -197,8 +197,8 @@
                 </div>
               </div>
               <div>
-                <h3 class="text-xl font-bold text-[#1a1a1b] mb-3 leading-tight">{{ block.settings.title }}</h3>
-                <p class="text-[#666666] text-md leading-relaxed font-medium">{{ block.settings.text }}</p>
+                <h3 class="text-xl font-bold text-[#1a1a1b] mb-3 mt-0 leading-tight">{{ block.settings.title }}</h3>
+                <p class="text-[#666666] m-0 text-md leading-relaxed font-medium">{{ block.settings.text }}</p>
               </div>
             </div>
           {% endif %}
