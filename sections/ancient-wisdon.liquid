@@ -1,0 +1,117 @@
+{% schema %}
+{
+  "name": "Ancient Wisdom",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#f9f6f1"
+    },
+    {
+      "type": "text",
+      "id": "badge_text",
+      "label": "Badge Text",
+      "default": "ANCIENT PERFORMANCE WISDOM"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Long before modern supplements... there was mineral intelligence."
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Section Image"
+    },
+    {
+      "type": "richtext",
+      "id": "text_content",
+      "label": "Main Text",
+      "default": "<p>High in the Himalayan ranges, naturally occurring mineral resin has been used for centuries by mountain cultures seeking strength, stamina, and resilience in extreme environments.</p><p>Formed slowly between layers of rock, authentic shilajit contains a complex spectrum of trace minerals bound with fulvic compounds — designed by nature for biological activity.</p><p>Long before energy drinks, synthetic boosters, or isolated formulas existed, vitality began at the cellular level.</p>"
+    },
+    {
+      "type": "textarea",
+      "id": "highlight_text",
+      "label": "Highlight Box Text",
+      "default": "Modern science measures what ancient environments already proved: performance starts with foundational biology."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Ancient Wisdom"
+    }
+  ]
+}
+{% endschema %}
+
+<section class="py-16 md:py-24" style="background-color: {{ section.settings.background_color }};">
+  <div class="max-w-[1300px] mx-auto px-6">
+    <!-- Header -->
+    <div class="text-center max-w-4xl mx-auto mb-16 md:mb-20">
+      {% if section.settings.badge_text != blank %}
+        <span class="inline-block bg-[#efe6d9] rounded-full px-5 py-2 text-[10px] md:text-xs font-bold tracking-[0.15em] text-[#1a1a1b] mb-6 uppercase">
+          {{ section.settings.badge_text }}
+        </span>
+      {% endif %}
+
+      {% if section.settings.heading != blank %}
+        <h2 class="text-3xl md:text-5xl font-bold text-[#1a1a1b] tracking-tight leading-[1.1]">
+          {{ section.settings.heading }}
+        </h2>
+      {% endif %}
+    </div>
+
+    <!-- Content Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+      <!-- Left: Image -->
+      <div class="relative">
+        <div class="rounded-[2.5rem] overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.1)] aspect-[4/5] lg:aspect-auto">
+          {% if section.settings.image != blank %}
+            {{
+              section.settings.image
+              | image_url: width: 1000
+              | image_tag: loading: 'lazy', class: 'w-full h-full object-cover', widths: '400, 600, 800, 1000'
+            }}
+          {% else %}
+            {{ 'image' | placeholder_svg_tag: 'w-full h-full bg-gray-200' }}
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- Right: Text Content -->
+      <div class="flex flex-col gap-8">
+        {% if section.settings.text_content != blank %}
+          <div class="text-[#1a1a1b] text-base md:text-lg leading-relaxed font-medium space-y-6 rte">
+            {{ section.settings.text_content }}
+          </div>
+        {% endif %}
+
+        {% if section.settings.highlight_text != blank %}
+          <div class="ancient-wisdom__highlight p-8 bg-white/30 rounded-r-[1rem] border-l-2 border-[#e6c69b]">
+            <p class="text-[12px] md:text-sm font-bold text-[#1a1a1b] uppercase tracking-wide leading-relaxed m-0">
+              {{ section.settings.highlight_text }}
+            </p>
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .ancient-wisdom__highlight {
+    position: relative;
+    background: linear-gradient(90deg, rgba(230, 198, 155, 0.05), transparent);
+  }
+
+  /* Space-y-6 replacement if Tailwind isn't active */
+  .space-y-6 > :not([hidden]) ~ :not([hidden]) {
+    margin-top: 1.5rem;
+  }
+{% endstylesheet %}
