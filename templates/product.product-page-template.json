@@ -354,9 +354,84 @@
         "desktop_image_height": 40,
         "padding_top": 16,
         "padding_bottom": 16,
-        "custom_colors_background": "#FFFFFF",
+        "custom_colors_background": "#ffffff",
         "custom_gradient_background": "",
-        "custom_colors_text": "#2E2A39"
+        "custom_colors_text": "#2e2a39"
+      }
+    },
+    "why_shiljit_pdp_9wF34k": {
+      "type": "why-shiljit-pdp",
+      "blocks": {
+        "performance_card_z66Yry": {
+          "type": "performance_card",
+          "settings": {
+            "icon_svg": "",
+            "title": "Circulation & Sexual Performance",
+            "text": "helps support healthy blood flow, firmness, and performance when it matters.*"
+          }
+        },
+        "performance_card_FQckJM": {
+          "type": "performance_card",
+          "settings": {
+            "icon_svg": "",
+            "title": "Energy & Fatigue Support",
+            "text": "helps support steady energy and stamina — without feeling \"wired.\""
+          }
+        },
+        "performance_card_z7gybe": {
+          "type": "performance_card",
+          "settings": {
+            "icon_svg": "",
+            "title": "Stress Response & Recovery",
+            "text": "helps support resilience, recovery, and overall vitality — so you feel like yourself again."
+          }
+        },
+        "potency_tag_JGUGjQ": {
+          "type": "potency_tag",
+          "settings": {
+            "text": "Potency Tested"
+          }
+        },
+        "potency_tag_EULy4A": {
+          "type": "potency_tag",
+          "settings": {
+            "text": "Heavy Metals Screened"
+          }
+        },
+        "potency_tag_dpkifh": {
+          "type": "potency_tag",
+          "settings": {
+            "text": "Microbial Screened"
+          }
+        },
+        "potency_tag_K4kLYK": {
+          "type": "potency_tag",
+          "settings": {
+            "text": "Transparent Results"
+          }
+        }
+      },
+      "block_order": [
+        "performance_card_z66Yry",
+        "performance_card_FQckJM",
+        "performance_card_z7gybe",
+        "potency_tag_JGUGjQ",
+        "potency_tag_EULy4A",
+        "potency_tag_dpkifh",
+        "potency_tag_K4kLYK"
+      ],
+      "name": "Why Gold Shiljit PDP",
+      "settings": {
+        "background_color": "#f9f6f1",
+        "badge_text": "MEN'S PERFORMANCE FOUNDATIONS",
+        "heading": "Most male performance supplements stimulate your body. Very few rebuild it.",
+        "description": "<p>If erections feel weaker and fatigue is creeping in, it's often the same root issue: your body isn't recovering the way it used to. Gold Shiljit supports the daily foundations that power performance — in and out of the bedroom.*</p>",
+        "potency_badge": "THIRD-PARTY VERIFIED",
+        "potency_percentage": "82.8%",
+        "potency_label": "Fulvic Acid",
+        "potency_sublabel": "Potency verified on your lab report",
+        "potency_why_title": "WHY THIS MATTERS",
+        "potency_description": "Fulvic acid is a key marker of shilajit quality. It supports mineral transport and absorption — which is why premium-grade shilajit is measured, not guessed."
       }
     },
     "854b8c46-40a3-4c74-9b36-360886558b1f": {
@@ -1120,6 +1195,7 @@
   "order": [
     "main",
     "horizontal_ticker_NyqAbx",
+    "why_shiljit_pdp_9wF34k",
     "854b8c46-40a3-4c74-9b36-360886558b1f",
     "related-products",
     "rich_text_JKTUfe",
