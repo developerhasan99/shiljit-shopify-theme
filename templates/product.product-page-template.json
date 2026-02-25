@@ -623,6 +623,52 @@
         "footer_badge_text": "Real customers. Real results. No filters."
       }
     },
+    "real_result_pdp_XyZ123": {
+      "type": "real-result-pdp",
+      "blocks": {
+        "result_1": {
+          "type": "result",
+          "settings": {
+            "percentage": 71,
+            "text": "<p>Reported stronger daily energy and stamina — without feeling \"wired”*</p>"
+          }
+        },
+        "result_2": {
+          "type": "result",
+          "settings": {
+            "percentage": 83,
+            "text": "<p>Noticed improved blood-flow support and more consistent bedroom performance*</p>"
+          }
+        },
+        "result_3": {
+          "type": "result",
+          "settings": {
+            "percentage": 89,
+            "text": "<p>Said drive, erections and libido felt higher — with better confidence during intimacy*</p>"
+          }
+        },
+        "result_4": {
+          "type": "result",
+          "settings": {
+            "percentage": 92,
+            "text": "<p>Reported feeling more like themselves again after consistent daily use — stronger, sharper, and more in control*</p>"
+          }
+        }
+      },
+      "block_order": [
+        "result_1",
+        "result_2",
+        "result_3",
+        "result_4"
+      ],
+      "name": "Real Results PDP",
+      "settings": {
+        "background_color": "#ffffff",
+        "heading": "REAL RESULTS FROM <em>XARA SHILAJIT GUMMIES</em> CUSTOMERS",
+        "subheading": "In a recent customer survey, men reported:",
+        "footer_note": "*Results based on a voluntary, self-reported customer survey. Individual results may vary."
+      }
+    },
     "854b8c46-40a3-4c74-9b36-360886558b1f": {
       "type": "testimonials",
       "settings": {}
@@ -1374,6 +1420,7 @@
     "collapsible_content_igJqFK",
     "how_shiljit_works_pdp_Mxmyfd",
     "review_pdp_8LpQDz",
+    "real_result_pdp_XyZ123",
     "854b8c46-40a3-4c74-9b36-360886558b1f",
     "related-products",
     "rich_text_JKTUfe",

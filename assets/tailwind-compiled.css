@@ -376,6 +376,10 @@
     width: 24px
 }
 
+.w-24 {
+    width: 96px
+}
+
 .min-w-full {
     min-width: 100%
 }
@@ -426,6 +430,10 @@
 
 .max-w-\[1200px\] {
     max-width: 1200px
+}
+
+.max-w-\[900px\] {
+    max-width: 900px
 }
 
 .flex-1 {
@@ -911,6 +919,11 @@
     background-color: rgb(240 244 248 / var(--tw-bg-opacity, 1))
 }
 
+.bg-\[\#f0f0f0\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(240 240 240 / var(--tw-bg-opacity, 1))
+}
+
 .bg-gradient-to-b {
     background-image: linear-gradient(to bottom, var(--tw-gradient-stops))
 }
@@ -1151,6 +1164,10 @@
     padding-top: 40px
 }
 
+.pl-0 {
+    padding-left: 0px
+}
+
 .text-left {
     text-align: left
 }
@@ -1334,6 +1351,10 @@
 
 .leading-\[1\.15\] {
     line-height: 1.15
+}
+
+.leading-\[1\.2\] {
+    line-height: 1.2
 }
 
 .tracking-\[0\.2em\] {
@@ -1679,6 +1700,10 @@
     transition-duration: 200ms
 }
 
+.duration-1000 {
+    transition-duration: 1000ms
+}
+
 .ease-in-out {
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1)
 }
@@ -1793,6 +1818,10 @@
 
     .md\:mb-20 {
         margin-bottom: 80px
+    }
+
+    .md\:mt-24 {
+        margin-top: 96px
     }
 
     .md\:block {
@@ -2039,6 +2068,14 @@
 
 @media (min-width: 1024px) {
 
+    .lg\:order-1 {
+        order: 1
+    }
+
+    .lg\:order-2 {
+        order: 2
+    }
+
     .lg\:mt-0 {
         margin-top: 0px
     }
@@ -2105,6 +2142,10 @@
 
     .lg\:gap-16 {
         gap: 64px
+    }
+
+    .lg\:gap-24 {
+        gap: 96px
     }
 
     .lg\:bg-gradient-to-r {

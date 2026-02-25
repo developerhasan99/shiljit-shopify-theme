@@ -1,0 +1,171 @@
+{% schema %}
+{
+  "name": "Real Results PDP",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "REAL RESULTS FROM <em>XARA SHILAJIT GUMMIES</em> CUSTOMERS"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "In a recent customer survey, men reported:"
+    },
+    {
+      "type": "image_picker",
+      "id": "collage_image",
+      "label": "Social Collage Image"
+    },
+    {
+      "type": "text",
+      "id": "footer_note",
+      "label": "Footer Note",
+      "default": "*Results based on a voluntary, self-reported customer survey. Individual results may vary."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "result",
+      "name": "Survey Result",
+      "settings": [
+        {
+          "type": "range",
+          "id": "percentage",
+          "min": 0,
+          "max": 100,
+          "step": 1,
+          "unit": "%",
+          "label": "Percentage",
+          "default": 90
+        },
+        {
+          "type": "richtext",
+          "id": "text",
+          "label": "Result Text",
+          "default": "<p>Reported stronger daily energy and stamina — without feeling \"wired”*</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Real Results PDP",
+      "blocks": [
+        {
+          "type": "result",
+          "settings": {
+            "percentage": 71,
+            "text": "<p>Reported stronger daily energy and stamina — without feeling \"wired”*</p>"
+          }
+        },
+        {
+          "type": "result",
+          "settings": {
+            "percentage": 83,
+            "text": "<p>Noticed improved blood-flow support and more consistent bedroom performance*</p>"
+          }
+        },
+        {
+          "type": "result",
+          "settings": {
+            "percentage": 89,
+            "text": "<p>Said drive, erections and libido felt higher — with better confidence during intimacy*</p>"
+          }
+        },
+        {
+          "type": "result",
+          "settings": {
+            "percentage": 92,
+            "text": "<p>Reported feeling more like themselves again after consistent daily use — stronger, sharper, and more in control*</p>"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<section class="py-16 md:py-24" style="background-color: {{ section.settings.background_color }};">
+  <div class="max-w-[1300px] mx-auto px-6">
+    <!-- Header -->
+    <div class="text-center mb-12 md:mb-20">
+      <h2 class="real-results-heading text-3xl md:text-5xl font-black text-black uppercase leading-[1.2] tracking-tight max-w-[900px] mx-auto mb-6">
+        {{ section.settings.heading }}
+      </h2>
+      {% if section.settings.subheading != blank %}
+        <p class="text-sm md:text-base font-bold text-[#444] tracking-wide">
+          {{ section.settings.subheading }}
+        </p>
+      {% endif %}
+    </div>
+
+    <!-- Content Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24 items-center">
+      <!-- Left: Collage -->
+      <div class="relative order-2 lg:order-1">
+        {% if section.settings.collage_image != blank %}
+          {{
+            section.settings.collage_image
+            | image_url: width: 1200
+            | image_tag: loading: 'lazy', class: 'w-full h-auto block'
+          }}
+        {% else %}
+          {{ 'collection-1' | placeholder_svg_tag: 'w-full h-full bg-[#f3f3f3] opacity-50' }}
+        {% endif %}
+      </div>
+
+      <!-- Right: Results -->
+      <div class="flex flex-col gap-10 order-1 lg:order-2">
+        {% for block in section.blocks %}
+          <div class="survey-row" {{ block.shopify_attributes }}>
+            <div class="flex items-center gap-6 mb-4">
+              <span class="text-3xl md:text-4xl font-black text-black w-24 flex-shrink-0">
+                {{ block.settings.percentage }}%
+              </span>
+              <div class="flex-grow bg-[#f0f0f0] h-3 rounded-full overflow-hidden">
+                <div
+                  class="bg-[#e6c69b] h-full rounded-full transition-all duration-1000"
+                  style="width: {{ block.settings.percentage }}%;"
+                ></div>
+              </div>
+            </div>
+            <div class="pl-0 md:pl-30 text-[#444] text-base md:text-lg font-medium leading-relaxed">
+              {{ block.settings.text }}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Footer Note -->
+    {% if section.settings.footer_note != blank %}
+      <div class="mt-16 md:mt-24 text-center">
+        <p class="text-xs md:text-sm font-bold text-[#666] tracking-tight">
+          {{ section.settings.footer_note }}
+        </p>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+<style>
+  .real-results-heading em {
+    font-style: normal;
+    color: #e6c69b;
+  }
+
+  @media screen and (min-width: 768px) {
+    .survey-row {
+      padding-left: 2rem;
+    }
+  }
+</style>
