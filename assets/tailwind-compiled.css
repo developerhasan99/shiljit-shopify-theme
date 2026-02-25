@@ -742,6 +742,11 @@
     border-color: rgb(255 255 255 / var(--tw-border-opacity, 1))
 }
 
+.border-\[\#443d31\] {
+    --tw-border-opacity: 1;
+    border-color: rgb(68 61 49 / var(--tw-border-opacity, 1))
+}
+
 .bg-\[\#0c0c0d\] {
     --tw-bg-opacity: 1;
     background-color: rgb(12 12 13 / var(--tw-bg-opacity, 1))
@@ -886,6 +891,11 @@
 .bg-\[\#e6c69b\] {
     --tw-bg-opacity: 1;
     background-color: rgb(230 198 155 / var(--tw-bg-opacity, 1))
+}
+
+.bg-\[\#231f18\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(35 31 24 / var(--tw-bg-opacity, 1))
 }
 
 .bg-gradient-to-b {
