@@ -466,6 +466,79 @@
         "description": ""
       }
     },
+    "collapsible_content_igJqFK": {
+      "type": "collapsible-content",
+      "blocks": {
+        "collapsible_row_J3M8Dk": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Testosterone Support",
+            "icon": "check_mark",
+            "row_content": "<p>Shilajit’s minerals and fulvic acids help support healthy testosterone levels, which improves strength, motivation, mood, and overall male vitality. It’s a natural boost that builds over time.</p>",
+            "page": ""
+          }
+        },
+        "collapsible_row_KXVdae": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_63AEdT": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        },
+        "collapsible_row_XQ6PgY": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Collapsible row",
+            "icon": "check_mark",
+            "row_content": "",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "collapsible_row_J3M8Dk",
+        "collapsible_row_KXVdae",
+        "collapsible_row_63AEdT",
+        "collapsible_row_XQ6PgY"
+      ],
+      "name": "t:sections.collapsible_content.presets.name",
+      "settings": {
+        "visibility": "always-display",
+        "caption": "",
+        "title": "Collapsible content",
+        "title_highlight_color": "#DD1D1D",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "background-1",
+        "container_color_scheme": "background-2",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "row_heading_size": "medium",
+        "collapse_icon": "carret",
+        "display_top_border": true,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "custom_colors_background": "#FFFFFF",
+        "custom_gradient_background": "",
+        "custom_colors_text": "#2E2A39",
+        "custom_contaner_colors_background": "#FFFFFF",
+        "custom_container_gradient_background": "",
+        "custom_contaner_colors_text": "#2E2A39"
+      }
+    },
     "854b8c46-40a3-4c74-9b36-360886558b1f": {
       "type": "testimonials",
       "settings": {}
@@ -1231,6 +1304,7 @@
     "ancient_wisdon_TdAL6j",
     "why_gold_shiljit_n3KrjB",
     "certificate_PHaiYk",
+    "collapsible_content_igJqFK",
     "854b8c46-40a3-4c74-9b36-360886558b1f",
     "related-products",
     "rich_text_JKTUfe",
