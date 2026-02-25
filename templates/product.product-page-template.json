@@ -456,6 +456,16 @@
         "banner_link": ""
       }
     },
+    "certificate_PHaiYk": {
+      "type": "certificate",
+      "name": "Certificate",
+      "settings": {
+        "background_color": "#ffffff",
+        "certificate_image": "shopify://shop_images/Screenshot_2026-02-05_at_3.54.03_PM_518c322b-5ad1-4c49-b70a-a431adf1ada1.webp",
+        "heading": "Verified Pure. Every Batch.",
+        "description": ""
+      }
+    },
     "854b8c46-40a3-4c74-9b36-360886558b1f": {
       "type": "testimonials",
       "settings": {}
@@ -1220,6 +1230,7 @@
     "why_shiljit_pdp_9wF34k",
     "ancient_wisdon_TdAL6j",
     "why_gold_shiljit_n3KrjB",
+    "certificate_PHaiYk",
     "854b8c46-40a3-4c74-9b36-360886558b1f",
     "related-products",
     "rich_text_JKTUfe",
