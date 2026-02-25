@@ -517,8 +517,50 @@
         "color_scheme": "background-1",
         "open_first_collapsible_row": false,
         "image": "shopify://shop_images/j6.webp",
+        "show_add_to_cart": true,
+        "atc_button_text": "Add to Cart",
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "how_shiljit_works_pdp_Mxmyfd": {
+      "type": "how-shiljit-works-pdp",
+      "blocks": {
+        "phase_zLEgyB": {
+          "type": "phase",
+          "settings": {
+            "number": "01",
+            "title": "Testosterone Reboot",
+            "content": "<p>Shilajit supports ATP production, hormone balance, and natural male energy.</p><p>Many men report increased stamina, confidence, and drive within the first 24–48 hours.*</p>"
+          }
+        },
+        "phase_BfYHLh": {
+          "type": "phase",
+          "settings": {
+            "number": "02",
+            "title": "Stress & Cortisol Control",
+            "content": "<p>Manuka honey helps regulate stress pathways that interfere with performance.</p><p>Lower stress is strongly linked to higher libido, improved arousal, and better mood.*</p>"
+          }
+        },
+        "phase_MfmRMq": {
+          "type": "phase",
+          "settings": {
+            "number": "03",
+            "title": "Nitric Oxide + Blood Flow",
+            "content": "<p>Pomegranate and shilajit promote stronger circulation.</p><ul><li>Firmer erections</li><li>Greater fullness</li><li>Improved sensitivity</li><li>Stronger endurance</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "phase_zLEgyB",
+        "phase_BfYHLh",
+        "phase_MfmRMq"
+      ],
+      "name": "How Shiljit Works PDP",
+      "settings": {
+        "badge_text": "THE SCIENCE",
+        "heading": "How Xara Works",
+        "heading_highlight": "(3-Phase System)"
       }
     },
     "854b8c46-40a3-4c74-9b36-360886558b1f": {
@@ -1255,6 +1297,8 @@
         "heading_size": "h1",
         "color_scheme": "background-1",
         "open_first_collapsible_row": false,
+        "show_add_to_cart": true,
+        "atc_button_text": "Add to Cart",
         "padding_top": 36,
         "padding_bottom": 36
       }
@@ -1268,6 +1312,7 @@
     "why_gold_shiljit_n3KrjB",
     "certificate_PHaiYk",
     "collapsible_content_igJqFK",
+    "how_shiljit_works_pdp_Mxmyfd",
     "854b8c46-40a3-4c74-9b36-360886558b1f",
     "related-products",
     "rich_text_JKTUfe",
