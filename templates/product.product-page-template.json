@@ -564,111 +564,6 @@
         "image": "shopify://shop_images/Screenshot_2026-02-05_at_7.42.43_PM.webp"
       }
     },
-    "review_pdp_8LpQDz": {
-      "type": "review-pdp",
-      "blocks": {
-        "review_AmVf7k": {
-          "type": "review",
-          "settings": {
-            "image": "shopify://shop_images/picture.jpg",
-            "quote": "I bought it for the size claims, but the energy and stamina were what took me by surprise. Better blood flow = harder, longer-lasting erections. I'm performing better in every way... bedroom, gym, daily life. Two weeks in and the results are insane.",
-            "star_rating": 5,
-            "author_name": "Jimmy L.",
-            "is_verified": true
-          }
-        },
-        "review_RGGF9w": {
-          "type": "review",
-          "settings": {
-            "image": "shopify://shop_images/third_image.webp",
-            "quote": "I couldn't believe the difference! In just 2 weeks, I was rock hard much easier and it was visibly larger, its cause of the blood flow getting better. My confidence skyrocketed. This isn't hype it really works!",
-            "star_rating": 5,
-            "author_name": "Anthony B.",
-            "is_verified": true
-          }
-        },
-        "review_wzMcGG": {
-          "type": "review",
-          "settings": {
-            "image": "shopify://shop_images/picture.jpg",
-            "quote": "I bought this for my husband quietly because I could tell something was off low energy, no drive, constantly stressed. Within a week he started acting like himself again. By week two, the difference was unbelievable. This saved my husband and honestly our relationship too.",
-            "star_rating": 5,
-            "author_name": "Rebecca K.",
-            "is_verified": true
-          }
-        },
-        "review_xXyYzZ": {
-          "type": "review",
-          "settings": {
-            "image": "shopify://shop_images/picture.jpg",
-            "quote": "As a couple, we were struggling more than we wanted to admit. Stress, low energy, and intimacy problems were putting distance between us. Xara literally saved us. He feels like himself again, I feel like myself again, I feel like our relationship feels alive. This saved us.",
-            "star_rating": 5,
-            "author_name": "Philip and Stephanie",
-            "is_verified": true
-          }
-        }
-      },
-      "block_order": [
-        "review_AmVf7k",
-        "review_RGGF9w",
-        "review_wzMcGG",
-        "review_xXyYzZ"
-      ],
-      "name": "Review PDP",
-      "settings": {
-        "background_color": "#f9f6f1",
-        "top_label": "50K+ Happy Customers",
-        "rating_text": "Excellent 4.9",
-        "heading": "<em>40,000+ Men</em> Transformed Their <em>Energy & Performance</em>",
-        "footer_badge_text": "Real customers. Real results. No filters."
-      }
-    },
-    "real_result_pdp_XyZ123": {
-      "type": "real-result-pdp",
-      "blocks": {
-        "result_1": {
-          "type": "result",
-          "settings": {
-            "percentage": 71,
-            "text": "<p>Reported stronger daily energy and stamina — without feeling \"wired”*</p>"
-          }
-        },
-        "result_2": {
-          "type": "result",
-          "settings": {
-            "percentage": 83,
-            "text": "<p>Noticed improved blood-flow support and more consistent bedroom performance*</p>"
-          }
-        },
-        "result_3": {
-          "type": "result",
-          "settings": {
-            "percentage": 89,
-            "text": "<p>Said drive, erections and libido felt higher — with better confidence during intimacy*</p>"
-          }
-        },
-        "result_4": {
-          "type": "result",
-          "settings": {
-            "percentage": 92,
-            "text": "<p>Reported feeling more like themselves again after consistent daily use — stronger, sharper, and more in control*</p>"
-          }
-        }
-      },
-      "block_order": [
-        "result_1",
-        "result_2",
-        "result_3",
-        "result_4"
-      ],
-      "name": "Real Results PDP",
-      "settings": {
-        "background_color": "#ffffff",
-        "heading": "REAL RESULTS FROM <em>XARA SHILAJIT GUMMIES</em> CUSTOMERS",
-        "subheading": "In a recent customer survey, men reported:",
-        "footer_note": "*Results based on a voluntary, self-reported customer survey. Individual results may vary."
-      }
-    },
     "854b8c46-40a3-4c74-9b36-360886558b1f": {
       "type": "testimonials",
       "settings": {}
@@ -1419,8 +1314,6 @@
     "certificate_PHaiYk",
     "collapsible_content_igJqFK",
     "how_shiljit_works_pdp_Mxmyfd",
-    "review_pdp_8LpQDz",
-    "real_result_pdp_XyZ123",
     "854b8c46-40a3-4c74-9b36-360886558b1f",
     "related-products",
     "rich_text_JKTUfe",
