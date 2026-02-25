@@ -1,0 +1,195 @@
+{% schema %}
+{
+  "name": "Review PDP",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#f9f6f1"
+    },
+    {
+      "type": "text",
+      "id": "top_label",
+      "label": "Top Label",
+      "default": "50K+ Happy Customers"
+    },
+    {
+      "type": "text",
+      "id": "rating_text",
+      "label": "Rating Text",
+      "default": "Excellent 4.9"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "<em>40,000+ Men</em> Transformed Their <em>Energy & Performance</em>"
+    },
+    {
+      "type": "text",
+      "id": "footer_badge_text",
+      "label": "Footer Badge Text",
+      "default": "Real customers. Real results. No filters."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Customer Image"
+        },
+        {
+          "type": "textarea",
+          "id": "quote",
+          "label": "Quote",
+          "default": "I bought it for the size claims, but the energy and stamina were what took me by surprise."
+        },
+        {
+          "type": "range",
+          "id": "star_rating",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "label": "Star Rating",
+          "default": 5
+        },
+        {
+          "type": "text",
+          "id": "author_name",
+          "label": "Author Name",
+          "default": "Jimmy L."
+        },
+        {
+          "type": "checkbox",
+          "id": "is_verified",
+          "label": "Show Verified Badge",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Review PDP",
+      "blocks": [
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        },
+        {
+          "type": "review"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<section class="py-16 md:py-24" style="background-color: {{ section.settings.background_color }};">
+  <div class="max-w-[1300px] mx-auto px-6">
+    <!-- Header -->
+    <div class="text-center mb-12 md:mb-16">
+      <p class="text-sm font-medium text-black mb-1 uppercase tracking-wide">
+        {{ section.settings.top_label }}
+      </p>
+
+      <div class="flex items-center justify-center gap-2 mb-6">
+        <span class="text-sm font-bold text-black uppercase tracking-wide">{{ section.settings.rating_text }}</span>
+        <div class="flex gap-0.5">
+          {% for i in (1..5) %}
+            <svg class="w-4 h-4 text-[#00b67a]" fill="currentColor" viewBox="0 0 20 20">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+            </svg>
+          {% endfor %}
+        </div>
+      </div>
+
+      <h2 class="section-heading text-4xl md:text-6xl font-bold tracking-tight text-center leading-[1.15]">
+        {{ section.settings.heading }}
+      </h2>
+    </div>
+
+    <!-- Review Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+      {% for block in section.blocks %}
+        <div
+          class="flex flex-col h-full bg-white rounded-[2rem] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-white"
+          {{ block.shopify_attributes }}
+        >
+          <!-- Customer Image -->
+          <div class="aspect-[4/3] overflow-hidden">
+            {% if block.settings.image != blank %}
+              {{
+                block.settings.image
+                | image_url: width: 800
+                | image_tag: loading: 'lazy', class: 'w-full h-full object-cover block'
+              }}
+            {% else %}
+              {{ 'image' | placeholder_svg_tag: 'w-full h-full bg-[#f3f3f3]' }}
+            {% endif %}
+          </div>
+
+          <!-- Quote & Info -->
+          <div class="flex flex-col flex-grow p-8 text-center pt-10">
+            <p class="text-base md:text-lg font-medium text-black leading-relaxed mb-10 flex-grow italic">
+              "{{ block.settings.quote }}"
+            </p>
+
+            <div class="mt-auto space-y-4">
+              <div class="flex items-center justify-center gap-3">
+                <div class="flex gap-0.5">
+                  {% for i in (1..block.settings.star_rating) %}
+                    <svg class="w-4 h-4 text-[#d4af37]" fill="currentColor" viewBox="0 0 20 20">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                    </svg>
+                  {% endfor %}
+                </div>
+                {% if block.settings.is_verified %}
+                  <span class="inline-flex items-center bg-[#f0f4f8] rounded-[0.5rem] px-2 py-1 text-[10px] font-bold text-[#444] uppercase tracking-wider">
+                    Verified
+                  </span>
+                {% endif %}
+              </div>
+
+              <div>
+                <h3 class="text-lg font-black text-black">
+                  {{ block.settings.author_name }}
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <!-- Footer Badge -->
+    {% if section.settings.footer_badge_text != blank %}
+      <div class="mt-16 flex justify-center">
+        <div class="bg-[#e6c69b] text-white px-8 md:px-12 py-3 rounded-full text-sm md:text-base font-bold italic shadow-lg inline-block">
+          {{ section.settings.footer_badge_text }}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+</section>
+
+{% style %}
+  .section-heading em {
+    font-style: normal;
+    text-decoration: none;
+    background-image: linear-gradient(0deg, #00b67a 2px, transparent 2px);
+    background-position: 0 92%;
+    background-repeat: repeat-x;
+    background-size: 100% 12px;
+  }
+{% endstyle %}

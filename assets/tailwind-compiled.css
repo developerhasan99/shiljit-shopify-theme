@@ -239,6 +239,10 @@
     aspect-ratio: 4/5
 }
 
+.aspect-\[4\/3\] {
+    aspect-ratio: 4/3
+}
+
 .h-10 {
     height: 40px
 }
@@ -661,6 +665,10 @@
     border-radius: 12px
 }
 
+.rounded-\[0\.5rem\] {
+    border-radius: 8px
+}
+
 .rounded-r-\[1rem\] {
     border-top-right-radius: 16px;
     border-bottom-right-radius: 16px
@@ -898,6 +906,11 @@
     background-color: rgb(35 31 24 / var(--tw-bg-opacity, 1))
 }
 
+.bg-\[\#f0f4f8\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(240 244 248 / var(--tw-bg-opacity, 1))
+}
+
 .bg-gradient-to-b {
     background-image: linear-gradient(to bottom, var(--tw-gradient-stops))
 }
@@ -1072,6 +1085,16 @@
     padding-right: 0px
 }
 
+.px-2 {
+    padding-left: 8px;
+    padding-right: 8px
+}
+
+.px-8 {
+    padding-left: 32px;
+    padding-right: 32px
+}
+
 .pl-5 {
     padding-left: 20px
 }
@@ -1122,6 +1145,10 @@
 
 .pl-10 {
     padding-left: 40px
+}
+
+.pt-10 {
+    padding-top: 40px
 }
 
 .text-left {
@@ -1303,6 +1330,10 @@
 
 .leading-\[1\.3\] {
     line-height: 1.3
+}
+
+.leading-\[1\.15\] {
+    line-height: 1.15
 }
 
 .tracking-\[0\.2em\] {
@@ -1488,6 +1519,16 @@
     color: rgb(230 198 155 / var(--tw-text-opacity, 1))
 }
 
+.text-\[\#00b67a\] {
+    --tw-text-opacity: 1;
+    color: rgb(0 182 122 / var(--tw-text-opacity, 1))
+}
+
+.text-\[\#444\] {
+    --tw-text-opacity: 1;
+    color: rgb(68 68 68 / var(--tw-text-opacity, 1))
+}
+
 .antialiased {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale
@@ -1564,6 +1605,12 @@
 .shadow-\[0_0_20px_rgba\(230\2c 198\2c 155\2c 0\.4\)\] {
     --tw-shadow: 0 0 20px rgba(230,198,155,0.4);
     --tw-shadow-colored: 0 0 20px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.shadow-\[0_10px_40px_rgba\(0\2c 0\2c 0\2c 0\.03\)\] {
+    --tw-shadow: 0 10px 40px rgba(0,0,0,0.03);
+    --tw-shadow-colored: 0 10px 40px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
 }
 
@@ -1789,6 +1836,10 @@
         transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))
     }
 
+    .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+
     .md\:flex-row {
         flex-direction: row
     }
@@ -1803,6 +1854,10 @@
 
     .md\:gap-20 {
         gap: 80px
+    }
+
+    .md\:gap-8 {
+        gap: 32px
     }
 
     .md\:rounded-\[32px\] {
