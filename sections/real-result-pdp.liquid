@@ -131,11 +131,14 @@
               <span class="text-3xl md:text-4xl font-black text-black w-24 flex-shrink-0">
                 {{ block.settings.percentage }}%
               </span>
-              <div class="flex-grow h-3 rounded-full overflow-hidden" style="background-color: #f0f0f0;">
-                <div
-                  class="h-full rounded-full transition-all duration-1000"
-                  style="width: {{ block.settings.percentage }}%; background-color: #e6c69b;"
-                ></div>
+              <div
+                class="flex-grow h-4 rounded-full progress-bar-bg"
+                style="background-color: #f0f0f0 !important; position: relative; overflow: hidden;"
+              >
+                <span
+                  class="progress-bar-fill"
+                  style="position: absolute; left: 0; top: 0; bottom: 0; width: 80% !important; background-color: #ff0000 !important; display: block !important;"
+                ></span>
               </div>
             </div>
             <div class="pl-0 md:pl-20 text-[#444] text-base md:text-lg font-medium leading-relaxed">
@@ -157,10 +160,18 @@
   </div>
 </section>
 
-<style>
+{% style %}
   .real-results-heading em {
     font-style: normal;
-    color: #e6c69b;
+    color: #ffcc00;
+  }
+
+  .progress-bar-bg {
+    background-color: #f0f0f0 !important;
+  }
+
+  .progress-bar-fill {
+    background-color: #ffcc00 !important; /* Vibrant Yellow-Gold */
   }
 
   @media screen and (min-width: 768px) {
@@ -168,4 +179,4 @@
       padding-left: 2rem;
     }
   }
-</style>
+{% endstyle %}
