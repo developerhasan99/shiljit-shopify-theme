@@ -131,14 +131,14 @@
               <span class="text-3xl md:text-4xl font-black text-black w-24 flex-shrink-0">
                 {{ block.settings.percentage }}%
               </span>
-              <div class="flex-grow bg-[#f0f0f0] h-3 rounded-full overflow-hidden">
+              <div class="flex-grow h-3 rounded-full overflow-hidden" style="background-color: #f0f0f0;">
                 <div
-                  class="bg-[#e6c69b] h-full rounded-full transition-all duration-1000"
-                  style="width: {{ block.settings.percentage }}%;"
+                  class="h-full rounded-full transition-all duration-1000"
+                  style="width: {{ block.settings.percentage }}%; background-color: #e6c69b;"
                 ></div>
               </div>
             </div>
-            <div class="pl-0 md:pl-30 text-[#444] text-base md:text-lg font-medium leading-relaxed">
+            <div class="pl-0 md:pl-20 text-[#444] text-base md:text-lg font-medium leading-relaxed">
               {{ block.settings.text }}
             </div>
           </div>
