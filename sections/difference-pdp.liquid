@@ -143,13 +143,13 @@
       <!-- Left: Image Wrapper -->
       <div class="order-2 lg:order-1 flex items-center justify-center">
         <!-- White card frame for the image -->
-        <div class="bg-white rounded-[2.5rem] p-4 w-full h-full max-w-[550px] shadow-[0_10px_40px_rgba(0,0,0,0.03)]">
+        <div class="bg-white fixed top-8 rounded-[2.5rem] p-4 w-full h-full max-w-[550px] shadow-[0_10px_40px_rgba(0,0,0,0.03)]">
           <div class="rounded-[2rem] overflow-hidden relative w-full h-full aspect-[4/5] object-cover">
             {% if section.settings.image != blank %}
               {{
                 section.settings.image
                 | image_url: width: 1000
-                | image_tag: loading: 'lazy', class: 'w-full h-full object-cover absolute inset-0'
+                | image_tag: loading: 'lazy', class: 'w-full object-cover absolute inset-0'
               }}
             {% else %}
               <div class="w-full h-full bg-[#e5e5e5] flex items-center justify-center absolute inset-0">
@@ -172,7 +172,7 @@
             </div>
           {% endif %}
 
-          <h2 class="difference-heading text-4xl md:text-5xl lg:text-6xl font-black text-black leading-[1.1] tracking-tight">
+          <h2 class="difference-heading text-4xl m-0 font-black text-black leading-[1.1] tracking-tight">
             {{ section.settings.heading }}
           </h2>
 
@@ -220,7 +220,7 @@
           {% for block in section.blocks %}
             {% if block.type == 'positive_point' %}
               <div
-                class="bg-white rounded-[1rem] p-4 flex items-center gap-3 shadow-[0_4px_20px_rgba(0,0,0,0.02)]"
+                class="bg-white border border-[#e6c69b] rounded-[1rem] p-4 flex items-center gap-3 shadow-[0_4px_20px_rgba(0,0,0,0.02)]"
                 {{ block.shopify_attributes }}
               >
                 <!-- Gold Check Icon -->

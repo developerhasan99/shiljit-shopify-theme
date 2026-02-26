@@ -73,6 +73,10 @@
     top: 0px
 }
 
+.top-8 {
+    top: 32px
+}
+
 .isolate {
     isolation: isolate
 }
