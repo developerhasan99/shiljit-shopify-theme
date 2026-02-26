@@ -359,6 +359,44 @@
         "custom_colors_text": "#2e2a39"
       }
     },
+    "video_review_xJWTKP": {
+      "type": "video-review",
+      "blocks": {
+        "video_VfMxTJ": {
+          "type": "video",
+          "settings": {}
+        },
+        "video_KPYg6G": {
+          "type": "video",
+          "settings": {}
+        },
+        "video_FVkLAi": {
+          "type": "video",
+          "settings": {}
+        },
+        "video_GDYtAH": {
+          "type": "video",
+          "settings": {}
+        },
+        "video_knMn3t": {
+          "type": "video",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "video_VfMxTJ",
+        "video_KPYg6G",
+        "video_FVkLAi",
+        "video_GDYtAH",
+        "video_knMn3t"
+      ],
+      "name": "Video Review",
+      "settings": {
+        "background_color": "#ffffff",
+        "heading": "Real People. Restored Power.",
+        "description": "<p>The Shift Is Real: See How <strong>Gold Shilajit</strong> Are Transforming Lives</p>"
+      }
+    },
     "why_shiljit_pdp_9wF34k": {
       "type": "why-shiljit-pdp",
       "blocks": {
@@ -464,44 +502,6 @@
         "certificate_image": "shopify://shop_images/IMG_5366.jpg",
         "heading": "Verified Pure. Every Batch.",
         "description": ""
-      }
-    },
-    "video_review_gQn7gm": {
-      "type": "video-review",
-      "blocks": {
-        "video_AKexrt": {
-          "type": "video",
-          "settings": {}
-        },
-        "video_Vbcwyb": {
-          "type": "video",
-          "settings": {}
-        },
-        "video_K7jbtR": {
-          "type": "video",
-          "settings": {}
-        },
-        "video_9MJ34i": {
-          "type": "video",
-          "settings": {}
-        },
-        "video_jn8MTi": {
-          "type": "video",
-          "settings": {}
-        }
-      },
-      "block_order": [
-        "video_AKexrt",
-        "video_Vbcwyb",
-        "video_K7jbtR",
-        "video_9MJ34i",
-        "video_jn8MTi"
-      ],
-      "name": "Video Review",
-      "settings": {
-        "background_color": "#ffffff",
-        "heading": "Real People. Restored Power.",
-        "description": "<p>The Shift Is Real: See How<strong> Shilajit Gold</strong> Are Transforming Lives</p>"
       }
     },
     "collapsible_content_igJqFK": {
@@ -1030,11 +1030,11 @@
   "order": [
     "main",
     "horizontal_ticker_NyqAbx",
+    "video_review_xJWTKP",
     "why_shiljit_pdp_9wF34k",
     "ancient_wisdon_TdAL6j",
     "why_gold_shiljit_n3KrjB",
     "certificate_PHaiYk",
-    "video_review_gQn7gm",
     "collapsible_content_igJqFK",
     "how_shiljit_works_pdp_Mxmyfd",
     "review_pdp_ke46Dp",
