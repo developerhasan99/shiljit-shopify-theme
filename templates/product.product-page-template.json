@@ -461,7 +461,7 @@
       "name": "Certificate",
       "settings": {
         "background_color": "#ffffff",
-        "certificate_image": "shopify://shop_images/Screenshot_2026-02-05_at_3.54.03_PM_518c322b-5ad1-4c49-b70a-a431adf1ada1.webp",
+        "certificate_image": "shopify://shop_images/IMG_5366.jpg",
         "heading": "Verified Pure. Every Batch.",
         "description": ""
       }
@@ -827,161 +827,85 @@
         "custom_colors_solid_button_text": "#ffffff"
       }
     },
-    "d7112918-a6ed-4119-8565-5d4b7041284a": {
-      "type": "rich-text",
+    "comparison_table_DnM3Fw": {
+      "type": "comparison-table",
       "blocks": {
-        "template--18472096170313__d7112918-a6ed-4119-8565-5d4b7041284a-16798653812b488ac7-0": {
-          "type": "heading",
+        "row_rx8hKw": {
+          "type": "row",
           "settings": {
-            "heading": "<p>Men Over 40: Read this! </p>",
-            "heading_size": "h1"
+            "benefit": "<strong>Benefit</strong>",
+            "us": true,
+            "others": false,
+            "others_2": false,
+            "others_3": false
           }
         },
-        "template--18472096170313__d7112918-a6ed-4119-8565-5d4b7041284a-16798653812b488ac7-1": {
-          "type": "text",
+        "row_CkzAqJ": {
+          "type": "row",
           "settings": {
-            "text": "<p>Low Drive, low energy & weaker performance are usually not 'age'. It is your body asking for support. </p>"
+            "benefit": "<strong>Benefit</strong>",
+            "us": true,
+            "others": false,
+            "others_2": false,
+            "others_3": false
+          }
+        },
+        "row_zz8Fnk": {
+          "type": "row",
+          "settings": {
+            "benefit": "<strong>Benefit</strong>",
+            "us": true,
+            "others": false,
+            "others_2": false,
+            "others_3": false
           }
         }
       },
       "block_order": [
-        "template--18472096170313__d7112918-a6ed-4119-8565-5d4b7041284a-16798653812b488ac7-0",
-        "template--18472096170313__d7112918-a6ed-4119-8565-5d4b7041284a-16798653812b488ac7-1"
+        "row_rx8hKw",
+        "row_CkzAqJ",
+        "row_zz8Fnk"
       ],
+      "name": "Comparison table",
       "settings": {
         "visibility": "always-display",
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "background-1",
-        "full_width": true,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#2e2a39",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff"
-      }
-    },
-    "multicolumn_4RLyNP": {
-      "type": "multicolumn",
-      "blocks": {
-        "column_dJ8bWb": {
-          "type": "column",
-          "settings": {
-            "title": "Non Existent Drive & Libido",
-            "text": "<p>You dont feel like yourself mentally or physically. Low drive can be linked  to stress, low energy and hormonal balance. Supporting vitality helps you feel switches on again. </p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_rCGqVz": {
-          "type": "column",
-          "settings": {
-            "title": "Constant Fatigue & Brain Fog",
-            "text": "<p>Struggling to concentrate, think clearly or stay sharp. Daily stress and low mineral intake can disrupt mental clarity. Supporting energy metabolism helps you stay focused.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column_HNKXtq": {
-          "type": "column",
-          "settings": {
-            "title": "Mood Swing & Disturbed Sleep",
-            "text": "<p>Easily irritated, restless or well rested but still tired. Poor recovery impacts mood and performance. Support stress response can help you unwind and feel more balanced.</p>",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_dJ8bWb",
-        "column_rCGqVz",
-        "column_HNKXtq"
-      ],
-      "name": "t:sections.multicolumn.presets.name",
-      "settings": {
-        "visibility": "always-display",
-        "title": "",
+        "title": "Comparison table",
         "heading_size": "h1",
-        "image_width": "full",
-        "image_ratio": "adapt",
-        "columns_desktop": 3,
-        "column_alignment": "left",
-        "background_style": "primary",
+        "text": "<p>Talk about how and why is your brand better than the others.</p>",
         "button_label": "",
-        "button_link": "",
+        "link": "",
+        "button_style_secondary": false,
         "color_scheme": "background-1",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "slider_preview": true,
+        "layout": "table_second",
+        "corner_radius": 20,
+        "number_of_competitors": 1,
+        "benefit_color_scheme": "accent-1",
+        "checkmark_color": "#53AF01",
+        "icon_cells_color_scheme": "background-1",
+        "us_label": "[shop_name]",
+        "us_label_size": 18,
+        "logo_width": 90,
+        "mobile_logo_width": 60,
+        "others_label": "Others",
+        "others_label_size": 18,
+        "others_logo_width": 90,
+        "others_mobile_logo_width": 60,
+        "others_2_label": "Competitor 2",
+        "others_2_label_size": 18,
+        "others_2_logo_width": 90,
+        "others_2_mobile_logo_width": 60,
+        "others_3_label": "Competitor 3",
+        "others_3_label_size": 18,
+        "others_3_logo_width": 90,
+        "others_3_mobile_logo_width": 60,
         "padding_top": 36,
         "padding_bottom": 36,
-        "custom_colors_background": "#ffffff",
+        "custom_colors_background": "#FFFFFF",
         "custom_gradient_background": "",
-        "custom_colors_text": "#2e2a39",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff"
-      }
-    },
-    "image_with_text_zT9VpF": {
-      "type": "image-with-text",
-      "blocks": {
-        "heading_hqcABL": {
-          "type": "heading",
-          "settings": {
-            "heading": "3RD PARTY TESTED & VERIFIED",
-            "heading_size": "h1"
-          }
-        },
-        "text_gch7Qb": {
-          "type": "text",
-          "settings": {
-            "text": "<ul><li>100% AUTHENTIC SHILAJIT </li><li>SOURCED STRAIGHT FROM THE HILAMALAYAN REGION ABOVE 17000 FT </li><li>CONTAINS OVER 85+ MINERALS & NUTRIENTS </li><li>LAB VERIFIED & TESTED FOR PURITY AND POTENCY</li></ul>",
-            "text_style": "body"
-          }
-        },
-        "button_rJkRKN": {
-          "type": "button",
-          "disabled": true,
-          "settings": {
-            "button_label": "Button label",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "heading_hqcABL",
-        "text_gch7Qb",
-        "button_rJkRKN"
-      ],
-      "name": "t:sections.image-with-text.presets.name",
-      "settings": {
-        "visibility": "always-display",
-        "image": "shopify://shop_images/IMG_5366.jpg",
-        "video_autoplay": true,
-        "height": "adapt",
-        "full_desktop_width": false,
-        "content_layout": "no-overlap",
-        "desktop_image_width": "medium",
-        "layout": "image_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "color_scheme": "background-1",
-        "section_color_scheme": "background-1",
-        "mobile_direction": "normal",
-        "mobile_image_quanlity": "2",
-        "mobile_content_alignment": "left",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "custom_colors_background": "#2e2a39",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#ffffff",
+        "custom_colors_text": "#2E2A39",
         "custom_colors_solid_button_background": "#dd1d1d",
         "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d",
-        "custom_section_colors_background": "#ffffff",
-        "custom_section_gradient_background": ""
+        "custom_colors_outline_button": "#dd1d1d"
       }
     },
     "03c08e95-f0ce-4379-bc05-787da4136202": {
@@ -1472,9 +1396,7 @@
     "us_vs_other_pdp_123",
     "related-products",
     "rich_text_JKTUfe",
-    "d7112918-a6ed-4119-8565-5d4b7041284a",
-    "multicolumn_4RLyNP",
-    "image_with_text_zT9VpF",
+    "comparison_table_DnM3Fw",
     "03c08e95-f0ce-4379-bc05-787da4136202",
     "comparison_table_UCFFhC",
     "1dec15b6-e51f-4064-b412-acf7a98422ef",
