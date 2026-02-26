@@ -1,0 +1,273 @@
+{% schema %}
+{
+  "name": "Us vs Other PDP",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#fbf9f6"
+    },
+    {
+      "type": "text",
+      "id": "pill_label",
+      "label": "Pill Label",
+      "default": "THE XARA DIFFERENCE"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Xara <em>vs</em> Other Brands"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "What actually impacts performance.*"
+    },
+    {
+      "type": "header",
+      "content": "Product 1 (Ours)"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_1_image",
+      "label": "Product Image"
+    },
+    {
+      "type": "text",
+      "id": "product_1_name",
+      "label": "Product Name",
+      "default": "Xara"
+    },
+    {
+      "type": "header",
+      "content": "Product 2 (Theirs)"
+    },
+    {
+      "type": "image_picker",
+      "id": "product_2_image",
+      "label": "Product Image"
+    },
+    {
+      "type": "text",
+      "id": "product_2_name",
+      "label": "Product Name",
+      "default": "Other"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "comparison_row",
+      "name": "Comparison Feature",
+      "settings": [
+        {
+          "type": "text",
+          "id": "feature_name",
+          "label": "Feature Name",
+          "default": "Feature"
+        },
+        {
+          "type": "text",
+          "id": "product_1_value",
+          "label": "Product 1 Value",
+          "default": "Yes"
+        },
+        {
+          "type": "text",
+          "id": "product_2_value",
+          "label": "Product 2 Value",
+          "default": "No"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Us vs Other PDP",
+      "blocks": [
+        {
+          "type": "comparison_row",
+          "settings": {
+            "feature_name": "What matters",
+            "product_1_value": "Xara",
+            "product_2_value": "Other"
+          }
+        },
+        {
+          "type": "comparison_row",
+          "settings": {
+            "feature_name": "Purity Tested",
+            "product_1_value": "Yes",
+            "product_2_value": "Unknown"
+          }
+        },
+        {
+          "type": "comparison_row",
+          "settings": {
+            "feature_name": "Natural Formula",
+            "product_1_value": "Yes",
+            "product_2_value": "Synthetic"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<section class="py-16 md:py-24" style="background-color: {{ section.settings.background_color }};">
+  <div class="max-w-[1000px] mx-auto px-6">
+    <!-- Header -->
+    <div class="text-center mb-12 md:mb-16">
+      {% if section.settings.pill_label != blank %}
+        <span class="inline-block bg-[#f3ecd7] text-[#443d31] text-[10px] md:text-xs font-bold tracking-[0.2em] rounded-full px-6 py-2 uppercase border border-[#e6c69b]/30 mb-6">
+          {{ section.settings.pill_label }}
+        </span>
+      {% endif %}
+
+      <h2 class="vs-heading text-4xl md:text-5xl lg:text-6xl font-black text-black leading-[1.1] tracking-tight mb-4">
+        {{ section.settings.heading }}
+      </h2>
+
+      {% if section.settings.subheading != blank %}
+        <p class="text-[#666] text-base md:text-xl font-bold tracking-tight">
+          {{ section.settings.subheading }}
+        </p>
+      {% endif %}
+    </div>
+
+    <!-- Layout Grid for Product Cards + Comparison -->
+    <div class="flex flex-col gap-4 md:gap-6 w-full max-w-[900px] mx-auto">
+      <!-- Product Cards Header Row (Desktop) -->
+      <div class="hidden md:grid grid-cols-3 gap-6 items-end">
+        <!-- Empty left column -->
+        <div></div>
+        <!-- Product 1 Card -->
+        <div class="bg-white rounded-[2rem] p-6 flex flex-col items-center justify-center shadow-[0_4px_20px_rgba(0,0,0,0.02)] h-[240px]">
+          <div class="flex-grow flex items-center justify-center w-full mb-4">
+            {% if section.settings.product_1_image != blank %}
+              {{
+                section.settings.product_1_image
+                | image_url: width: 300
+                | image_tag: class: 'max-h-[140px] w-auto object-contain'
+              }}
+            {% else %}
+              <div class="w-full h-full max-h-[140px] bg-gray-100 flex items-center justify-center rounded-lg">
+                Placeholder
+              </div>
+            {% endif %}
+          </div>
+          <h3 class="font-black text-2xl text-black m-0 leading-none">{{ section.settings.product_1_name }}</h3>
+        </div>
+        <!-- Product 2 Card -->
+        <div class="bg-white rounded-[2rem] p-6 flex flex-col items-center justify-center shadow-[0_4px_20px_rgba(0,0,0,0.02)] h-[240px]">
+          <div class="flex-grow flex items-center justify-center w-full mb-4">
+            {% if section.settings.product_2_image != blank %}
+              {{
+                section.settings.product_2_image
+                | image_url: width: 300
+                | image_tag: class: 'max-h-[140px] w-auto object-contain'
+              }}
+            {% else %}
+              <div class="w-full h-full max-h-[140px] bg-gray-100 flex items-center justify-center rounded-lg">
+                Placeholder
+              </div>
+            {% endif %}
+          </div>
+          <h3 class="font-black text-2xl text-[#666] m-0 leading-none">{{ section.settings.product_2_name }}</h3>
+        </div>
+      </div>
+
+      <!-- Mobile Product Cards Header -->
+      <div class="grid md:hidden grid-cols-2 gap-4">
+        <!-- Product 1 Card -->
+        <div class="bg-white rounded-[1.5rem] p-4 flex flex-col items-center justify-center shadow-[0_4px_20px_rgba(0,0,0,0.02)] h-[180px]">
+          <div class="flex-grow flex items-center justify-center w-full mb-3">
+            {% if section.settings.product_1_image != blank %}
+              {{
+                section.settings.product_1_image
+                | image_url: width: 200
+                | image_tag: class: 'max-h-[100px] w-auto object-contain'
+              }}
+            {% else %}
+              <div class="w-full h-full max-h-[100px] bg-gray-100 flex items-center justify-center rounded-lg">
+                Placeholder
+              </div>
+            {% endif %}
+          </div>
+          <h3 class="font-black text-xl text-black m-0 leading-none">{{ section.settings.product_1_name }}</h3>
+        </div>
+        <!-- Product 2 Card -->
+        <div class="bg-white rounded-[1.5rem] p-4 flex flex-col items-center justify-center shadow-[0_4px_20px_rgba(0,0,0,0.02)] h-[180px]">
+          <div class="flex-grow flex items-center justify-center w-full mb-3">
+            {% if section.settings.product_2_image != blank %}
+              {{
+                section.settings.product_2_image
+                | image_url: width: 200
+                | image_tag: class: 'max-h-[100px] w-auto object-contain'
+              }}
+            {% else %}
+              <div class="w-full h-full max-h-[100px] bg-gray-100 flex items-center justify-center rounded-lg">
+                Placeholder
+              </div>
+            {% endif %}
+          </div>
+          <h3 class="font-black text-xl text-[#666] m-0 leading-none">{{ section.settings.product_2_name }}</h3>
+        </div>
+      </div>
+
+      <!-- Comparison Rows -->
+      <div class="flex flex-col gap-2 md:gap-3 mt-4">
+        {% for block in section.blocks %}
+          {%- assign is_header = false -%}
+          {%- if forloop.first and block.settings.feature_name == 'What matters' -%}
+            {%- assign is_header = true -%}
+          {%- endif -%}
+
+          <div
+            class="rounded-xl md:rounded-[1.5rem] p-4 md:p-6 grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 items-center {% if is_header %}bg-[#f5f1eb]{% else %}bg-white{% endif %} shadow-[0_2px_10px_rgba(0,0,0,0.01)]"
+            {{ block.shopify_attributes }}
+          >
+            <!-- Feature Name (Row Label) -->
+            <div class="col-span-2 md:col-span-1 {% unless is_header %}border-b border-[#f0f0f0]{% endunless %} md:border-none pb-3 md:pb-0 mb-2 md:mb-0">
+              <span class="font-black text-black text-base md:text-lg">{{ block.settings.feature_name }}</span>
+            </div>
+
+            <!-- Product 1 Value -->
+            <div class="text-center flex flex-col items-center justify-center">
+              {% unless is_header %}
+                <span class="md:hidden text-[10px] text-[#888] font-bold uppercase tracking-wider mb-1">
+                  {{- section.settings.product_1_name -}}
+                </span>
+              {% endunless %}
+              <div class="font-black text-black text-sm md:text-lg">
+                {{ block.settings.product_1_value }}
+              </div>
+            </div>
+
+            <!-- Product 2 Value -->
+            <div class="text-center flex flex-col items-center justify-center border-l w-full border-[#f0f0f0] md:border-none">
+              {% unless is_header %}
+                <span class="md:hidden text-[10px] text-[#888] font-bold uppercase tracking-wider mb-1">
+                  {{- section.settings.product_2_name -}}
+                </span>
+              {% endunless %}
+              <div class="font-bold text-[#666] text-sm md:text-lg">
+                {{ block.settings.product_2_value }}
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% style %}
+  .vs-heading em {
+    font-style: normal;
+    color: #dfba83; /* Matching the mockup 'vs' color */
+  }
+{% endstyle %}

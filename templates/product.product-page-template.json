@@ -752,6 +752,41 @@
         "positive_heading": "WHAT MEN TYPICALLY NOTICE"
       }
     },
+    "us_vs_other_pdp_123": {
+      "type": "us-vs-other-pdp",
+      "blocks": {
+        "comp_1": {
+          "type": "comparison_row",
+          "settings": {
+            "feature_name": "What matters",
+            "product_1_value": "Xara",
+            "product_2_value": "Other"
+          }
+        },
+        "comp_2": {
+          "type": "comparison_row",
+          "settings": {
+            "feature_name": "Purity Tested",
+            "product_1_value": "Yes",
+            "product_2_value": "No"
+          }
+        }
+      },
+      "block_order": [
+        "comp_1",
+        "comp_2"
+      ],
+      "name": "Us vs Other PDP",
+      "settings": {
+        "background_color": "#fbf9f6",
+        "pill_label": "THE XARA DIFFERENCE",
+        "heading": "Xara <em>vs</em> Other Brands",
+        "subheading": "What actually impacts performance.*",
+        "product_1_image": "shopify://shop_images/1770339800560-tdy8dqf60ej_1.webp",
+        "product_1_name": "Xara",
+        "product_2_name": "Other"
+      }
+    },
     "related-products": {
       "type": "related-products",
       "disabled": true,
@@ -1434,6 +1469,7 @@
     "review_pdp_ke46Dp",
     "real_result_pdp_yyLgif",
     "difference_pdp_yxqjPz",
+    "us_vs_other_pdp_123",
     "related-products",
     "rich_text_JKTUfe",
     "d7112918-a6ed-4119-8565-5d4b7041284a",
