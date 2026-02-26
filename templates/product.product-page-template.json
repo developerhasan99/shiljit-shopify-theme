@@ -752,10 +752,10 @@
         "positive_heading": "WHAT MEN TYPICALLY NOTICE"
       }
     },
-    "us_vs_other_pdp_123": {
+    "us_vs_other_pdp_H4ypTi": {
       "type": "us-vs-other-pdp",
       "blocks": {
-        "comp_1": {
+        "comparison_row_EUyPiQ": {
           "type": "comparison_row",
           "settings": {
             "feature_name": "What matters",
@@ -763,26 +763,34 @@
             "product_2_value": "Other"
           }
         },
-        "comp_2": {
+        "comparison_row_WXmdab": {
           "type": "comparison_row",
           "settings": {
             "feature_name": "Purity Tested",
             "product_1_value": "Yes",
-            "product_2_value": "No"
+            "product_2_value": "Unknown"
+          }
+        },
+        "comparison_row_PWmgH6": {
+          "type": "comparison_row",
+          "settings": {
+            "feature_name": "Natural Formula",
+            "product_1_value": "Yes",
+            "product_2_value": "Synthetic"
           }
         }
       },
       "block_order": [
-        "comp_1",
-        "comp_2"
+        "comparison_row_EUyPiQ",
+        "comparison_row_WXmdab",
+        "comparison_row_PWmgH6"
       ],
-      "name": "Us vs Other PDP",
+      "name": "Us vs Other section",
       "settings": {
         "background_color": "#fbf9f6",
         "pill_label": "THE XARA DIFFERENCE",
         "heading": "Xara <em>vs</em> Other Brands",
         "subheading": "What actually impacts performance.*",
-        "product_1_image": "shopify://shop_images/1770339800560-tdy8dqf60ej_1.webp",
         "product_1_name": "Xara",
         "product_2_name": "Other"
       }
@@ -827,237 +835,6 @@
         "custom_colors_solid_button_text": "#ffffff"
       }
     },
-    "comparison_table_DnM3Fw": {
-      "type": "comparison-table",
-      "blocks": {
-        "row_rx8hKw": {
-          "type": "row",
-          "settings": {
-            "benefit": "<strong>Benefit</strong>",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
-          }
-        },
-        "row_CkzAqJ": {
-          "type": "row",
-          "settings": {
-            "benefit": "<strong>Benefit</strong>",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
-          }
-        },
-        "row_zz8Fnk": {
-          "type": "row",
-          "settings": {
-            "benefit": "<strong>Benefit</strong>",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
-          }
-        }
-      },
-      "block_order": [
-        "row_rx8hKw",
-        "row_CkzAqJ",
-        "row_zz8Fnk"
-      ],
-      "name": "Comparison table",
-      "settings": {
-        "visibility": "always-display",
-        "title": "Comparison table",
-        "heading_size": "h1",
-        "text": "<p>Talk about how and why is your brand better than the others.</p>",
-        "button_label": "",
-        "link": "",
-        "button_style_secondary": false,
-        "color_scheme": "background-1",
-        "layout": "table_second",
-        "corner_radius": 20,
-        "number_of_competitors": 1,
-        "benefit_color_scheme": "accent-1",
-        "checkmark_color": "#53AF01",
-        "icon_cells_color_scheme": "background-1",
-        "us_label": "[shop_name]",
-        "us_label_size": 18,
-        "logo_width": 90,
-        "mobile_logo_width": 60,
-        "others_label": "Others",
-        "others_label_size": 18,
-        "others_logo_width": 90,
-        "others_mobile_logo_width": 60,
-        "others_2_label": "Competitor 2",
-        "others_2_label_size": 18,
-        "others_2_logo_width": 90,
-        "others_2_mobile_logo_width": 60,
-        "others_3_label": "Competitor 3",
-        "others_3_label_size": 18,
-        "others_3_logo_width": 90,
-        "others_3_mobile_logo_width": 60,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "custom_colors_background": "#FFFFFF",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#2E2A39",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d"
-      }
-    },
-    "03c08e95-f0ce-4379-bc05-787da4136202": {
-      "type": "horizontal-ticker",
-      "blocks": {
-        "template--18472096170313__03c08e95-f0ce-4379-bc05-787da4136202-1679864525e35c34e4-0": {
-          "type": "text",
-          "settings": {
-            "title": "OVER 10,000+ MEN BOOSTED THEIR TESTOSTERONE NATURALLY"
-          }
-        },
-        "template--18472096170313__03c08e95-f0ce-4379-bc05-787da4136202-1679864525e35c34e4-1": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "title": "Shrine Theme"
-          }
-        },
-        "template--18472096170313__03c08e95-f0ce-4379-bc05-787da4136202-1679864525e35c34e4-2": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "title": "Shrine Theme"
-          }
-        }
-      },
-      "block_order": [
-        "template--18472096170313__03c08e95-f0ce-4379-bc05-787da4136202-1679864525e35c34e4-0",
-        "template--18472096170313__03c08e95-f0ce-4379-bc05-787da4136202-1679864525e35c34e4-1",
-        "template--18472096170313__03c08e95-f0ce-4379-bc05-787da4136202-1679864525e35c34e4-2"
-      ],
-      "settings": {
-        "visibility": "always-display",
-        "speed": 1,
-        "mobile_spacing": 60,
-        "desktop_spacing": 100,
-        "color_scheme": "accent-1",
-        "text_size": "1.75",
-        "italic_text": false,
-        "uppercase_text": false,
-        "bold_text": false,
-        "mobile_image_height": 26,
-        "desktop_image_height": 40,
-        "padding_top": 16,
-        "padding_bottom": 16,
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#2e2a39"
-      }
-    },
-    "comparison_table_UCFFhC": {
-      "type": "comparison-table",
-      "blocks": {
-        "row_HrrUyn": {
-          "type": "row",
-          "settings": {
-            "benefit": "Improves Sexual Function",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
-          }
-        },
-        "row_zGpKTP": {
-          "type": "row",
-          "settings": {
-            "benefit": "Increases Testosterone",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
-          }
-        },
-        "row_jYQfWx": {
-          "type": "row",
-          "settings": {
-            "benefit": "Safe to Use Everyday",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
-          }
-        },
-        "row_jUf4XK": {
-          "type": "row",
-          "settings": {
-            "benefit": "<strong>Free from Drugs & Heavy Metals</strong>",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
-          }
-        },
-        "row_YRzn4m": {
-          "type": "row",
-          "settings": {
-            "benefit": "<strong>100% Money Back Guarantee</strong>",
-            "us": true,
-            "others": false,
-            "others_2": false,
-            "others_3": false
-          }
-        }
-      },
-      "block_order": [
-        "row_HrrUyn",
-        "row_zGpKTP",
-        "row_jYQfWx",
-        "row_jUf4XK",
-        "row_YRzn4m"
-      ],
-      "settings": {
-        "visibility": "always-display",
-        "title": "Why Choosee Shilajit Gold",
-        "heading_size": "h1",
-        "text": "",
-        "button_label": "",
-        "link": "",
-        "button_style_secondary": false,
-        "color_scheme": "background-1",
-        "layout": "table_second",
-        "corner_radius": 20,
-        "number_of_competitors": 1,
-        "benefit_color_scheme": "accent-1",
-        "checkmark_color": "#53af01",
-        "icon_cells_color_scheme": "background-1",
-        "us_label": "Our Shilajit",
-        "us_label_size": 18,
-        "logo_width": 90,
-        "mobile_logo_width": 60,
-        "others_label": "Others",
-        "others_label_size": 18,
-        "others_logo_width": 90,
-        "others_mobile_logo_width": 60,
-        "others_2_label": "Competitor 2",
-        "others_2_label_size": 18,
-        "others_2_logo_width": 90,
-        "others_2_mobile_logo_width": 60,
-        "others_3_label": "Competitor 3",
-        "others_3_label_size": 18,
-        "others_3_logo_width": 90,
-        "others_3_mobile_logo_width": 60,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#2e2a39",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d"
-      }
-    },
     "1dec15b6-e51f-4064-b412-acf7a98422ef": {
       "type": "comparison-slider",
       "disabled": true,
@@ -1084,67 +861,6 @@
         "custom_colors_solid_button_background": "#dd1d1d",
         "custom_colors_solid_button_text": "#ffffff",
         "custom_colors_outline_button": "#dd1d1d"
-      }
-    },
-    "e21ff573-e051-4bf7-867b-94765a3b8f11": {
-      "type": "icon-bar",
-      "blocks": {
-        "template--18472096170313__e21ff573-e051-4bf7-867b-94765a3b8f11-16798645704e6a2246-0": {
-          "type": "column",
-          "settings": {
-            "icon": "check_mark",
-            "title": "Betters Long Lasting Sex",
-            "text": ""
-          }
-        },
-        "template--18472096170313__e21ff573-e051-4bf7-867b-94765a3b8f11-16798645704e6a2246-1": {
-          "type": "column",
-          "settings": {
-            "icon": "ruler",
-            "title": "Longer Erection",
-            "text": ""
-          }
-        },
-        "template--18472096170313__e21ff573-e051-4bf7-867b-94765a3b8f11-16798645704e6a2246-2": {
-          "type": "column",
-          "settings": {
-            "icon": "lightning_bolt",
-            "title": "More Energy & Less Stress",
-            "text": ""
-          }
-        },
-        "column_dTJPka": {
-          "type": "column",
-          "settings": {
-            "icon": "heart",
-            "title": "Confidence in the Bedroom",
-            "text": ""
-          }
-        }
-      },
-      "block_order": [
-        "template--18472096170313__e21ff573-e051-4bf7-867b-94765a3b8f11-16798645704e6a2246-0",
-        "template--18472096170313__e21ff573-e051-4bf7-867b-94765a3b8f11-16798645704e6a2246-1",
-        "template--18472096170313__e21ff573-e051-4bf7-867b-94765a3b8f11-16798645704e6a2246-2",
-        "column_dTJPka"
-      ],
-      "settings": {
-        "visibility": "always-display",
-        "title": "UPGRADE YOUR ENERGY, STRENGTH & DRIVE",
-        "heading_size": "h1",
-        "text": "",
-        "icon_size": "medium",
-        "columns_desktop": 4,
-        "icon_color": "accent-1",
-        "background_style": "none",
-        "color_scheme": "inverse",
-        "columns_mobile": "1",
-        "swipe_on_mobile": false,
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#2e2a39"
       }
     },
     "93b0a974-5b22-49fe-9076-abdc86f89548": {
@@ -1215,59 +931,6 @@
         "custom_colors_solid_button_background": "#dd1d1d",
         "custom_colors_solid_button_text": "#ffffff",
         "custom_colors_outline_button": "#dd1d1d"
-      }
-    },
-    "73c5de8e-7b83-4813-8812-d56eb3a987a3": {
-      "type": "horizontal-ticker",
-      "blocks": {
-        "image_8tciir": {
-          "type": "image",
-          "settings": {}
-        },
-        "template--18472096170313__73c5de8e-7b83-4813-8812-d56eb3a987a3-1679864525e35c34e4-0": {
-          "type": "text",
-          "settings": {
-            "title": "30 Day Money Back Guarantee"
-          }
-        },
-        "template--18472096170313__73c5de8e-7b83-4813-8812-d56eb3a987a3-1679864525e35c34e4-1": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "title": "Shrine Theme"
-          }
-        },
-        "template--18472096170313__73c5de8e-7b83-4813-8812-d56eb3a987a3-1679864525e35c34e4-2": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "title": "Shrine Theme"
-          }
-        }
-      },
-      "block_order": [
-        "image_8tciir",
-        "template--18472096170313__73c5de8e-7b83-4813-8812-d56eb3a987a3-1679864525e35c34e4-0",
-        "template--18472096170313__73c5de8e-7b83-4813-8812-d56eb3a987a3-1679864525e35c34e4-1",
-        "template--18472096170313__73c5de8e-7b83-4813-8812-d56eb3a987a3-1679864525e35c34e4-2"
-      ],
-      "settings": {
-        "visibility": "always-display",
-        "speed": 3,
-        "mobile_spacing": 60,
-        "desktop_spacing": 100,
-        "color_scheme": "inverse",
-        "text_size": "1.75",
-        "italic_text": false,
-        "uppercase_text": false,
-        "bold_text": false,
-        "mobile_image_height": 26,
-        "desktop_image_height": 40,
-        "padding_top": 16,
-        "padding_bottom": 16,
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#2e2a39"
       }
     },
     "64c96926-2c31-48fe-bd21-30941bc87822": {
@@ -1393,16 +1056,11 @@
     "review_pdp_ke46Dp",
     "real_result_pdp_yyLgif",
     "difference_pdp_yxqjPz",
-    "us_vs_other_pdp_123",
+    "us_vs_other_pdp_H4ypTi",
     "related-products",
     "rich_text_JKTUfe",
-    "comparison_table_DnM3Fw",
-    "03c08e95-f0ce-4379-bc05-787da4136202",
-    "comparison_table_UCFFhC",
     "1dec15b6-e51f-4064-b412-acf7a98422ef",
-    "e21ff573-e051-4bf7-867b-94765a3b8f11",
     "93b0a974-5b22-49fe-9076-abdc86f89548",
-    "73c5de8e-7b83-4813-8812-d56eb3a987a3",
     "64c96926-2c31-48fe-bd21-30941bc87822",
     "bb7d2784-ae42-434b-aece-ca60bb5e9aa5"
   ]
