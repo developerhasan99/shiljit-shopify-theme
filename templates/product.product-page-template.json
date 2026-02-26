@@ -933,61 +933,6 @@
         "custom_colors_outline_button": "#dd1d1d"
       }
     },
-    "64c96926-2c31-48fe-bd21-30941bc87822": {
-      "type": "results",
-      "blocks": {
-        "template--18472096170313__64c96926-2c31-48fe-bd21-30941bc87822-16798646483bf89b52-0": {
-          "type": "row",
-          "settings": {
-            "percentage": 93,
-            "row_text": "<p>Noticed a 15% increase in their testosterone levels in just under 4 weeks </p>"
-          }
-        },
-        "template--18472096170313__64c96926-2c31-48fe-bd21-30941bc87822-16798646483bf89b52-1": {
-          "type": "row",
-          "settings": {
-            "percentage": 92,
-            "row_text": "<p>Noticed a significant increase in libido and bedroom performance </p>"
-          }
-        },
-        "template--18472096170313__64c96926-2c31-48fe-bd21-30941bc87822-16798646483bf89b52-2": {
-          "type": "row",
-          "settings": {
-            "percentage": 99,
-            "row_text": "<p>Noticed a massive increase in energy and mind clarity all day</p>"
-          }
-        }
-      },
-      "block_order": [
-        "template--18472096170313__64c96926-2c31-48fe-bd21-30941bc87822-16798646483bf89b52-0",
-        "template--18472096170313__64c96926-2c31-48fe-bd21-30941bc87822-16798646483bf89b52-1",
-        "template--18472096170313__64c96926-2c31-48fe-bd21-30941bc87822-16798646483bf89b52-2"
-      ],
-      "settings": {
-        "visibility": "always-display",
-        "title": "",
-        "heading_size": "h1",
-        "text": "",
-        "color_scheme": "background-1",
-        "layout": "results_first",
-        "results_headline": "What To Expect in 4 Weeks!",
-        "results_headline_size": "h2",
-        "results_headline_alignment": "left",
-        "caption": "<p>Results are based off off 54,5449 orders </p>",
-        "button_label": "",
-        "link": "",
-        "button_style_secondary": false,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "custom_colors_background": "#ffffff",
-        "custom_gradient_background": "",
-        "custom_colors_text": "#2e2a39",
-        "custom_colors_accent": "#dd1d1d",
-        "custom_colors_solid_button_background": "#dd1d1d",
-        "custom_colors_solid_button_text": "#ffffff",
-        "custom_colors_outline_button": "#dd1d1d"
-      }
-    },
     "bb7d2784-ae42-434b-aece-ca60bb5e9aa5": {
       "type": "collapsible-content",
       "blocks": {
@@ -1061,7 +1006,6 @@
     "rich_text_JKTUfe",
     "1dec15b6-e51f-4064-b412-acf7a98422ef",
     "93b0a974-5b22-49fe-9076-abdc86f89548",
-    "64c96926-2c31-48fe-bd21-30941bc87822",
     "bb7d2784-ae42-434b-aece-ca60bb5e9aa5"
   ]
 }
