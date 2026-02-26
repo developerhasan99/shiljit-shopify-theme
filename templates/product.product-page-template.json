@@ -795,6 +795,39 @@
         "product_2_name": "Other"
       }
     },
+    "video_review_pdp_123": {
+      "type": "video-review",
+      "blocks": {
+        "vid_1": {
+          "type": "video"
+        },
+        "vid_2": {
+          "type": "video"
+        },
+        "vid_3": {
+          "type": "video"
+        },
+        "vid_4": {
+          "type": "video"
+        },
+        "vid_5": {
+          "type": "video"
+        }
+      },
+      "block_order": [
+        "vid_1",
+        "vid_2",
+        "vid_3",
+        "vid_4",
+        "vid_5"
+      ],
+      "name": "Video Review",
+      "settings": {
+        "background_color": "#ffffff",
+        "heading": "Real People. Restored Power.",
+        "description": "<p>The Shift Is Real: See How <strong>Xara Shilajit</strong> Are Transforming Lives</p>"
+      }
+    },
     "related-products": {
       "type": "related-products",
       "disabled": true,
@@ -1002,6 +1035,7 @@
     "real_result_pdp_yyLgif",
     "difference_pdp_yxqjPz",
     "us_vs_other_pdp_H4ypTi",
+    "video_review_pdp_123",
     "related-products",
     "rich_text_JKTUfe",
     "1dec15b6-e51f-4064-b412-acf7a98422ef",
