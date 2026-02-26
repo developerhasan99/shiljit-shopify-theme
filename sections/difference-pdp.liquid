@@ -137,13 +137,13 @@
 }
 {% endschema %}
 
-<section class="py-16 relative md:py-24" style="background-color: {{ section.settings.background_color }};">
+<section class="py-16 md:py-24" style="background-color: {{ section.settings.background_color }};">
   <div class="max-w-[1300px] mx-auto px-6">
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
       <!-- Left: Image Wrapper -->
       <div class="order-2 lg:order-1 flex items-center justify-center">
         <!-- White card frame for the image -->
-        <div class="bg-white fixed top-8 rounded-[2.5rem] p-4 w-full h-full max-w-[550px] shadow-[0_10px_40px_rgba(0,0,0,0.03)]">
+        <div class="bg-white rounded-[2.5rem] p-4 w-full h-full max-w-[550px] shadow-[0_10px_40px_rgba(0,0,0,0.03)]">
           <div class="rounded-[2rem] overflow-hidden relative w-full h-full aspect-[4/5] object-cover">
             {% if section.settings.image != blank %}
               {{
