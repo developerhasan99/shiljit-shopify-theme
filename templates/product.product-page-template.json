@@ -466,6 +466,44 @@
         "description": ""
       }
     },
+    "video_review_gQn7gm": {
+      "type": "video-review",
+      "blocks": {
+        "video_AKexrt": {
+          "type": "video",
+          "settings": {}
+        },
+        "video_Vbcwyb": {
+          "type": "video",
+          "settings": {}
+        },
+        "video_K7jbtR": {
+          "type": "video",
+          "settings": {}
+        },
+        "video_9MJ34i": {
+          "type": "video",
+          "settings": {}
+        },
+        "video_jn8MTi": {
+          "type": "video",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "video_AKexrt",
+        "video_Vbcwyb",
+        "video_K7jbtR",
+        "video_9MJ34i",
+        "video_jn8MTi"
+      ],
+      "name": "Video Review",
+      "settings": {
+        "background_color": "#ffffff",
+        "heading": "Real People. Restored Power.",
+        "description": "<p>The Shift Is Real: See How <strong>Xara Shilajit</strong> Are Transforming Lives</p>"
+      }
+    },
     "collapsible_content_igJqFK": {
       "type": "collapsible-content",
       "blocks": {
@@ -799,19 +837,24 @@
       "type": "video-review",
       "blocks": {
         "vid_1": {
-          "type": "video"
+          "type": "video",
+          "settings": {}
         },
         "vid_2": {
-          "type": "video"
+          "type": "video",
+          "settings": {}
         },
         "vid_3": {
-          "type": "video"
+          "type": "video",
+          "settings": {}
         },
         "vid_4": {
-          "type": "video"
+          "type": "video",
+          "settings": {}
         },
         "vid_5": {
-          "type": "video"
+          "type": "video",
+          "settings": {}
         }
       },
       "block_order": [
@@ -1029,6 +1072,7 @@
     "ancient_wisdon_TdAL6j",
     "why_gold_shiljit_n3KrjB",
     "certificate_PHaiYk",
+    "video_review_gQn7gm",
     "collapsible_content_igJqFK",
     "how_shiljit_works_pdp_Mxmyfd",
     "review_pdp_ke46Dp",
