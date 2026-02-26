@@ -776,18 +776,6 @@
     },
     "rich_text_JKTUfe": {
       "type": "rich-text",
-      "blocks": {
-        "heading_h8beid": {
-          "type": "heading",
-          "settings": {
-            "heading": "<p>100% Trusted & Recommended by Experts on Men's Health! </p>",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_h8beid"
-      ],
       "name": "t:sections.rich-text.presets.name",
       "settings": {
         "visibility": "always-display",
@@ -802,61 +790,6 @@
         "custom_colors_text": "#2e2a39",
         "custom_colors_solid_button_background": "#dd1d1d",
         "custom_colors_solid_button_text": "#ffffff"
-      }
-    },
-    "image_banner_qXTwgz": {
-      "type": "image-banner",
-      "blocks": {
-        "heading_kcdtfY": {
-          "type": "heading",
-          "disabled": true,
-          "settings": {
-            "heading": "Image banner",
-            "heading_size": "h1"
-          }
-        },
-        "text_QPG6Kz": {
-          "type": "text",
-          "disabled": true,
-          "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "buttons_8EHTUC": {
-          "type": "buttons",
-          "disabled": true,
-          "settings": {
-            "button_label_1": "Button label",
-            "button_link_1": "",
-            "button_style_secondary_1": false,
-            "button_label_2": "Button label",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_kcdtfY",
-        "text_QPG6Kz",
-        "buttons_8EHTUC"
-      ],
-      "name": "t:sections.image-banner.presets.name",
-      "settings": {
-        "visibility": "always-display",
-        "image": "shopify://shop_images/ChatGPT_Image_Jan_28_2026_05_02_01_PM.png",
-        "image_1_visibility": "always-display",
-        "image_2_visibility": "always-display",
-        "image_overlay_opacity": 0,
-        "image_height": "adapt",
-        "url": "",
-        "desktop_content_position": "middle-center",
-        "show_text_box": true,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
       }
     },
     "d7112918-a6ed-4119-8565-5d4b7041284a": {
@@ -1503,7 +1436,6 @@
     "difference_pdp_yxqjPz",
     "related-products",
     "rich_text_JKTUfe",
-    "image_banner_qXTwgz",
     "d7112918-a6ed-4119-8565-5d4b7041284a",
     "multicolumn_4RLyNP",
     "image_with_text_zT9VpF",
