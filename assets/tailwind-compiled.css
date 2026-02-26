@@ -199,6 +199,10 @@
     margin-bottom: 64px
 }
 
+.mt-4 {
+    margin-top: 16px
+}
+
 .block {
     display: block
 }
@@ -293,6 +297,10 @@
 
 .h-\[60px\] {
     height: 60px
+}
+
+.h-8 {
+    height: 32px
 }
 
 .max-h-\[800px\] {
@@ -434,6 +442,10 @@
 
 .max-w-\[900px\] {
     max-width: 900px
+}
+
+.max-w-\[550px\] {
+    max-width: 550px
 }
 
 .flex-1 {
@@ -677,6 +689,10 @@
     border-radius: 8px
 }
 
+.rounded-\[1rem\] {
+    border-radius: 16px
+}
+
 .rounded-r-\[1rem\] {
     border-top-right-radius: 16px;
     border-bottom-right-radius: 16px
@@ -761,6 +777,10 @@
 .border-\[\#443d31\] {
     --tw-border-opacity: 1;
     border-color: rgb(68 61 49 / var(--tw-border-opacity, 1))
+}
+
+.border-\[\#e6c69b\]\/30 {
+    border-color: rgb(230 198 155 / 0.3)
 }
 
 .bg-\[\#0c0c0d\] {
@@ -922,6 +942,21 @@
 .bg-\[\#f0f0f0\] {
     --tw-bg-opacity: 1;
     background-color: rgb(240 240 240 / var(--tw-bg-opacity, 1))
+}
+
+.bg-\[\#e5e5e5\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(229 229 229 / var(--tw-bg-opacity, 1))
+}
+
+.bg-\[\#f3ecd7\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(243 236 215 / var(--tw-bg-opacity, 1))
+}
+
+.bg-\[\#fde8e8\] {
+    --tw-bg-opacity: 1;
+    background-color: rgb(253 232 232 / var(--tw-bg-opacity, 1))
 }
 
 .bg-gradient-to-b {
@@ -1550,6 +1585,21 @@
     color: rgb(68 68 68 / var(--tw-text-opacity, 1))
 }
 
+.text-\[\#443d31\] {
+    --tw-text-opacity: 1;
+    color: rgb(68 61 49 / var(--tw-text-opacity, 1))
+}
+
+.text-\[\#888\] {
+    --tw-text-opacity: 1;
+    color: rgb(136 136 136 / var(--tw-text-opacity, 1))
+}
+
+.text-\[\#f05252\] {
+    --tw-text-opacity: 1;
+    color: rgb(240 82 82 / var(--tw-text-opacity, 1))
+}
+
 .antialiased {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale
@@ -1632,6 +1682,12 @@
 .shadow-\[0_10px_40px_rgba\(0\2c 0\2c 0\2c 0\.03\)\] {
     --tw-shadow: 0 10px 40px rgba(0,0,0,0.03);
     --tw-shadow-colored: 0 10px 40px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
+}
+
+.shadow-\[0_4px_20px_rgba\(0\2c 0\2c 0\2c 0\.02\)\] {
+    --tw-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    --tw-shadow-colored: 0 4px 20px var(--tw-shadow-color);
     box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)
 }
 
@@ -1871,6 +1927,10 @@
 
     .md\:flex-row {
         flex-direction: row
+    }
+
+    .md\:items-center {
+        align-items: center
     }
 
     .md\:gap-4 {

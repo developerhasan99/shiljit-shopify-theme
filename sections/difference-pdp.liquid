@@ -1,0 +1,247 @@
+{% schema %}
+{
+  "name": "Difference PDP",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#fbf9f6"
+    },
+    {
+      "type": "text",
+      "id": "pill_label",
+      "label": "Pill Label",
+      "default": "THE XARA DIFFERENCE"
+    },
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "label": "Heading",
+      "default": "This isn't about supplements. It's about feeling like <em>yourself</em> again."
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>Most products chase stimulation. Xara supports the biological foundation — where real energy, drive, and performance begin.*</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Section Image"
+    },
+    {
+      "type": "text",
+      "id": "positive_heading",
+      "label": "Positive Section Heading",
+      "default": "WHAT MEN TYPICALLY NOTICE"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "negative_point",
+      "name": "Negative Point",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Energy Drinks"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Description",
+          "default": "Temporary spike. Guaranteed crash."
+        }
+      ]
+    },
+    {
+      "type": "positive_point",
+      "name": "Positive Point",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Text",
+          "default": "Stronger drive"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Difference PDP",
+      "blocks": [
+        {
+          "type": "negative_point",
+          "settings": {
+            "title": "Energy Drinks",
+            "text": "Temporary spike. Guaranteed crash."
+          }
+        },
+        {
+          "type": "negative_point",
+          "settings": {
+            "title": "Synthetic \"Boosters\"",
+            "text": "Inconsistent formulas. Unreliable results."
+          }
+        },
+        {
+          "type": "negative_point",
+          "settings": {
+            "title": "Isolated Vitamins",
+            "text": "Fragments — not a complete system."
+          }
+        },
+        {
+          "type": "positive_point",
+          "settings": {
+            "title": "Stronger drive"
+          }
+        },
+        {
+          "type": "positive_point",
+          "settings": {
+            "title": "Higher libido"
+          }
+        },
+        {
+          "type": "positive_point",
+          "settings": {
+            "title": "Sharper focus"
+          }
+        },
+        {
+          "type": "positive_point",
+          "settings": {
+            "title": "Physical confidence"
+          }
+        },
+        {
+          "type": "positive_point",
+          "settings": {
+            "title": "Better erections"
+          }
+        },
+        {
+          "type": "positive_point",
+          "settings": {
+            "title": "Relentless stamina"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<section class="py-16 md:py-24" style="background-color: {{ section.settings.background_color }};">
+  <div class="max-w-[1300px] mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
+      <!-- Left: Image Wrapper -->
+      <div class="order-2 lg:order-1 flex items-center justify-center">
+        <!-- White card frame for the image -->
+        <div class="bg-white rounded-[2.5rem] p-4 w-full h-full max-w-[550px] shadow-[0_10px_40px_rgba(0,0,0,0.03)]">
+          <div class="rounded-[2rem] overflow-hidden relative w-full h-full aspect-[4/5] object-cover">
+            {% if section.settings.image != blank %}
+              {{
+                section.settings.image
+                | image_url: width: 1000
+                | image_tag: loading: 'lazy', class: 'w-full h-full object-cover absolute inset-0'
+              }}
+            {% else %}
+              <div class="w-full h-full bg-[#e5e5e5] flex items-center justify-center absolute inset-0">
+                <span class="text-[#888] font-medium">Image Placeholder</span>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Content -->
+      <div class="flex flex-col gap-8 order-1 lg:order-2 justify-center">
+        <!-- Text Header -->
+        <div class="flex flex-col gap-6">
+          {% if section.settings.pill_label != blank %}
+            <div>
+              <span class="inline-block bg-[#f3ecd7] text-[#443d31] text-[10px] md:text-xs font-bold tracking-[0.2em] rounded-full px-6 py-2 uppercase border border-[#e6c69b]/30">
+                {{ section.settings.pill_label }}
+              </span>
+            </div>
+          {% endif %}
+
+          <h2 class="difference-heading text-4xl md:text-5xl lg:text-6xl font-black text-black leading-[1.1] tracking-tight">
+            {{ section.settings.heading }}
+          </h2>
+
+          {% if section.settings.description != blank %}
+            <div class="text-[#666] text-base md:text-lg font-medium leading-relaxed">
+              {{ section.settings.description }}
+            </div>
+          {% endif %}
+        </div>
+
+        <!-- Negative Points List -->
+        <div class="flex flex-col gap-4">
+          {% for block in section.blocks %}
+            {% if block.type == 'negative_point' %}
+              <div
+                class="bg-white rounded-[1rem] p-6 flex flex-col md:flex-row md:items-center gap-4 shadow-[0_4px_20px_rgba(0,0,0,0.02)]"
+                {{ block.shopify_attributes }}
+              >
+                <!-- Red X Icon -->
+                <div class="flex-shrink-0 w-8 h-8 rounded-full bg-[#fde8e8] text-[#f05252] flex items-center justify-center">
+                  <svg width="12" height="12" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 1L13 13M1 13L13 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="flex flex-col">
+                  <span class="text-black font-black text-lg">{{ block.settings.title }}</span>
+                  <span class="text-[#666] text-sm md:text-base font-bold">{{ block.settings.text }}</span>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <!-- Positive Header -->
+        {% if section.settings.positive_heading != blank %}
+          <div class="mt-4">
+            <h3 class="text-sm font-black text-black uppercase tracking-widest">
+              {{ section.settings.positive_heading }}
+            </h3>
+          </div>
+        {% endif %}
+
+        <!-- Positive Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {% for block in section.blocks %}
+            {% if block.type == 'positive_point' %}
+              <div
+                class="bg-white rounded-[1rem] p-4 flex items-center gap-3 shadow-[0_4px_20px_rgba(0,0,0,0.02)]"
+                {{ block.shopify_attributes }}
+              >
+                <!-- Gold Check Icon -->
+                <div class="flex-shrink-0 w-6 h-6 rounded-full bg-[#e6c69b] text-white flex items-center justify-center">
+                  <svg width="10" height="8" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 5L4.5 8.5L11 1" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <span class="text-black font-black text-base md:text-lg">{{ block.settings.title }}</span>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% style %}
+  .difference-heading em {
+    font-style: normal;
+    color: #e6c69b; /* Gold accent color used in mockup for 'yourself' */
+  }
+{% endstyle %}

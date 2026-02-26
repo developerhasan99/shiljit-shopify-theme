@@ -670,6 +670,88 @@
         "footer_note": "*Results based on a voluntary, self-reported customer survey. Individual results may vary."
       }
     },
+    "difference_pdp_ABC123": {
+      "type": "difference-pdp",
+      "blocks": {
+        "negative_1": {
+          "type": "negative_point",
+          "settings": {
+            "title": "Energy Drinks",
+            "text": "Temporary spike. Guaranteed crash."
+          }
+        },
+        "negative_2": {
+          "type": "negative_point",
+          "settings": {
+            "title": "Synthetic \"Boosters\"",
+            "text": "Inconsistent formulas. Unreliable results."
+          }
+        },
+        "negative_3": {
+          "type": "negative_point",
+          "settings": {
+            "title": "Isolated Vitamins",
+            "text": "Fragments — not a complete system."
+          }
+        },
+        "positive_1": {
+          "type": "positive_point",
+          "settings": {
+            "title": "Stronger drive"
+          }
+        },
+        "positive_2": {
+          "type": "positive_point",
+          "settings": {
+            "title": "Higher libido"
+          }
+        },
+        "positive_3": {
+          "type": "positive_point",
+          "settings": {
+            "title": "Sharper focus"
+          }
+        },
+        "positive_4": {
+          "type": "positive_point",
+          "settings": {
+            "title": "Physical confidence"
+          }
+        },
+        "positive_5": {
+          "type": "positive_point",
+          "settings": {
+            "title": "Better erections"
+          }
+        },
+        "positive_6": {
+          "type": "positive_point",
+          "settings": {
+            "title": "Relentless stamina"
+          }
+        }
+      },
+      "block_order": [
+        "negative_1",
+        "negative_2",
+        "negative_3",
+        "positive_1",
+        "positive_2",
+        "positive_3",
+        "positive_4",
+        "positive_5",
+        "positive_6"
+      ],
+      "name": "Difference PDP",
+      "settings": {
+        "background_color": "#fbf9f6",
+        "pill_label": "THE XARA DIFFERENCE",
+        "heading": "This isn't about supplements. It's about feeling like <em>yourself</em> again.",
+        "description": "<p>Most products chase stimulation. Xara supports the biological foundation — where real energy, drive, and performance begin.*</p>",
+        "image": "shopify://shop_images/Screenshot_2025-11-20_at_5.59.39_PM.webp",
+        "positive_heading": "WHAT MEN TYPICALLY NOTICE"
+      }
+    },
     "854b8c46-40a3-4c74-9b36-360886558b1f": {
       "type": "testimonials",
       "settings": {}
@@ -1422,6 +1504,7 @@
     "how_shiljit_works_pdp_Mxmyfd",
     "review_pdp_ke46Dp",
     "real_result_pdp_yyLgif",
+    "difference_pdp_ABC123",
     "854b8c46-40a3-4c74-9b36-360886558b1f",
     "related-products",
     "rich_text_JKTUfe",
