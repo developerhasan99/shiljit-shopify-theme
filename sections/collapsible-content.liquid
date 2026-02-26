@@ -21,9 +21,9 @@
 <div class="color-scheme-{{ section.id }} color-{{ section.settings.color_scheme }} gradient content-for-grouping animate-section animate--hidden {{ section.settings.visibility }}">
   <div class="collapsible-content isolate max-w-[1300px] mx-auto px-6">
     <div class="collapsible-content__wrapper section-{{ section.id }}-padding">
-      <div class="grid grid--1-col grid--2-col-tablet collapsible-content__grid">
+      <div class="g collapsible-content__grid">
         <!-- Left Column: Accordions -->
-        <div class="grid__item">
+        <div class="">
           <div class="collapsible-content__header mb-8">
             {%- if section.settings.caption != blank -%}
               <p class="caption-with-letter-spacing">{{ section.settings.caption }}</p>
@@ -77,55 +77,6 @@
               </div>
             {%- endfor -%}
           </div>
-
-          {% if section.settings.show_add_to_cart %}
-            <div class="mt-12">
-              <product-form class="product-form">
-                {%- form 'product',
-                  product,
-                  id: product_form_id,
-                  class: 'form',
-                  novalidate: 'novalidate',
-                  data-type: 'add-to-cart-form'
-                -%}
-                  <input
-                    type="hidden"
-                    name="id"
-                    value="{{ product.selected_or_first_available_variant.id }}"
-                    disabled
-                  >
-                  <button
-                    id="ProductSubmitButton-{{ section.id }}"
-                    type="submit"
-                    name="add"
-                    class="product-form__submit button button--full-width button--primary h-[60px] text-lg font-bold uppercase tracking-widest"
-                    {% if product.selected_or_first_available_variant.available == false %}
-                      disabled
-                    {% endif %}
-                  >
-                    <span>
-                      {%- if product.selected_or_first_available_variant.available -%}
-                        {{ section.settings.atc_button_text | default: 'Add to Cart' }}
-                      {%- else -%}
-                        {{ 'products.product.sold_out' | t }}
-                      {%- endif -%}
-                    </span>
-                    <div class="loading-overlay__spinner hidden">
-                      <svg
-                        aria-hidden="true"
-                        focusable="false"
-                        class="spinner"
-                        viewBox="0 0 66 66"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <circle class="path" fill="none" stroke-width="6" cx="33" cy="33" r="30"></circle>
-                      </svg>
-                    </div>
-                  </button>
-                {%- endform -%}
-              </product-form>
-            </div>
-          {% endif %}
         </div>
 
         <!-- Right Column: Image -->
