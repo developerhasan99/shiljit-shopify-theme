@@ -409,5 +409,10 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      ".product__description{font-size: 16px !important;}"
+    ]
   }
 }
