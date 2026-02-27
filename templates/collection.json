@@ -20,7 +20,8 @@
     "main-collection-product-grid": {
       "type": "main-collection-product-grid",
       "custom_css": [
-        ".quick-add:hover {text-decoration: none !important;}"
+        ".quick-add:hover {text-decoration: none !important;}",
+        "ul{list-style-type: none;}"
       ],
       "settings": {
         "products_per_page": 8,
