@@ -46,7 +46,7 @@
           "type": "title",
           "settings": {
             "uppercase_title": true,
-            "desktop_size": 39,
+            "desktop_size": 24,
             "alignment": "left",
             "mobile_size": 28,
             "mobile_alignment": "mobile-left",
