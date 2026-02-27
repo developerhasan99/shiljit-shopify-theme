@@ -57,6 +57,10 @@
     top: 12px
 }
 
+.right-0 {
+    right: 0px
+}
+
 .isolate {
     isolation: isolate
 }
@@ -71,6 +75,10 @@
 
 .z-\[2\] {
     z-index: 2
+}
+
+.z-50 {
+    z-index: 50
 }
 
 .order-1 {
