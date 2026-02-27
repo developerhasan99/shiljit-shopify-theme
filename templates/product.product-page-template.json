@@ -177,7 +177,7 @@
           "settings": {
             "show_dynamic_checkout": false,
             "skip_cart": false,
-            "atc_custom_label": "",
+            "atc_custom_label": "ADD TO CART",
             "display_price": false,
             "uppercase_text": true,
             "enable_custom_color": false,
