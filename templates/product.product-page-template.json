@@ -313,10 +313,10 @@
         "dots_color_scheme": "inverse",
         "trust_badge_position": "top-right",
         "trust_badge_size": "medium",
-        "mobile_padding_top": 0,
-        "mobile_padding_bottom": 0,
-        "desktop_padding_top": 16,
-        "desktop_padding_bottom": 0
+        "mobile_padding_top": 20,
+        "mobile_padding_bottom": 20,
+        "desktop_padding_top": 32,
+        "desktop_padding_bottom": 32
       }
     },
     "horizontal_ticker_NyqAbx": {
