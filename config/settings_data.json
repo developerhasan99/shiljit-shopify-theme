@@ -149,7 +149,7 @@
     "cart_trust_badges_width": 100,
     "cart_drawer_collection": "upsells",
     "enable_cart_discount": true,
-    "enable_cart_progress_bar": false,
+    "enable_cart_progress_bar": true,
     "cart_progress_message": "Spend [amount] more to get FREE shipping!",
     "cart_progress_success_message": "Congrats! You get FREE shipping! 🎉",
     "cart_progress_icon": "truck",
