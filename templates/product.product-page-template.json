@@ -364,23 +364,33 @@
       "blocks": {
         "video_VfMxTJ": {
           "type": "video",
-          "settings": {}
+          "settings": {
+            "video": "shopify://files/videos/Video.mp4"
+          }
         },
         "video_KPYg6G": {
           "type": "video",
-          "settings": {}
+          "settings": {
+            "video": "shopify://files/videos/Video (2).mp4"
+          }
         },
         "video_FVkLAi": {
           "type": "video",
-          "settings": {}
+          "settings": {
+            "video": "shopify://files/videos/Video (1).mp4"
+          }
         },
         "video_GDYtAH": {
           "type": "video",
-          "settings": {}
+          "settings": {
+            "video": "shopify://files/videos/Video (3).mp4"
+          }
         },
         "video_knMn3t": {
           "type": "video",
-          "settings": {}
+          "settings": {
+            "video": "shopify://files/videos/Video (4).mp4"
+          }
         }
       },
       "block_order": [
