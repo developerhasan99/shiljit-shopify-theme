@@ -263,6 +263,11 @@
         "type": "shopify://apps/avada-seo-suite/blocks/avada-seo/15507c6e-1aa3-45d3-b698-7e175e033440",
         "disabled": false,
         "settings": {}
+      },
+      "1932496262343429097": {
+        "type": "shopify://apps/bogox-free-gift/blocks/app/4254c128-561c-4a78-b553-cfcb302243bb",
+        "disabled": false,
+        "settings": {}
       }
     }
   },
