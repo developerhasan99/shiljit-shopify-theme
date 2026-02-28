@@ -184,42 +184,52 @@
         "description": "Shilajit Gold is the only brand where we confidentaly showcase our 3rd Party lab test showing over 82% fulvic acid, most fake shilajit has less than 20%"
       }
     },
-    "video_review_AdjWPY": {
+    "video_review_Ai8WPb": {
       "type": "video-review",
       "blocks": {
-        "video_mUG6L8": {
+        "video_PGJCcw": {
           "type": "video",
-          "settings": {}
+          "settings": {
+            "video": "shopify://files/videos/Video.mp4"
+          }
         },
-        "video_3qyAhF": {
+        "video_QjNcdG": {
           "type": "video",
-          "settings": {}
+          "settings": {
+            "video": "shopify://files/videos/Video (2).mp4"
+          }
         },
-        "video_bUtKMY": {
+        "video_RHijx7": {
           "type": "video",
-          "settings": {}
+          "settings": {
+            "video": "shopify://files/videos/Video (1).mp4"
+          }
         },
-        "video_bgfMcN": {
+        "video_PcxKdX": {
           "type": "video",
-          "settings": {}
+          "settings": {
+            "video": "shopify://files/videos/Video (3).mp4"
+          }
         },
-        "video_pXPXBL": {
+        "video_PPikNA": {
           "type": "video",
-          "settings": {}
+          "settings": {
+            "video": "shopify://files/videos/Video (4).mp4"
+          }
         }
       },
       "block_order": [
-        "video_mUG6L8",
-        "video_3qyAhF",
-        "video_bUtKMY",
-        "video_bgfMcN",
-        "video_pXPXBL"
+        "video_PGJCcw",
+        "video_QjNcdG",
+        "video_RHijx7",
+        "video_PcxKdX",
+        "video_PPikNA"
       ],
       "name": "Video Review",
       "settings": {
         "background_color": "#ffffff",
         "heading": "Real People. Restored Power.",
-        "description": "<p>The Shift Is Real: See How <strong>Shilajit</strong> <strong>Gold </strong>Are Transforming Lives</p>"
+        "description": "<p>The Shift Is Real: See How <strong>Gold Shilajit</strong> Are Transforming Lives</p>"
       }
     },
     "homepage_product_WpkqV6": {
@@ -820,7 +830,7 @@
     "performance_support_n79ggF",
     "why_benifit_G3XxR4",
     "certificate_VKqyBC",
-    "video_review_AdjWPY",
+    "video_review_Ai8WPb",
     "homepage_product_WpkqV6",
     "free_travel_tin_k8hm9D",
     "featured_product_bKjGVU",
