@@ -147,7 +147,7 @@
     "show_cart_payment_badges": false,
     "enabled_cart_payment_types": "",
     "cart_trust_badges_width": 100,
-    "cart_drawer_collection": "frontpage",
+    "cart_drawer_collection": "upsells",
     "enable_cart_discount": true,
     "enable_cart_progress_bar": false,
     "cart_progress_message": "Spend [amount] more to get FREE shipping!",
