@@ -116,10 +116,7 @@
                   {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                     {{ 'products.product.sold_out' | t }}
                   {%- else -%}
-                    Add To Cart -
-                    <span id="main-atc-price-{{ section.id }}" class="main-atc-price">
-                      {{ product.selected_or_first_available_variant.price | money }} USD
-                    </span>
+                    Add To Cart
                   {%- endif -%}
                 </span>
               </span>
