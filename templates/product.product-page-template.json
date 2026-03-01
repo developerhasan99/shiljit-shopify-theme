@@ -610,7 +610,7 @@
         "badge_text": "THE SCIENCE",
         "heading": "How Pure Shilajit™ Works",
         "heading_highlight": "(3-Phase System)",
-        "image": "shopify://shop_images/Screenshot_2026-02-05_at_7.42.43_PM.webp"
+        "image": "shopify://shop_images/black_man_product_2048x2048_2b3f63f9-0726-42fd-882d-3ab4ab4466cf.png"
       }
     },
     "review_pdp_ke46Dp": {
@@ -806,6 +806,7 @@
       "blocks": {
         "comparison_row_EUyPiQ": {
           "type": "comparison_row",
+          "disabled": true,
           "settings": {
             "feature_name": "What matters",
             "product_1_value": "Pure Shilajit™",
@@ -816,6 +817,14 @@
           "type": "comparison_row",
           "settings": {
             "feature_name": "Purity Tested",
+            "product_1_value": "Yes",
+            "product_2_value": "Unknown"
+          }
+        },
+        "comparison_row_QNwmf9": {
+          "type": "comparison_row",
+          "settings": {
+            "feature_name": "100% Potency",
             "product_1_value": "Yes",
             "product_2_value": "Unknown"
           }
@@ -832,6 +841,7 @@
       "block_order": [
         "comparison_row_EUyPiQ",
         "comparison_row_WXmdab",
+        "comparison_row_QNwmf9",
         "comparison_row_PWmgH6"
       ],
       "name": "Us vs Other section",
@@ -840,7 +850,8 @@
         "pill_label": "THE Pure Shilajit™ DIFFERENCE",
         "heading": "Pure Shilajit™ <em>vs</em> Other Brands",
         "subheading": "What actually impacts performance.*",
-        "product_1_name": "Xara",
+        "product_1_image": "shopify://shop_images/ChatGPT_Image_Mar_2_2026_03_43_30_AM_ceba93c6-1955-4a73-8200-d27d3d4130c4.png",
+        "product_1_name": "Pure Shilajit™",
         "product_2_name": "Other"
       }
     },
