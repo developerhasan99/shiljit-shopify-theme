@@ -556,6 +556,7 @@
         "collapsible_row_63AEdT",
         "collapsible_row_XQ6PgY"
       ],
+      "disabled": true,
       "name": "t:sections.collapsible_content.presets.name",
       "settings": {
         "visibility": "always-display",
@@ -714,7 +715,7 @@
         "background_color": "#ffffff",
         "heading": "REAL RESULTS FROM pure<em> SHILAJIT GUMMIES</em> CUSTOMERS",
         "subheading": "In a recent customer survey, men reported:",
-        "collage_image": "shopify://shop_images/bd38a30b-c5ce-47c4-b6d0-c5b2a16ba146.webp",
+        "collage_image": "shopify://shop_images/7b28f586-7807-48ce-b3d2-e00f3a16bd8e.png",
         "footer_note": "*Results based on a voluntary, self-reported customer survey. Individual results may vary."
       }
     },
@@ -796,7 +797,7 @@
         "pill_label": "THE Pure Shilajit™ DIFFERENCE",
         "heading": "This isn't about supplements. It's about feeling like <em>yourself</em> again.",
         "description": "<p>Most products chase stimulation. Pure Shilajit™ supports the biological foundation — where real energy, drive, and performance begin.*</p>",
-        "image": "shopify://shop_images/1770339800560-tdy8dqf60ej_1.webp",
+        "image": "shopify://shop_images/abca3996-fcf4-40b1-b753-1eed13797c95.png",
         "positive_heading": "WHAT MEN TYPICALLY NOTICE"
       }
     },
