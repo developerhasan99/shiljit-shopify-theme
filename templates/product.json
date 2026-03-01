@@ -114,7 +114,7 @@
             "enable_quantity_discounts": true,
             "headline": "BUNDLE & SAVE",
             "preselected": "option_1",
-            "display_badge": "none",
+            "display_badge": "option_2",
             "update_pdp_prices": false,
             "badge_text": "Most Popular",
             "enable_variant_selectors": true,
@@ -123,7 +123,7 @@
             "skip_unavailable": false,
             "color_scheme": "accent-1",
             "option_1_quantity": 1,
-            "option_1_label": "",
+            "option_1_label": "Buy 1",
             "option_1_benefit": "",
             "option_1_caption": "You save [amount_saved]",
             "option_1_percentage_off_text": "0",
@@ -361,9 +361,9 @@
         "desktop_image_height": 40,
         "padding_top": 16,
         "padding_bottom": 16,
-        "custom_colors_background": "#FFFFFF",
+        "custom_colors_background": "#ffffff",
         "custom_gradient_background": "",
-        "custom_colors_text": "#2E2A39"
+        "custom_colors_text": "#2e2a39"
       }
     },
     "related-products": {
