@@ -473,7 +473,7 @@
         "background_color": "#f9f6f1",
         "badge_text": "MEN'S PERFORMANCE FOUNDATIONs",
         "heading": "Most male performance supplements stimulate your body. Very few rebuild it.",
-        "description": "<p>If erections feel weaker and fatigue is creeping in, it's often the same root issue: your body isn't recovering the way it used to. Gold Shiljit supports the daily foundations that power performance — in and out of the bedroom.*</p>",
+        "description": "<p>If erections feel weaker and fatigue is creeping in, it's often the same root issue: your body isn't recovering the way it used to. Pure Shilajit supports the daily foundations that power performance — in and out of the bedroom.*</p>",
         "potency_badge": "THIRD-PARTY VERIFIED",
         "potency_percentage": "82.8%",
         "potency_label": "Fulvic Acid",
@@ -712,7 +712,7 @@
       "name": "Real Results PDP",
       "settings": {
         "background_color": "#ffffff",
-        "heading": "REAL RESULTS FROM <em>XARA SHILAJIT GUMMIES</em> CUSTOMERS",
+        "heading": "REAL RESULTS FROM pure<em> SHILAJIT GUMMIES</em> CUSTOMERS",
         "subheading": "In a recent customer survey, men reported:",
         "collage_image": "shopify://shop_images/bd38a30b-c5ce-47c4-b6d0-c5b2a16ba146.webp",
         "footer_note": "*Results based on a voluntary, self-reported customer survey. Individual results may vary."
@@ -1030,6 +1030,7 @@
         "heading_size": "h1",
         "color_scheme": "background-1",
         "open_first_collapsible_row": false,
+        "image": "shopify://shop_images/655c8b58-4d82-406a-99f8-7d055f9099bb.png",
         "show_add_to_cart": true,
         "atc_button_text": "Add to Cart",
         "padding_top": 36,
