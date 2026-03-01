@@ -144,7 +144,7 @@
     "cart_icon": "cart",
     "show_vendor": false,
     "show_cart_note": false,
-    "show_cart_payment_badges": false,
+    "show_cart_payment_badges": true,
     "enabled_cart_payment_types": "",
     "cart_trust_badges_width": 100,
     "cart_drawer_collection": "bestsellers",
