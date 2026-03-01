@@ -161,7 +161,7 @@
             "star_color": "#ffcc00",
             "avatar_alignment": "top",
             "author_1": "Author",
-            "text_1": "<p>After turning 40, I noticed a dip in my energy and libido. Shilajit Gold has truly revitalised me. My wife has never been happier, it's like I'm in my 30s again!\"</p>",
+            "text_1": "<p>After turning 40, I noticed a dip in my energy and libido. Pure Shilajit has truly revitalised me. My wife has never been happier, it's like I'm in my 30s again!\"</p>",
             "image_1": "shopify://shop_images/picture.jpg",
             "author_2": "Author",
             "text_2": "<p>I bought this for the size claims & stamina. It is true. Better blood flow and harder for longer. Two weeks in, the results are insane. </p>",
@@ -793,9 +793,9 @@
       "name": "Difference PDP",
       "settings": {
         "background_color": "#fbf9f6",
-        "pill_label": "THE Shilajit gold DIFFERENCE",
+        "pill_label": "THE Pure Shilajit DIFFERENCE",
         "heading": "This isn't about supplements. It's about feeling like <em>yourself</em> again.",
-        "description": "<p>Most products chase stimulation. Shilajit Gold supports the biological foundation — where real energy, drive, and performance begin.*</p>",
+        "description": "<p>Most products chase stimulation. Pure Shilajit supports the biological foundation — where real energy, drive, and performance begin.*</p>",
         "image": "shopify://shop_images/1770339800560-tdy8dqf60ej_1.webp",
         "positive_heading": "WHAT MEN TYPICALLY NOTICE"
       }
@@ -836,8 +836,8 @@
       "name": "Us vs Other section",
       "settings": {
         "background_color": "#fbf9f6",
-        "pill_label": "THE shilajit gold DIFFERENCE",
-        "heading": "Shilajit Gold <em>vs</em> Other Brands",
+        "pill_label": "THE Pure Shilajit DIFFERENCE",
+        "heading": "Pure Shilajit <em>vs</em> Other Brands",
         "subheading": "What actually impacts performance.*",
         "product_1_name": "Xara",
         "product_2_name": "Other"
