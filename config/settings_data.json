@@ -153,6 +153,7 @@
     "cart_progress_message": "Spend [amount] more to get FREE shipping!",
     "cart_progress_success_message": "Congrats! You get FREE shipping! 🎉",
     "cart_progress_icon": "truck",
+    "cart_upsell_hide_when_in_cart": false,
     "cart_upsell_drop_shadow": true,
     "cart_upsell_color_scheme": "background-2",
     "enable_cart_upsell_1": true,
