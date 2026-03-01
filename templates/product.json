@@ -161,7 +161,7 @@
             "star_color": "#ffcc00",
             "avatar_alignment": "top",
             "author_1": "Author",
-            "text_1": "<p>After turning 40, I noticed a dip in my energy and libido. Pure Shilajit has truly revitalised me. My wife has never been happier, it's like I'm in my 30s again!\"</p>",
+            "text_1": "<p>After turning 40, I noticed a dip in my energy and libido. Pure Shilajit™ has truly revitalised me. My wife has never been happier, it's like I'm in my 30s again!\"</p>",
             "image_1": "shopify://shop_images/picture.jpg",
             "author_2": "Author",
             "text_2": "<p>I bought this for the size claims & stamina. It is true. Better blood flow and harder for longer. Two weeks in, the results are insane. </p>",
@@ -656,7 +656,7 @@
       ],
       "settings": {
         "visibility": "always-display",
-        "title": "Why Choosee Pure Shilajit",
+        "title": "Why Choosee Pure Shilajit™",
         "heading_size": "h1",
         "text": "",
         "button_label": "",
