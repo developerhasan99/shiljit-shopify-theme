@@ -422,7 +422,8 @@
   "platform_customizations": {
     "custom_css": [
       ".product__description {font-size: 16px !important;}",
-      "#Slider-template--21508252696834__featured-collection {display: flex; gap: 24px; justify-content: space-between; flex-wrap: wrap;}"
+      "#Slider-template--21508252696834__featured-collection {display: flex; gap: 24px; justify-content: space-between; flex-wrap: wrap;}",
+      ".quantity-break__badge{background: red;}"
     ]
   }
 }
